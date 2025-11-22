@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="favicon.ico">
 
     <!-- SEO Meta Tags -->
@@ -90,11 +92,11 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="#home" class="nav__link">Home</a></li>
-                    <li><a href="#" class="nav__link">Blog</a></li>
-                    <li><a href="#" class="nav__link">Reseller</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="reseller.html" class="nav__link">Reseller</a></li>
                     <li><a href="#" class="nav__link">Contact</a></li>
                 </ul>
-                <a href="#pricing" class="btn btn--primary">Free Trial</a>
+                <a href="free-trial.html" class="btn btn--primary">Free Trial</a>
             </nav>
             <button class="mobile-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -106,35 +108,46 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Scattered Movie Posters Background -->
+        <div class="hero__posters">
+            <div class="poster poster-1"><img src="assets/movies/back_to_the_future_ver11.webp"
+                    alt="Back to the Future"></div>
+            <div class="poster poster-2"><img src="assets/movies/black_phone_two.webp" alt="The Black Phone 2"></div>
+            <div class="poster poster-3"><img src="assets/movies/bugonia.webp" alt="Bugonia"></div>
+            <div class="poster poster-4"><img src="assets/movies/gekijoban_chenso_man_rezehen_ver6.webp"
+                    alt="Chainsaw Man"></div>
+            <div class="poster poster-5"><img src="assets/movies/good_fortune_ver9.webp" alt="Good Fortune"></div>
+            <div class="poster poster-6"><img src="assets/movies/kpop_demon_hunters.webp" alt="K-Pop Demon Hunters">
+            </div>
+            <div class="poster poster-7"><img src="assets/movies/shawshank_redemption_ver2.webp"
+                    alt="Shawshank Redemption"></div>
+            <div class="poster poster-8"><img src="assets/movies/stitch_head_ver2.webp" alt="Stitch Head"></div>
+            <div class="poster poster-9"><img src="assets/movies/tron_ares_ver2.webp" alt="Tron Ares"></div>
+            <div class="poster poster-10"><img src="assets/movies/twelve_angry_men.webp" alt="12 Angry Men"></div>
+        </div>
+
+        <!-- Centered Content -->
         <div class="container hero__container">
             <div class="hero__content">
-                <span class="badge">#1 Rated IPTV in USA 🇺🇸</span>
-                <h1 class="hero__title">Stream Unlimited TV <br> <span class="text-gradient">Without Limits</span></h1>
+                <h1 class="hero__title">America’s Favorite IPTV — 20,000+ Live Channels & All Major Sports<br><span
+                        style="font-size: 0.8em; font-weight: normal;">Fast. Reliable. HD/4K. Cancel Anytime.</span>
+                </h1>
                 <p class="hero__text">
-                    Access 22,000+ live channels, movies, and series in 4K/HD.
-                    Compatible with Firestick, Smart TV, Android, and iOS.
-                    Instant activation, no contracts.
+                    Experience the most complete IPTV service in the USA. premium live sports, 4K streams, instant
+                    activation, and full device compatibility.
                 </p>
                 <div class="hero__actions">
-                    <a href="#pricing" class="btn btn--primary btn--lg">Start Free Trial</a>
-                    <a href="#features" class="btn btn--secondary btn--lg">Explore Features</a>
+                    <a href="free-trial.html" class="btn btn--primary">Start Free Trial</a>
+                    <a href="#pricing" class="btn btn--outline">View Plans</a>
                 </div>
-                <div class="hero__trust">
-                    <span>Trusted by 50,000+ US Customers</span>
-                    <div class="stars">★★★★★</div>
-                </div>
-            </div>
-            <div class="hero__image">
-                <img src="assets/stream.webp" alt="IPTV Streaming Interface" loading="lazy">
+
+
             </div>
         </div>
     </section>
 
     <!-- Channel Marquee -->
     <div class="marquee-section">
-        <div class="container">
-            <p class="marquee-label">Watch your favorite networks</p>
-        </div>
         <div class="marquee">
             <div class="marquee__track">
                 <!-- Duplicated for infinite scroll effect -->
@@ -162,88 +175,68 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose UltraStreamNow?</h2>
-                <p class="section-subtitle">Experience the future of television with our premium features.</p>
+                <h2 class="section-title">Why UltraStreamNow Is the Top IPTV Experience in 2025</h2>
             </div>
-            <div class="features__grid">
+            <div class="features__grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <div class="feature-card">
-                    <h3>Blazing Fast</h3>
-                    <p>Optimized for US Fiber networks. Zero buffering, instant channel switching.</p>
+                    <h3>4K Live IPTV + Premium Sports</h3>
+                    <p>Get access to NFL, NBA, UFC, PPV events & 20,000+ live channels in smooth 4K/HD — without delays
+                        or buffering.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>4K & HD Quality</h3>
-                    <p>Crystal clear picture quality for sports, movies, and live TV events.</p>
+                    <h3>Massive VOD Library</h3>
+                    <p>Enjoy 60,000+ movies, series & catch-up TV. New releases updated daily. Everything available
+                        instantly in your IPTV player.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Multi-Device</h3>
-                    <p>Watch on your TV, phone, tablet, or computer. Anywhere, anytime.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Secure & Private</h3>
-                    <p>We prioritize your privacy with secure connections and no logs policy.</p>
+                    <h3>Works on Every Device</h3>
+                    <p>Optimized for IPTV Smarters, Firestick, Android TV, iOS, Smart TVs & more. Setup takes less than
+                        2 minutes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Movies Carousel -->
-    <div class="marquee-section marquee-section--movies">
+    <!-- Sports Carousel Section -->
+    <section class="sports-carousel">
         <div class="container">
-            <p class="marquee-label">Latest Movies & Series</p>
-        </div>
-        <div class="marquee marquee--movies">
-            <div class="marquee__track">
-                <!-- Duplicated for infinite scroll effect -->
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/back_to_the_future_ver11.webp"
-                        alt="Back to the Future"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/black_phone_two.webp"
-                        alt="The Black Phone 2"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/bugonia.webp" alt="Bugonia">
-                </div>
-                <div class="marquee__item marquee__item--movie"><img
-                        src="assets/movies/gekijoban_chenso_man_rezehen_ver6.webp" alt="Chainsaw Man"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/good_fortune_ver9.webp"
-                        alt="Good Fortune"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/kpop_demon_hunters.webp"
-                        alt="K-Pop Demon Hunters"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/shawshank_redemption_ver2.webp"
-                        alt="Shawshank Redemption"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/stitch_head_ver2.webp"
-                        alt="Stitch Head"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/tron_ares_ver2.webp"
-                        alt="Tron Ares"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/twelve_angry_men.webp"
-                        alt="12 Angry Men"></div>
-                <!-- Duplicate set -->
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/back_to_the_future_ver11.webp"
-                        alt="Back to the Future"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/black_phone_two.webp"
-                        alt="The Black Phone 2"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/bugonia.webp" alt="Bugonia">
-                </div>
-                <div class="marquee__item marquee__item--movie"><img
-                        src="assets/movies/gekijoban_chenso_man_rezehen_ver6.webp" alt="Chainsaw Man"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/good_fortune_ver9.webp"
-                        alt="Good Fortune"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/kpop_demon_hunters.webp"
-                        alt="K-Pop Demon Hunters"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/shawshank_redemption_ver2.webp"
-                        alt="Shawshank Redemption"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/stitch_head_ver2.webp"
-                        alt="Stitch Head"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/tron_ares_ver2.webp"
-                        alt="Tron Ares"></div>
-                <div class="marquee__item marquee__item--movie"><img src="assets/movies/twelve_angry_men.webp"
-                        alt="12 Angry Men"></div>
+            <div class="section-header">
+                <h2 class="section-title">Stream all of Your Favorite Live Sports in One Place</h2>
             </div>
         </div>
-    </div>
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                <!-- Original Set -->
+                <div class="carousel-item"><img src="assets/shows/1.webp" alt="Sports Show 1"></div>
+                <div class="carousel-item"><img src="assets/shows/2.jpeg" alt="Sports Show 2"></div>
+                <div class="carousel-item"><img src="assets/shows/3.jpeg" alt="Sports Show 3"></div>
+                <div class="carousel-item"><img src="assets/shows/4.jpeg" alt="Sports Show 4"></div>
+                <div class="carousel-item"><img src="assets/shows/5.webp" alt="Sports Show 5"></div>
+                <div class="carousel-item"><img src="assets/shows/6.webp" alt="Sports Show 6"></div>
+                <div class="carousel-item"><img src="assets/shows/7.webp" alt="Sports Show 7"></div>
+                <div class="carousel-item"><img src="assets/shows/8.webp" alt="Sports Show 8"></div>
+                <div class="carousel-item"><img src="assets/shows/9.jpeg" alt="Sports Show 9"></div>
+                <div class="carousel-item"><img src="assets/shows/10.webp" alt="Sports Show 10"></div>
+                <!-- Duplicate Set for Infinite Scroll -->
+                <div class="carousel-item"><img src="assets/shows/1.webp" alt="Sports Show 1"></div>
+                <div class="carousel-item"><img src="assets/shows/2.jpeg" alt="Sports Show 2"></div>
+                <div class="carousel-item"><img src="assets/shows/3.jpeg" alt="Sports Show 3"></div>
+                <div class="carousel-item"><img src="assets/shows/4.jpeg" alt="Sports Show 4"></div>
+                <div class="carousel-item"><img src="assets/shows/5.webp" alt="Sports Show 5"></div>
+                <div class="carousel-item"><img src="assets/shows/6.webp" alt="Sports Show 6"></div>
+                <div class="carousel-item"><img src="assets/shows/7.webp" alt="Sports Show 7"></div>
+                <div class="carousel-item"><img src="assets/shows/8.webp" alt="Sports Show 8"></div>
+                <div class="carousel-item"><img src="assets/shows/9.jpeg" alt="Sports Show 9"></div>
+                <div class="carousel-item"><img src="assets/shows/10.webp" alt="Sports Show 10"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <h2 class="section-title">Flexible IPTV Subscription Plans</h2>
                 <p class="section-subtitle">Choose the plan that fits your needs. No hidden fees, cancel anytime.</p>
 
                 <!-- Pricing Toggle -->
@@ -354,7 +347,9 @@
     <section class="reviews-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">What Our Customers Say</h2>
+                <h2 class="section-title">IPTV Reviews from Verified USA Customers</h2>
+                <p class="section-subtitle">Real reviews from real users who switched to UltraStreamNow — ranking us the
+                    best IPTV service in 2025.</p>
                 <div class="trustpilot-header">
                     <span class="stars">★★★★★</span>
                     <p>Rated 4.9/5 based on 2,000+ reviews</p>
@@ -509,94 +504,98 @@
     <section class="detailed-features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">IPTV App & IPTV Box USA - Smart TV & Beyond</h2>
-                <p class="section-subtitle" style="max-width: 800px; margin: 0 auto;">Everything in UltraStreamNow is
-                    engineered for reliable entertainment — from resilient delivery and deep channel libraries to
-                    billing that plays nicely with US households. Works with any IPTV app, IPTV box, IPTV Pro player, or
-                    IPTV smart player for maximum compatibility.</p>
+                <h2 class="section-title">Why Thousands Choose UltraStreamNow</h2>
             </div>
-            <div class="detailed-grid">
+            <div class="detailed-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                 <!-- Card 1 -->
                 <div class="info-card">
-                    <div class="info-icon">
+                    <div class="info-icon info-icon--checkmark">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                         </svg>
                     </div>
-                    <h3>IPTV Streaming USA - HD & 4K Quality</h3>
-                    <p>Ultra-stable IPTV streaming delivery for live sports, movies, and global channels tuned for US
-                        Fiber speeds. Experience IPTV with 4K support and HD quality.</p>
+                    <h3>99.9% Server Uptime</h3>
+                    <p>Optimized U.S. servers for smooth, buffer-free streaming.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="info-card">
-                    <div class="info-icon">
+                    <div class="info-icon info-icon--checkmark">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3>Catch-up & Replays</h3>
-                    <p>Missed the live kick-off? Jump back with 7-day catch-up and time-shift tools baked into every
-                        plan. Perfect for watching NFL, NBA, and MLB replays.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="info-card">
-                    <div class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                         </svg>
                     </div>
                     <h3>Instant Activation</h3>
-                    <p>Sign up, receive credentials, and start watching on any supported player in minutes — no tech
-                        degrees required. Follow our step-by-step setup guides.</p>
+                    <p>Get started in under 2 minutes on any device. No technical skills required.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="info-card">
+                    <div class="info-icon info-icon--checkmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="24" height="24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3>24/7 U.S. Support</h3>
+                    <p>Real technicians ready to help anytime by chat or WhatsApp.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="info-card">
-                    <div class="info-icon">
+                    <div class="info-icon info-icon--checkmark">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                         </svg>
                     </div>
-                    <h3>IPTV App & IPTV Box USA - All Devices</h3>
-                    <p>Samsung, LG, Android TV, Fire TV, Apple TV, MAG boxes, mobiles, and browsers — all supported with
-                        guides. Works with popular IPTV apps like IPTV Smarters Pro.</p>
-                </div>
-                <!-- Card 5 -->
-                <div class="info-card">
-                    <div class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                        </svg>
-                    </div>
-                    <h3>IPTV Channels USA - 22,500+ Live Channels</h3>
-                    <p>Sport, movies, news, and kids content sourced from vetted partners with constant catalogue
-                        refreshes. Explore live sports channels or see why USAns are switching.</p>
-                </div>
-                <!-- Card 6 -->
-                <div class="info-card">
-                    <div class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                        </svg>
-                    </div>
-                    <h3>Local USD Billing</h3>
-                    <p>Stripe or PayPal in US dollars, GST-ready invoices, and subscription control from your dashboard.
-                        Learn about our refund policy or read our comparison with cable.</p>
+                    <h3>Works on All Devices</h3>
+                    <p>Firestick, Smart TV, Android, iOS, Mac/PC — full compatibility guaranteed.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Sports Highlight Section -->
+    <section class="sports-highlight">
+        <div class="container">
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="benzema.png" alt="Sports Highlights">
+                </div>
+                <div class="highlight-content">
+                    <h2 class="highlight-title">Home to Even More Sports</h2>
+                    <p class="highlight-text">
+                        UltraStreamNow is your ultimate destination for live sports. Go beyond standard cable with
+                        exclusive access to NFL, NBA, UFC, Champions League, and more. Experience every match in
+                        stunning 4K quality with zero buffering.
+                    </p>
+
+                    <div class="highlight-plans">
+                        <div class="highlight-plan-row">
+                            <span class="plan-name">MONTHLY</span>
+                            <div class="plan-right">
+                                <div class="plan-price">
+                                    $14.99<span>/mo</span>
+                                </div>
+                                <a href="#pricing" class="btn btn--primary btn--sm">SUBSCRIBE</a>
+                            </div>
+                        </div>
+                        <div class="highlight-plan-row">
+                            <span class="plan-name">ANNUAL</span>
+                            <div class="plan-right">
+                                <div class="plan-price">
+                                    $80.00<span>/yr</span>
+                                </div>
+                                <a href="#pricing" class="btn btn--primary btn--sm">SUBSCRIBE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
@@ -676,7 +675,9 @@
                     </button>
                     <div class="faq-answer">
                         <p>Yes, we offer a risk-free trial so you can test our channel stability and VOD library before
-                            committing to a monthly or yearly plan. Click "Start Free Trial" to get started.</p>
+                            committing to a monthly or yearly plan. Click <a href="free-trial.html"
+                                style="color: var(--color-accent); text-decoration: none; font-weight: 600;">"Start Free
+                                Trial"</a> to get started.</p>
                     </div>
                 </div>
             </div>
