@@ -6,7 +6,7 @@
 
   <!-- Home Page - Highest Priority -->
   <url>
-    <loc>https://ultrastreamnow.com/</loc>
+    <loc>https://www.ultrastreamnow.com/index.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -14,143 +14,97 @@
 
   <!-- Main Navigation Pages -->
   <url>
-    <loc>https://ultrastreamnow.com/blog</loc>
+    <loc>https://www.ultrastreamnow.com/blog.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/reseller</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ultrastreamnow.com/contact</loc>
+    <loc>https://www.ultrastreamnow.com/contact.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Pricing/Plans Section -->
   <url>
-    <loc>https://ultrastreamnow.com/pricing</loc>
+    <loc>https://www.ultrastreamnow.com/free-trial.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Free Trial Page -->
   <url>
-    <loc>https://ultrastreamnow.com/free-trial</loc>
+    <loc>https://www.ultrastreamnow.com/reseller.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Features/Info Pages -->
+  <!-- Blog Posts -->
   <url>
-    <loc>https://ultrastreamnow.com/features</loc>
+    <loc>https://www.ultrastreamnow.com/blog/install-iptv-firestick-guide.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ultrastreamnow.com/faq</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Setup Guides -->
-  <url>
-    <loc>https://ultrastreamnow.com/setup-guides</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/setup-guides/firestick</loc>
+    <loc>https://www.ultrastreamnow.com/blog/iptv-vs-cable-2025.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/setup-guides/smart-tv</loc>
+    <loc>https://www.ultrastreamnow.com/blog/best-vpn-for-iptv-usa.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/setup-guides/android</loc>
+    <loc>https://www.ultrastreamnow.com/blog/understanding-iptv-beginner-guide.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/setup-guides/apple-tv</loc>
+    <loc>https://www.ultrastreamnow.com/blog/top-10-sports-channels-iptv.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Support Pages -->
   <url>
-    <loc>https://ultrastreamnow.com/support</loc>
+    <loc>https://www.ultrastreamnow.com/blog/fix-iptv-buffering-issues.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://ultrastreamnow.com/privacy-policy</loc>
+    <loc>https://www.ultrastreamnow.com/privacy-policy.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/terms-of-service</loc>
+    <loc>https://www.ultrastreamnow.com/terms-of-service.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://ultrastreamnow.com/refund-policy</loc>
+    <loc>https://www.ultrastreamnow.com/refund-policy.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-
-  <!-- Category Pages for SEO -->
-  <url>
-    <loc>https://ultrastreamnow.com/iptv-usa</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ultrastreamnow.com/iptv-sports</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ultrastreamnow.com/4k-streaming</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
+
