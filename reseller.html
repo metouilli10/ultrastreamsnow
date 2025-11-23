@@ -14,9 +14,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-new.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-new.png">
-    <link rel="shortcut icon" href="assets/logo-new.png">
 </head>
 
 <body class="reseller-page">
@@ -25,7 +22,7 @@
     <header class="header">
         <div class="container header__container">
             <a href="index.html" class="logo">
-                UltraStream<span class="text-gradient-gold">Now</span>
+                <img src="assets/logo-new.png" alt="UltraStreamNow Logo">
             </a>
             <nav class="nav">
                 <ul class="nav__list">
@@ -34,12 +31,12 @@
                     <li><a href="reseller.html" class="nav__link active">Reseller</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="header__actions">
                 <a href="free-trial.html" class="btn btn--primary">Free Trial</a>
-            </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </header>
@@ -56,13 +53,29 @@
                     <span class="text-gradient-gold">UltraStreamNow</span>
                 </h1>
                 <p class="premium-hero__text">
-                    Join the world's most premium IPTV reseller network. High margins, white-label panel, and 20,000+
-                    live channels at your fingertips.
+                    Join the world's most premium IPTV reseller network. Earn recurring income with high profit margins, white-label panel, and 20,000+ live channels at your fingertips.
                 </p>
                 <div class="premium-hero__actions">
                     <a href="#application-form" class="premium-btn">
-                        Apply Now <i class="fas fa-arrow-right"></i>
+                        Apply to Become a Reseller <i class="fas fa-arrow-right"></i>
                     </a>
+                    <a href="contact.html" class="premium-btn btn-secondary">
+                        Contact Reseller Team
+                    </a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>High Profit Margins</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Instant Activation</span>
+                    </div>
                 </div>
             </div>
 
@@ -81,42 +94,42 @@
             </div>
 
             <div class="premium-grid">
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-wallet"></i>
                     </div>
                     <h3>High Profit Margins</h3>
                     <p>Buy credits at wholesale rates and sell at your own price. Keep 100% of the profit markup.</p>
                 </div>
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>99.9% Uptime</h3>
                     <p>Our enterprise-grade servers ensure your customers enjoy buffer-free streaming 24/7.</p>
                 </div>
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3>White Label Panel</h3>
                     <p>Manage your customers with a fully branded panel. Your business, your brand.</p>
                 </div>
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Priority Support</h3>
                     <p>Get dedicated support via WhatsApp and Ticket system. We solve technical issues for you.</p>
                 </div>
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-tv"></i>
                     </div>
                     <h3>20K+ Channels</h3>
                     <p>Offer the most comprehensive library of Live TV, Movies, and Series in 4K/FHD.</p>
                 </div>
-                <div class="premium-card glass-panel">
+                <div class="premium-card">
                     <div class="premium-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -168,13 +181,14 @@
                 <div class="pricing-glass-card">
                     <h3>Starter</h3>
                     <div class="plan-price">$XXX <span>/ credit</span></div>
-                    <p style="color: var(--color-premium-text-muted);">Min Order: 10 Credits</p>
+                    <p style="color: var(--color-premium-text-muted); margin-bottom: 24px;">Min Order: 10 Credits</p>
                     <ul class="pricing-list">
                         <li><i class="fas fa-check check-gold"></i> Full Panel Access</li>
                         <li><i class="fas fa-check check-gold"></i> 24/7 Support</li>
                         <li><i class="fas fa-check check-gold"></i> No Expiry on Credits</li>
+                        <li><i class="fas fa-check check-gold"></i> White Label Options</li>
                     </ul>
-                    <a href="#application-form" class="btn btn--outline">Get Started</a>
+                    <a href="#application-form" class="btn btn--outline" style="width: 100%; justify-content: center; margin-top: 24px;">Get Started</a>
                 </div>
 
                 <!-- Pro -->
@@ -182,27 +196,28 @@
                     <div class="popular-badge">Most Popular</div>
                     <h3>Pro Reseller</h3>
                     <div class="plan-price">$YYY <span>/ credit</span></div>
-                    <p style="color: var(--color-premium-text-muted);">Min Order: 50 Credits</p>
+                    <p style="color: var(--color-premium-text-muted); margin-bottom: 24px;">Min Order: 50 Credits</p>
                     <ul class="pricing-list">
                         <li><i class="fas fa-check check-gold"></i> <strong>Priority Support</strong></li>
                         <li><i class="fas fa-check check-gold"></i> Free Marketing Assets</li>
                         <li><i class="fas fa-check check-gold"></i> Sub-Reseller Creation</li>
                         <li><i class="fas fa-check check-gold"></i> Best Profit Margin</li>
                     </ul>
-                    <a href="#application-form" class="premium-btn">Get Started</a>
+                    <a href="#application-form" class="premium-btn" style="width: 100%; justify-content: center; margin-top: 24px;">Get Started</a>
                 </div>
 
                 <!-- Elite -->
                 <div class="pricing-glass-card">
                     <h3>Elite</h3>
                     <div class="plan-price">$ZZZ <span>/ credit</span></div>
-                    <p style="color: var(--color-premium-text-muted);">Min Order: 100+ Credits</p>
+                    <p style="color: var(--color-premium-text-muted); margin-bottom: 24px;">Min Order: 100+ Credits</p>
                     <ul class="pricing-list">
                         <li><i class="fas fa-check check-gold"></i> Dedicated Account Manager</li>
-                        <li><i class="fas fa-check check-gold"></i> Custom DNS</li>
+                        <li><i class="fas fa-check check-gold"></i> Custom DNS Setup</li>
                         <li><i class="fas fa-check check-gold"></i> White Label App</li>
+                        <li><i class="fas fa-check check-gold"></i> Premium Features</li>
                     </ul>
-                    <a href="#application-form" class="btn btn--outline">Contact Us</a>
+                    <a href="#application-form" class="btn btn--outline" style="width: 100%; justify-content: center; margin-top: 24px;">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -216,18 +231,17 @@
             </div>
 
             <div class="testimonial-slider">
-                <div class="testimonial-glass">
+                    <div class="testimonial-glass">
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="quote">"I switched to UltraStreamNow last year and my churn rate dropped to zero. The
-                        streams are rock solid."</p>
+                        streams are rock solid and my customers are thrilled."</p>
                     <div class="user-profile">
-                        <div class="user-avatar"></div>
                         <div>
                             <strong>Michael R.</strong>
-                            <span style="display:block; font-size: 0.8rem; color: #94A3B8;">Reseller since 2023</span>
+                            <span>Reseller since 2023</span>
                         </div>
                     </div>
                 </div>
@@ -236,13 +250,11 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="quote">"The panel is so easy to use. I can manage my 500+ customers from my phone. Highly
-                        recommended."</p>
+                    <p class="quote">"The panel is so easy to use. I can manage my 500+ customers from my phone. Best decision for my business."</p>
                     <div class="user-profile">
-                        <div class="user-avatar"></div>
                         <div>
                             <strong>Sarah K.</strong>
-                            <span style="display:block; font-size: 0.8rem; color: #94A3B8;">Reseller since 2024</span>
+                            <span>Reseller since 2024</span>
                         </div>
                     </div>
                 </div>
@@ -252,12 +264,11 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="quote">"Best support team in the game. They actually help you solve problems instead of
-                        ignoring tickets."</p>
+                        ignoring tickets. Highly recommended."</p>
                     <div class="user-profile">
-                        <div class="user-avatar"></div>
                         <div>
                             <strong>David L.</strong>
-                            <span style="display:block; font-size: 0.8rem; color: #94A3B8;">Reseller since 2022</span>
+                            <span>Reseller since 2022</span>
                         </div>
                     </div>
                 </div>
@@ -268,29 +279,29 @@
     <!-- Application Form -->
     <section id="application-form" class="premium-form-section">
         <div class="container">
-            <div class="form-container-glass glass-panel">
+            <div class="form-container-glass">
                 <div class="text-center" style="margin-bottom: 40px;">
-                    <h2 class="section-title" style="color: white;">Apply Now</h2>
-                    <p style="color: var(--color-premium-text-muted);">Join the elite circle of UltraStreamNow partners.
-                    </p>
+                    <h2 class="section-title">Apply Now</h2>
+                    <p>Join the elite circle of UltraStreamNow partners and start earning today.</p>
                 </div>
 
                 <form>
                     <div class="form-group">
                         <label class="form-label">Full Name</label>
-                        <input type="text" class="premium-input" placeholder="John Doe">
+                        <input type="text" class="premium-input" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Email Address</label>
-                        <input type="email" class="premium-input" placeholder="john@example.com">
+                        <input type="email" class="premium-input" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">WhatsApp / Telegram</label>
-                        <input type="text" class="premium-input" placeholder="+1 234 567 890">
+                        <input type="text" class="premium-input" placeholder="+1 234 567 890" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Current Experience</label>
-                        <select class="premium-input">
+                        <select class="premium-input" required>
+                            <option value="">Select your experience level</option>
                             <option>New to Reselling</option>
                             <option>1-2 Years</option>
                             <option>3+ Years</option>
@@ -299,19 +310,20 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Estimated Monthly Sales</label>
-                        <select class="premium-input">
+                        <select class="premium-input" required>
+                            <option value="">Select estimated sales</option>
                             <option>10-50 Credits</option>
                             <option>50-200 Credits</option>
                             <option>200+ Credits</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="premium-btn" style="width: 100%; justify-content: center;">
-                        Submit Application
+                    <button type="submit" class="premium-btn" style="width: 100%; justify-content: center; margin-top: 16px;">
+                        Submit Application <i class="fas fa-arrow-right"></i>
                     </button>
 
                     <div class="text-center"
-                        style="margin-top: 20px; font-size: 0.8rem; color: var(--color-premium-text-muted);">
+                        style="margin-top: 24px; font-size: 0.875rem; color: var(--color-premium-text-muted);">
                         <i class="fas fa-lock"></i> Your data is encrypted and secure.
                     </div>
                 </form>
@@ -320,53 +332,59 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer"
-        style="background: var(--color-premium-bg-secondary); border-top: 1px solid var(--color-premium-border);">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <a href="index.html" class="logo">
-                        UltraStream<span class="text-gradient-gold">Now</span>
-                    </a>
-                    <p style="margin-top: 16px; color: var(--color-premium-text-muted);">
-                        The #1 Premium IPTV Service in the USA.
-                    </p>
-                </div>
-                <div class="footer__col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer__links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="reseller.html">Reseller Program</a></li>
-                        <li><a href="free-trial.html">Free Trial</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4>Legal</h4>
-                    <ul class="footer__links">
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="refund-policy.html">Refund Policy</a></li>
-                    </ul>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <p class="footer__desc">The #1 Rated IPTV Provider in the USA. Experience premium entertainment without
+                    the premium price tag.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="Instagram">IG</a>
                 </div>
             </div>
-            <div class="footer__bottom" style="border-top-color: var(--color-premium-border);">
-                <p>&copy; 2025 UltraStreamNow. All rights reserved.</p>
+            <div class="footer__col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="reseller.html">Reseller</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">DMCA</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Stay Updated</h4>
+                <p class="footer__newsletter-text">Subscribe for updates and exclusive offers.</p>
+                <form class="footer__newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn--primary">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <p>&copy; 2025 UltraStreamNow. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <span>Secure Payment:</span>
+                        <span>Credit Card</span>
+                        <span>Crypto</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('.nav');
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
