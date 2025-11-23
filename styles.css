@@ -1085,7 +1085,7 @@ input:checked+.slider:before {
 
 .detailed-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -1683,7 +1683,7 @@ input:checked+.slider:before {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -2787,6 +2787,10 @@ body.reseller-page {
         gap: 30px;
     }
 
+    .pricing-glass-card {
+        padding: 24px;
+    }
+
     .pricing__grid {
         padding: 20px 10px;
     }
@@ -3174,7 +3178,7 @@ body.reseller-page {
 }
 
 .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 /* Responsive Design for Free Trial Components */
