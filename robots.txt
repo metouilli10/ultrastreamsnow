@@ -1,0 +1,29 @@
+# UltraStreamNow Robots.txt
+# This file guides search engine crawlers
+
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas if they exist
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.md$
+
+# Allow CSS and JS for proper rendering
+Allow: /styles.css
+Allow: /script.js
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://ultrastreamnow.com/sitemap.xml
+
+# Crawl-delay to be respectful to server resources
+Crawl-delay: 1
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot  
+Crawl-delay: 10
+

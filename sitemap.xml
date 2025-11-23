@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://ultrastreamnow.com/</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Free Trial - Very High Priority (Conversion Page) -->
+    <url>
+        <loc>https://ultrastreamnow.com/free-trial.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Blog - High Priority (Content Hub) -->
+    <url>
+        <loc>https://ultrastreamnow.com/blog.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://ultrastreamnow.com/contact.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Reseller Page -->
+    <url>
+        <loc>https://ultrastreamnow.com/reseller.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Reseller Light Page -->
+    <url>
+        <loc>https://ultrastreamnow.com/reseller_light.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://ultrastreamnow.com/privacy-policy.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://ultrastreamnow.com/terms-of-service.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://ultrastreamnow.com/refund-policy.html</loc>
+        <lastmod>2025-11-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- 
+    TODO: Add these pages once created:
+    
+    Blog Posts (Priority: 0.7-0.8):
+    - /blog/how-to-setup-iptv-firestick-2025/
+    - /blog/iptv-vs-cable-tv-2025/
+    - /blog/best-vpn-for-iptv-usa/
+    - /blog/iptv-beginners-guide/
+    - /blog/top-10-sports-channels-iptv/
+    - /blog/fix-iptv-buffering-issues/
+    
+    Location Pages (Priority: 0.7-0.8):
+    - /iptv-service-new-york/
+    - /iptv-service-los-angeles/
+    - /iptv-service-chicago/
+    - /iptv-service-miami/
+    - /iptv-service-houston/
+    
+    Comparison Pages (Priority: 0.6-0.7):
+    - /iptv-vs-cable/
+    - /iptv-vs-streaming-services/
+    - /best-iptv-providers-comparison/
+    -->
+    
+</urlset>
+

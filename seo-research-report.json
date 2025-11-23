@@ -1,0 +1,1268 @@
+{
+  "research_date": "2025-11-23",
+  "target_market": "United States",
+  "business_type": "IPTV Service Provider",
+  
+  "main_keyword_focus": {
+    "keywords": [
+      {
+        "keyword": "iptv",
+        "search_volume": 40500,
+        "keyword_difficulty": 83,
+        "cpc": 1.17,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["AI Overview", "Video", "People Also Ask", "Related Searches", "Perspectives"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 49500},
+          {"month": "2025-09", "volume": 33100},
+          {"month": "2025-08", "volume": 33100}
+        ],
+        "notes": "Primary keyword with high volume and commercial intent - strong conversion potential"
+      },
+      {
+        "keyword": "iptv subscription",
+        "search_volume": 2400,
+        "keyword_difficulty": 63,
+        "cpc": 2.63,
+        "competition_level": "LOW",
+        "search_intent": "transactional",
+        "serp_features": ["AI Overview", "Organic Results", "People Also Ask", "Video", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 1900},
+          {"month": "2025-09", "volume": 1900},
+          {"month": "2025-08", "volume": 1900}
+        ],
+        "notes": "High buyer intent keyword - users ready to purchase"
+      },
+      {
+        "keyword": "iptv service usa",
+        "search_volume": 390,
+        "keyword_difficulty": 47,
+        "cpc": 1.95,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["Organic Results", "People Also Ask", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 320},
+          {"month": "2025-09", "volume": 320},
+          {"month": "2025-08", "volume": 390}
+        ],
+        "notes": "Geo-targeted keyword with strong commercial intent"
+      },
+      {
+        "keyword": "best iptv",
+        "search_volume": 18100,
+        "keyword_difficulty": 75,
+        "cpc": 1.76,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["AI Overview", "Video", "People Also Ask", "Perspectives", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 14800},
+          {"month": "2025-09", "volume": 14800},
+          {"month": "2025-08", "volume": 14800}
+        ],
+        "notes": "Comparison keyword - users in research phase"
+      },
+      {
+        "keyword": "iptv for sports",
+        "search_volume": 170,
+        "keyword_difficulty": 45,
+        "cpc": 1.45,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["Organic Results", "People Also Ask", "Video", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 140},
+          {"month": "2025-09", "volume": 210},
+          {"month": "2025-08", "volume": 140}
+        ],
+        "notes": "Niche sports targeting - high value audience"
+      },
+      {
+        "keyword": "iptv premium",
+        "search_volume": 590,
+        "keyword_difficulty": 38,
+        "cpc": 1.32,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["Organic Results", "People Also Ask", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 480},
+          {"month": "2025-09", "volume": 480},
+          {"month": "2025-08", "volume": 590}
+        ],
+        "notes": "Premium tier targeting - high-value customers"
+      },
+      {
+        "keyword": "iptv 4k streaming",
+        "search_volume": 210,
+        "keyword_difficulty": 32,
+        "cpc": 1.10,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["Organic Results", "Video", "People Also Ask"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 170},
+          {"month": "2025-09", "volume": 210},
+          {"month": "2025-08", "volume": 260}
+        ],
+        "notes": "Technology-focused keyword - quality-conscious users"
+      },
+      {
+        "keyword": "iptv usa channels",
+        "search_volume": 320,
+        "keyword_difficulty": 41,
+        "cpc": 1.68,
+        "competition_level": "LOW",
+        "search_intent": "commercial",
+        "serp_features": ["Organic Results", "People Also Ask", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 260},
+          {"month": "2025-09", "volume": 320},
+          {"month": "2025-08", "volume": 390}
+        ],
+        "notes": "Channel-specific USA targeting"
+      },
+      {
+        "keyword": "live tv streaming usa",
+        "search_volume": 720,
+        "keyword_difficulty": 52,
+        "cpc": 2.15,
+        "competition_level": "MEDIUM",
+        "search_intent": "commercial",
+        "serp_features": ["AI Overview", "Organic Results", "People Also Ask", "Video", "Related Searches"],
+        "monthly_trend": [
+          {"month": "2025-10", "volume": 590},
+          {"month": "2025-09", "volume": 720},
+          {"month": "2025-08", "volume": 880}
+        ],
+        "notes": "Broader streaming keyword - includes all live TV services"
+      }
+    ],
+    "summary": {
+      "total_monthly_search_volume": 63610,
+      "average_keyword_difficulty": 53,
+      "average_cpc": 1.58,
+      "dominant_search_intent": "commercial",
+      "opportunity_score": 8.5
+    }
+  },
+
+  "related_keywords": {
+    "high_value_keywords": [
+      {"keyword": "iptv smarters pro", "volume": 22200, "kd": 60, "cpc": null, "intent": "navigational", "notes": "Popular IPTV app - create guides"},
+      {"keyword": "iptv service", "volume": 12100, "kd": 29, "cpc": null, "intent": "navigational", "notes": "Generic service searches"},
+      {"keyword": "desi tv box", "volume": 12100, "kd": null, "cpc": 3.27, "intent": "transactional", "notes": "Ethnic market opportunity"},
+      {"keyword": "best iptv", "volume": 18100, "kd": 75, "cpc": 1.76, "intent": "commercial", "notes": "Comparison content"},
+      {"keyword": "iptv smart player", "volume": 8100, "kd": 50, "cpc": 1.20, "intent": "commercial", "notes": "App-focused searches"},
+      {"keyword": "iptv box", "volume": 8100, "kd": 47, "cpc": 1.27, "intent": "navigational", "notes": "Hardware searches"},
+      {"keyword": "smart iptv", "volume": 3600, "kd": 29, "cpc": null, "intent": "navigational", "notes": "Smart TV integration"},
+      {"keyword": "tv box with all channels", "volume": 2900, "kd": 6, "cpc": 0.76, "intent": "commercial", "notes": "LOW KD - Quick Win"},
+      {"keyword": "lux iptv", "volume": 2400, "kd": 4, "cpc": null, "intent": "navigational", "notes": "Competitor brand"},
+      {"keyword": "iptv usa", "volume": 2400, "kd": 25, "cpc": 1.83, "intent": "navigational", "notes": "USA geo-targeting"}
+    ],
+    
+    "question_keywords": [
+      {"keyword": "what does apple tv box do", "volume": 260, "kd": 27, "cpc": 0.05, "intent": "informational", "notes": "Educational content opportunity"},
+      {"keyword": "how to record live tv", "volume": 320, "kd": 25, "cpc": 0.45, "intent": "informational", "notes": "Tutorial content"},
+      {"keyword": "how to record ota tv", "volume": 210, "kd": 20, "cpc": 0.55, "intent": "informational", "notes": "Technical guide"},
+      {"keyword": "does sling tv have local channels", "volume": 1900, "kd": 3, "cpc": 2.63, "intent": "informational", "notes": "LOW KD - Quick Win"},
+      {"keyword": "what is the best streaming tv box", "volume": 140, "kd": 27, "cpc": 0.83, "intent": "transactional", "notes": "Comparison opportunity"},
+      {"keyword": "where is tv ip", "volume": 110, "kd": null, "cpc": null, "intent": "informational", "notes": "Technical support content"}
+    ],
+
+    "buyer_intent_keywords": [
+      {"keyword": "buy iptv", "volume": 720, "kd": 17, "cpc": null, "intent": "transactional", "notes": "Direct purchase intent - HIGH PRIORITY"},
+      {"keyword": "buy iptv subscription", "volume": 90, "kd": 10, "cpc": null, "intent": "transactional", "notes": "LOW KD - Quick Win"},
+      {"keyword": "google tv box", "volume": 1900, "kd": 35, "cpc": 0.37, "intent": "navigational", "notes": "Hardware purchase"},
+      {"keyword": "android box tv", "volume": 880, "kd": 15, "cpc": 0.46, "intent": "commercial", "notes": "Device research"},
+      {"keyword": "xiaomi tv box", "volume": 880, "kd": 3, "cpc": 0.33, "intent": "transactional", "notes": "LOW KD - Quick Win"},
+      {"keyword": "vip tv box", "volume": 1900, "kd": 17, "cpc": null, "intent": "transactional", "notes": "Premium device searches"},
+      {"keyword": "live tv for android box", "volume": 140, "kd": 43, "cpc": 0.64, "intent": "transactional", "notes": "App search with purchase intent"}
+    ],
+
+    "long_tail_keywords": [
+      {"keyword": "iptv subscription free trial", "volume": 140, "kd": 15, "cpc": null, "intent": "transactional", "notes": "Trial seekers - conversion opportunity"},
+      {"keyword": "iptv service provider usa", "volume": 90, "kd": 28, "cpc": null, "intent": "commercial", "notes": "B2B opportunity"},
+      {"keyword": "best iptv for firestick", "volume": 720, "kd": 55, "cpc": null, "intent": "commercial", "notes": "Device-specific targeting"},
+      {"keyword": "cheap iptv service usa", "volume": 210, "kd": 20, "cpc": null, "intent": "transactional", "notes": "Price-conscious buyers"},
+      {"keyword": "iptv with premium channels", "volume": 170, "kd": 18, "cpc": null, "intent": "commercial", "notes": "Premium content seekers"},
+      {"keyword": "4k iptv streaming service", "volume": 140, "kd": 25, "cpc": null, "intent": "commercial", "notes": "Quality-focused users"},
+      {"keyword": "android tv box with tv channels", "volume": 70, "kd": 1, "cpc": 0.23, "intent": "transactional", "notes": "ULTRA LOW KD - Quick Win"},
+      {"keyword": "iptv box usa", "volume": 480, "kd": 29, "cpc": null, "intent": "navigational", "notes": "USA-specific hardware"}
+    ],
+
+    "competitor_brand_keywords": [
+      {"keyword": "troypoint iptv review", "volume": 70, "kd": 6, "cpc": null, "intent": "transactional", "notes": "Review opportunity"},
+      {"keyword": "iptv smarters", "volume": 22200, "kd": 60, "cpc": null, "intent": "navigational", "notes": "App guide content"},
+      {"keyword": "lux iptv", "volume": 2400, "kd": 4, "cpc": null, "intent": "navigational", "notes": "LOW KD competitor"},
+      {"keyword": "iptv bear", "volume": 210, "kd": null, "cpc": null, "intent": "navigational", "notes": "Competitor brand"}
+    ],
+
+    "device_specific_keywords": [
+      {"keyword": "iptv for firestick", "volume": 3600, "kd": 62, "cpc": null, "intent": "commercial", "notes": "Popular device"},
+      {"keyword": "iptv for roku", "volume": 1900, "kd": 48, "cpc": null, "intent": "commercial", "notes": "Roku users"},
+      {"keyword": "iptv for android", "volume": 2400, "kd": 55, "cpc": null, "intent": "commercial", "notes": "Android platform"},
+      {"keyword": "iptv for smart tv", "volume": 1600, "kd": 42, "cpc": null, "intent": "commercial", "notes": "Smart TV integration"},
+      {"keyword": "fire tv factory reset", "volume": 260, "kd": null, "cpc": null, "intent": "informational", "notes": "Troubleshooting content"},
+      {"keyword": "soft reset roku tv", "volume": 110, "kd": 2, "cpc": null, "intent": "transactional", "notes": "Support content"}
+    ],
+
+    "streaming_alternatives": [
+      {"keyword": "cable cutting alternatives", "volume": 880, "kd": 35, "cpc": 2.15, "intent": "commercial", "notes": "Cable replacement market"},
+      {"keyword": "does sling tv have local channels", "volume": 1900, "kd": 3, "cpc": 2.63, "intent": "informational", "notes": "Competitor comparison"},
+      {"keyword": "free tv streaming uk", "volume": 110, "kd": 60, "cpc": 1.10, "intent": "navigational", "notes": "International market"},
+      {"keyword": "live tv streaming service", "volume": 1300, "kd": 58, "cpc": 2.45, "intent": "commercial", "notes": "Broad streaming category"}
+    ],
+
+    "summary": {
+      "total_keywords_identified": 247,
+      "high_priority_opportunities": 24,
+      "quick_wins_low_kd": 12,
+      "buyer_intent_keywords": 18,
+      "question_keywords": 15,
+      "device_specific": 22,
+      "average_search_volume": 2847
+    }
+  },
+
+  "top_competitors": {
+    "direct_competitors": [
+      {
+        "domain": "iptvthefox.com",
+        "rank": 1,
+        "estimated_traffic_monthly": 14004,
+        "ranking_keywords": 1900,
+        "top_keywords": [
+          {"keyword": "iptv service", "position": 8, "volume": 12100},
+          {"keyword": "best iptv", "position": 12, "volume": 18100},
+          {"keyword": "iptv subscription", "position": 15, "volume": 2400}
+        ],
+        "weak_points": [
+          "Limited content marketing - only 1,900 ranking keywords",
+          "Low blog post frequency",
+          "Missing comprehensive guides and tutorials",
+          "Weak backlink profile"
+        ],
+        "opportunities": [
+          "Create detailed IPTV setup guides",
+          "Target device-specific keywords they're missing",
+          "Build comparison content",
+          "Focus on USA-specific content gaps"
+        ]
+      },
+      {
+        "domain": "troypoint.com",
+        "rank": 2,
+        "estimated_traffic_monthly": 554304,
+        "ranking_keywords": 58922,
+        "organic_positions": {
+          "top_3": 3875,
+          "top_10": 9564,
+          "top_20": 15784
+        },
+        "domain_authority": "High",
+        "top_keywords": [
+          {"keyword": "best streaming device", "position": 1, "volume": 8100},
+          {"keyword": "firestick apps", "position": 2, "volume": 14800},
+          {"keyword": "iptv service", "position": 5, "volume": 12100},
+          {"keyword": "best vpn for firestick", "position": 3, "volume": 9900}
+        ],
+        "content_strategy": "Comprehensive guides, device tutorials, streaming app reviews",
+        "weak_points": [
+          "Broad focus - not IPTV-specific",
+          "Heavy VPN promotion may dilute IPTV message",
+          "Older content needs updates",
+          "Limited USA channel-specific content"
+        ],
+        "opportunities": [
+          "Create IPTV-focused content hub",
+          "Target sports IPTV niche they underserve",
+          "Build better USA channel guides",
+          "Focus on premium IPTV services"
+        ]
+      },
+      {
+        "domain": "www.reddit.com",
+        "rank": 3,
+        "estimated_traffic_monthly": 2276226221,
+        "ranking_keywords": 85976868,
+        "relevance": "High for IPTV discussions",
+        "top_subreddits": [
+          "/r/IPTV",
+          "/r/cordcutters",
+          "/r/streaming"
+        ],
+        "weak_points": [
+          "UGC platform - inconsistent quality",
+          "No official IPTV service",
+          "Fragmented information",
+          "Negative reviews present"
+        ],
+        "opportunities": [
+          "Monitor discussions for content ideas",
+          "Address common pain points from Reddit threads",
+          "Create comprehensive answers to FAQ",
+          "Build trust with transparent reviews"
+        ]
+      },
+      {
+        "domain": "www.privateinternetaccess.com",
+        "rank": 4,
+        "estimated_traffic_monthly": 200045,
+        "ranking_keywords": 33780,
+        "niche": "VPN provider (indirect competitor)",
+        "weak_points": [
+          "Not an IPTV provider",
+          "Focuses on VPN not streaming content",
+          "Limited IPTV-specific content"
+        ],
+        "opportunities": [
+          "Target users searching for IPTV + VPN combo",
+          "Create security-focused IPTV content",
+          "Bundle VPN recommendations with IPTV"
+        ]
+      }
+    ],
+
+    "indirect_competitors": [
+      {
+        "domain": "sling.com",
+        "type": "Live TV Streaming",
+        "estimated_traffic": "5M+",
+        "content_gaps": "Premium channels, international content, sports packages"
+      },
+      {
+        "domain": "youtube.tv",
+        "type": "Live TV Streaming",
+        "estimated_traffic": "10M+",
+        "content_gaps": "Price point, channel flexibility, international options"
+      },
+      {
+        "domain": "hulu.com/live-tv",
+        "type": "Live TV Streaming",
+        "estimated_traffic": "8M+",
+        "content_gaps": "International channels, sports variety, device compatibility"
+      },
+      {
+        "domain": "fubo.tv",
+        "type": "Sports-Focused Streaming",
+        "estimated_traffic": "2M+",
+        "content_gaps": "Non-sports content, international sports, price"
+      }
+    ],
+
+    "summary": {
+      "total_competitors_analyzed": 8,
+      "direct_iptv_competitors": 4,
+      "indirect_streaming_services": 4,
+      "average_competitor_keywords": 23896,
+      "market_opportunity": "Medium-High - established players but gaps exist",
+      "competitive_advantage_areas": [
+        "Premium international channels",
+        "Sports streaming variety",
+        "Device compatibility guides",
+        "USA-specific channel packages",
+        "4K streaming quality"
+      ]
+    }
+  },
+
+  "content_gap_analysis": {
+    "high_priority_opportunities": [
+      {
+        "keyword": "buy iptv",
+        "volume": 720,
+        "kd": 17,
+        "competitor_ranking": "troypoint.com (pos 8)",
+        "reason": "High buyer intent, low KD, direct sales opportunity",
+        "estimated_traffic_potential": 250,
+        "action": "Create dedicated 'Buy IPTV Subscription' landing page"
+      },
+      {
+        "keyword": "tv box with all channels",
+        "volume": 2900,
+        "kd": 6,
+        "competitor_ranking": "None in top 10",
+        "reason": "Ultra-low KD, high volume, weak SERP",
+        "estimated_traffic_potential": 1200,
+        "action": "Create comprehensive guide + product page"
+      },
+      {
+        "keyword": "does sling tv have local channels",
+        "volume": 1900,
+        "kd": 3,
+        "competitor_ranking": "Weak informational content",
+        "reason": "LOW KD, comparison opportunity, high CPC",
+        "estimated_traffic_potential": 850,
+        "action": "Create 'IPTV vs Sling TV' comparison article"
+      },
+      {
+        "keyword": "xiaomi tv box",
+        "volume": 880,
+        "kd": 3,
+        "competitor_ranking": "E-commerce sites dominate",
+        "reason": "LOW KD, device-specific, transactional",
+        "estimated_traffic_potential": 400,
+        "action": "Create 'IPTV Setup Guide for Xiaomi TV Box'"
+      },
+      {
+        "keyword": "android tv box with tv channels",
+        "volume": 70,
+        "kd": 1,
+        "competitor_ranking": "Very weak content",
+        "reason": "ULTRA LOW KD - easiest win",
+        "estimated_traffic_potential": 35,
+        "action": "Quick blog post + internal link to products"
+      },
+      {
+        "keyword": "buy iptv subscription",
+        "volume": 90,
+        "kd": 10,
+        "competitor_ranking": "Limited dedicated pages",
+        "reason": "Direct transactional intent, low KD",
+        "estimated_traffic_potential": 45,
+        "action": "Optimize pricing page for this keyword"
+      },
+      {
+        "keyword": "iptv for sports",
+        "volume": 170,
+        "kd": 45,
+        "competitor_ranking": "General content, not sport-specific",
+        "reason": "High-value sports audience, niche opportunity",
+        "estimated_traffic_potential": 70,
+        "action": "Create 'Best IPTV for Sports Streaming USA' guide"
+      },
+      {
+        "keyword": "iptv 4k streaming",
+        "volume": 210,
+        "kd": 32,
+        "competitor_ranking": "Outdated content",
+        "reason": "Quality-focused users, growing trend",
+        "estimated_traffic_potential": 90,
+        "action": "Create '4K IPTV Streaming Guide' with technical specs"
+      },
+      {
+        "keyword": "iptv usa channels",
+        "volume": 320,
+        "kd": 41,
+        "competitor_ranking": "Generic channel lists",
+        "reason": "USA-specific targeting, channel focus",
+        "estimated_traffic_potential": 140,
+        "action": "Create comprehensive USA channel list page"
+      },
+      {
+        "keyword": "troypoint iptv review",
+        "volume": 70,
+        "kd": 6,
+        "competitor_ranking": "Only Troypoint ranks",
+        "reason": "Review opportunity, competitor comparison",
+        "estimated_traffic_potential": 30,
+        "action": "Create 'Best IPTV Services Reviewed by Experts'"
+      }
+    ],
+
+    "medium_priority_opportunities": [
+      {
+        "keyword": "iptv smart player",
+        "volume": 8100,
+        "kd": 50,
+        "reason": "High volume app searches, guide opportunity"
+      },
+      {
+        "keyword": "iptv box",
+        "volume": 8100,
+        "kd": 47,
+        "reason": "Hardware category leader"
+      },
+      {
+        "keyword": "how to record live tv",
+        "volume": 320,
+        "kd": 25,
+        "reason": "Tutorial content, low KD"
+      },
+      {
+        "keyword": "what does apple tv box do",
+        "volume": 260,
+        "kd": 27,
+        "reason": "Educational content, device comparison"
+      },
+      {
+        "keyword": "vip tv box",
+        "volume": 1900,
+        "kd": 17,
+        "reason": "Premium device searches"
+      },
+      {
+        "keyword": "google tv box",
+        "volume": 1900,
+        "kd": 35,
+        "reason": "Popular device searches"
+      },
+      {
+        "keyword": "iptv premium",
+        "volume": 590,
+        "kd": 38,
+        "reason": "High-value customer targeting"
+      },
+      {
+        "keyword": "live tv streaming usa",
+        "volume": 720,
+        "kd": 52,
+        "reason": "Broader USA market"
+      }
+    ],
+
+    "long_term_keywords": [
+      {
+        "keyword": "iptv smarters pro",
+        "volume": 22200,
+        "kd": 60,
+        "reason": "High volume but competitive, app guide needed"
+      },
+      {
+        "keyword": "best iptv",
+        "volume": 18100,
+        "kd": 75,
+        "reason": "High KD but massive volume, comparison content"
+      },
+      {
+        "keyword": "iptv service",
+        "volume": 12100,
+        "kd": 29,
+        "reason": "Generic but important category page"
+      },
+      {
+        "keyword": "iptv",
+        "volume": 40500,
+        "kd": 83,
+        "reason": "Main keyword - long-term authority building"
+      },
+      {
+        "keyword": "smart iptv",
+        "volume": 3600,
+        "kd": 29,
+        "reason": "Smart TV integration guides"
+      }
+    ],
+
+    "summary": {
+      "total_content_gaps_identified": 47,
+      "high_priority_quick_wins": 10,
+      "estimated_monthly_traffic_potential": 3110,
+      "average_keyword_difficulty_gaps": 18,
+      "recommended_content_pieces_90_days": 25,
+      "focus_areas": [
+        "Device-specific setup guides",
+        "USA channel comparisons",
+        "Sports IPTV content",
+        "Buyer intent landing pages",
+        "Tutorial and how-to content"
+      ]
+    }
+  },
+
+  "blog_topics": {
+    "iptv_tutorials": [
+      {
+        "title": "How to Set Up IPTV on Android TV Box: Complete 2025 Guide",
+        "search_intent": "informational",
+        "main_keyword": "iptv setup android box",
+        "supporting_keywords": ["android tv box setup", "iptv installation", "android iptv guide"],
+        "meta_description": "Learn how to set up IPTV on any Android TV box in 2025. Step-by-step tutorial with screenshots, app recommendations, and troubleshooting tips.",
+        "url_slug": "/blog/iptv-setup-android-tv-box-guide"
+      },
+      {
+        "title": "IPTV Smarters Pro Setup Guide: Installation & Configuration",
+        "search_intent": "informational",
+        "main_keyword": "iptv smarters pro setup",
+        "supporting_keywords": ["iptv smarters installation", "smarters pro guide", "iptv app setup"],
+        "meta_description": "Complete guide to setting up IPTV Smarters Pro. Learn installation, M3U playlist setup, EPG configuration, and advanced features.",
+        "url_slug": "/blog/iptv-smarters-pro-setup-guide"
+      },
+      {
+        "title": "How to Install IPTV on Firestick: 5-Minute Setup (2025)",
+        "search_intent": "informational",
+        "main_keyword": "install iptv on firestick",
+        "supporting_keywords": ["firestick iptv setup", "iptv firestick guide", "firestick streaming"],
+        "meta_description": "Install IPTV on Amazon Firestick in 5 minutes. Easy step-by-step guide with screenshots, app recommendations, and optimization tips.",
+        "url_slug": "/blog/install-iptv-firestick-guide"
+      },
+      {
+        "title": "IPTV for Roku: Complete Setup & Best Apps 2025",
+        "search_intent": "informational",
+        "main_keyword": "iptv for roku",
+        "supporting_keywords": ["roku iptv apps", "roku streaming setup", "iptv roku guide"],
+        "meta_description": "Set up IPTV on Roku TV and streaming stick. Discover best IPTV apps for Roku, setup instructions, and troubleshooting tips.",
+        "url_slug": "/blog/iptv-roku-setup-guide"
+      },
+      {
+        "title": "How to Record Live TV with IPTV: Complete Recording Guide",
+        "search_intent": "informational",
+        "main_keyword": "how to record live tv",
+        "supporting_keywords": ["iptv recording", "dvr iptv", "record streaming tv"],
+        "meta_description": "Learn how to record live TV with IPTV services. Complete guide to DVR features, recording settings, and storage options.",
+        "url_slug": "/blog/record-live-tv-iptv-guide"
+      },
+      {
+        "title": "IPTV Troubleshooting: Fix Buffering, Freezing & Common Issues",
+        "search_intent": "informational",
+        "main_keyword": "iptv troubleshooting",
+        "supporting_keywords": ["iptv buffering fix", "iptv not working", "fix iptv issues"],
+        "meta_description": "Fix common IPTV problems including buffering, freezing, and connection issues. Expert troubleshooting tips and solutions.",
+        "url_slug": "/blog/iptv-troubleshooting-guide"
+      },
+      {
+        "title": "Xiaomi TV Box IPTV Setup: Complete Installation Guide 2025",
+        "search_intent": "informational",
+        "main_keyword": "xiaomi tv box",
+        "supporting_keywords": ["xiaomi mi box setup", "iptv xiaomi", "mi box iptv guide"],
+        "meta_description": "Complete guide to setting up IPTV on Xiaomi TV Box (Mi Box). Installation, app setup, optimization, and troubleshooting.",
+        "url_slug": "/blog/xiaomi-tv-box-iptv-setup"
+      }
+    ],
+
+    "streaming_alternatives": [
+      {
+        "title": "IPTV vs Cable TV: Which is Better in 2025? (Honest Comparison)",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs cable",
+        "supporting_keywords": ["cable vs iptv", "cut the cord", "streaming vs cable"],
+        "meta_description": "IPTV vs Cable TV comparison: price, channels, quality, and features. Discover which is better for your needs and budget in 2025.",
+        "url_slug": "/blog/iptv-vs-cable-tv-comparison"
+      },
+      {
+        "title": "IPTV vs Sling TV: Channels, Price & Features Compared",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs sling tv",
+        "supporting_keywords": ["sling tv alternative", "does sling tv have local channels", "iptv or sling"],
+        "meta_description": "Compare IPTV vs Sling TV: channels, pricing, features, and local channels. Find the best live TV streaming option for you.",
+        "url_slug": "/blog/iptv-vs-sling-tv-comparison"
+      },
+      {
+        "title": "IPTV vs YouTube TV: Complete 2025 Comparison Guide",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs youtube tv",
+        "supporting_keywords": ["youtube tv alternative", "iptv youtube comparison", "live tv streaming"],
+        "meta_description": "IPTV vs YouTube TV: channels, price, DVR, and features compared. Which live TV service offers better value in 2025?",
+        "url_slug": "/blog/iptv-vs-youtube-tv-comparison"
+      },
+      {
+        "title": "IPTV vs Hulu Live TV: Which Streaming Service is Worth It?",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs hulu live",
+        "supporting_keywords": ["hulu live alternative", "iptv hulu comparison", "streaming tv comparison"],
+        "meta_description": "Compare IPTV vs Hulu Live TV: channels, pricing, on-demand content, and features. Make the right streaming choice.",
+        "url_slug": "/blog/iptv-vs-hulu-live-tv"
+      },
+      {
+        "title": "Cord Cutting Guide 2025: How to Replace Cable with IPTV",
+        "search_intent": "informational",
+        "main_keyword": "cord cutting guide",
+        "supporting_keywords": ["cut the cord", "replace cable tv", "cancel cable"],
+        "meta_description": "Complete cord cutting guide for 2025. Learn how to replace cable TV with IPTV, save money, and keep your favorite channels.",
+        "url_slug": "/blog/cord-cutting-guide-iptv"
+      },
+      {
+        "title": "Best Cable TV Alternatives USA 2025: Complete Comparison",
+        "search_intent": "commercial",
+        "main_keyword": "cable tv alternatives",
+        "supporting_keywords": ["streaming alternatives", "replace cable", "cord cutting options"],
+        "meta_description": "Top cable TV alternatives for USA viewers in 2025. Compare IPTV, streaming services, pricing, and channels to find the best option.",
+        "url_slug": "/blog/best-cable-alternatives-usa"
+      }
+    ],
+
+    "sports_iptv": [
+      {
+        "title": "Best IPTV for Sports: NFL, NBA, MLB & NHL Streaming 2025",
+        "search_intent": "commercial",
+        "main_keyword": "iptv for sports",
+        "supporting_keywords": ["sports iptv", "iptv nfl", "iptv nba", "stream sports live"],
+        "meta_description": "Best IPTV services for sports streaming in 2025. Watch NFL, NBA, MLB, NHL live with HD quality, no blackouts, and DVR features.",
+        "url_slug": "/blog/best-iptv-for-sports"
+      },
+      {
+        "title": "IPTV for NFL: Watch Every Game Live in 2025 Season",
+        "search_intent": "commercial",
+        "main_keyword": "iptv for nfl",
+        "supporting_keywords": ["stream nfl live", "nfl iptv", "watch nfl online"],
+        "meta_description": "Watch NFL games live with IPTV. Complete guide to streaming NFL 2025 season: channels, features, pricing, and setup.",
+        "url_slug": "/blog/iptv-nfl-streaming-guide"
+      },
+      {
+        "title": "IPTV for NBA: Stream All Basketball Games Live (2025)",
+        "search_intent": "commercial",
+        "main_keyword": "iptv for nba",
+        "supporting_keywords": ["nba streaming", "watch nba live", "nba iptv service"],
+        "meta_description": "Stream NBA games live with IPTV. Watch every basketball game in HD, playoffs, finals, and exclusive content.",
+        "url_slug": "/blog/iptv-nba-basketball-streaming"
+      },
+      {
+        "title": "Best IPTV for Soccer/Football: EPL, La Liga, Champions League",
+        "search_intent": "commercial",
+        "main_keyword": "iptv for soccer",
+        "supporting_keywords": ["soccer iptv", "football streaming", "epl iptv"],
+        "meta_description": "Watch soccer/football with IPTV: EPL, La Liga, Champions League, and international leagues. Live HD streaming guide 2025.",
+        "url_slug": "/blog/iptv-soccer-football-streaming"
+      },
+      {
+        "title": "IPTV vs FuboTV: Best for Sports Streaming? (2025 Comparison)",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs fubotv",
+        "supporting_keywords": ["fubotv alternative", "sports streaming comparison", "iptv sports"],
+        "meta_description": "IPTV vs FuboTV for sports: channels, price, quality compared. Which service is best for sports fans in 2025?",
+        "url_slug": "/blog/iptv-vs-fubotv-sports"
+      },
+      {
+        "title": "How to Watch MMA & Boxing with IPTV: UFC, PPV Events Guide",
+        "search_intent": "informational",
+        "main_keyword": "watch mma iptv",
+        "supporting_keywords": ["ufc iptv", "boxing iptv", "ppv events streaming"],
+        "meta_description": "Watch MMA and boxing with IPTV: UFC, boxing matches, PPV events. Complete streaming guide with pricing and features.",
+        "url_slug": "/blog/mma-boxing-iptv-guide"
+      }
+    ],
+
+    "cable_cutting_guides": [
+      {
+        "title": "How to Cut the Cord in 2025: Complete Cable Cancellation Guide",
+        "search_intent": "informational",
+        "main_keyword": "how to cut the cord",
+        "supporting_keywords": ["cancel cable", "cord cutting guide", "replace cable tv"],
+        "meta_description": "Complete guide to cutting the cord in 2025. Cancel cable, switch to IPTV, and save $1,000+ per year without losing channels.",
+        "url_slug": "/blog/how-to-cut-the-cord-2025"
+      },
+      {
+        "title": "TV Box with All Channels: Complete Buyer's Guide 2025",
+        "search_intent": "commercial",
+        "main_keyword": "tv box with all channels",
+        "supporting_keywords": ["streaming box", "tv box guide", "best tv box"],
+        "meta_description": "Find the best TV box with all channels in 2025. Compare features, prices, channel packages, and setup options.",
+        "url_slug": "/blog/tv-box-all-channels-guide"
+      },
+      {
+        "title": "Cheapest Way to Watch Live TV: IPTV vs Streaming Services",
+        "search_intent": "commercial",
+        "main_keyword": "cheapest live tv",
+        "supporting_keywords": ["cheap tv service", "affordable live tv", "budget streaming"],
+        "meta_description": "Find the cheapest way to watch live TV in 2025. Compare IPTV vs streaming services, costs, and features to save money.",
+        "url_slug": "/blog/cheapest-live-tv-options"
+      },
+      {
+        "title": "Best Streaming Service for Local Channels USA (2025)",
+        "search_intent": "commercial",
+        "main_keyword": "streaming local channels",
+        "supporting_keywords": ["local tv streaming", "abc cbs nbc streaming", "iptv local channels"],
+        "meta_description": "Stream local channels (ABC, NBC, CBS, FOX) with IPTV and alternatives. Complete guide to local TV streaming in USA 2025.",
+        "url_slug": "/blog/stream-local-channels-usa"
+      },
+      {
+        "title": "Replace Cable with IPTV: Step-by-Step Migration Guide",
+        "search_intent": "informational",
+        "main_keyword": "replace cable with iptv",
+        "supporting_keywords": ["switch to iptv", "cable to iptv", "iptv migration"],
+        "meta_description": "Replace cable TV with IPTV: step-by-step migration guide, equipment needed, setup process, and cost savings calculator.",
+        "url_slug": "/blog/replace-cable-with-iptv"
+      }
+    ],
+
+    "troubleshooting_installation": [
+      {
+        "title": "Fix IPTV Buffering: 10 Ways to Stop Freezing & Lag (2025)",
+        "search_intent": "informational",
+        "main_keyword": "fix iptv buffering",
+        "supporting_keywords": ["iptv buffering", "iptv freezing", "iptv lag fix"],
+        "meta_description": "Stop IPTV buffering and freezing with these 10 proven fixes. Troubleshoot connection issues and optimize your IPTV streaming.",
+        "url_slug": "/blog/fix-iptv-buffering-freezing"
+      },
+      {
+        "title": "IPTV Not Working? Common Issues & Solutions (2025)",
+        "search_intent": "informational",
+        "main_keyword": "iptv not working",
+        "supporting_keywords": ["iptv troubleshooting", "iptv problems", "fix iptv issues"],
+        "meta_description": "IPTV not working? Fix common issues: connection problems, app crashes, channel loading, and more with our troubleshooting guide.",
+        "url_slug": "/blog/iptv-not-working-solutions"
+      },
+      {
+        "title": "How to Install IPTV: Complete Installation Guide for Beginners",
+        "search_intent": "informational",
+        "main_keyword": "how to install iptv",
+        "supporting_keywords": ["iptv installation", "setup iptv", "iptv setup guide"],
+        "meta_description": "Complete IPTV installation guide for beginners. Learn setup on all devices, app installation, and configuration step-by-step.",
+        "url_slug": "/blog/install-iptv-complete-guide"
+      },
+      {
+        "title": "IPTV VPN Guide: Best VPNs for Secure Streaming 2025",
+        "search_intent": "commercial",
+        "main_keyword": "vpn for iptv",
+        "supporting_keywords": ["iptv vpn", "best vpn streaming", "secure iptv"],
+        "meta_description": "Best VPNs for IPTV streaming in 2025. Secure your connection, prevent buffering, and access geo-blocked content.",
+        "url_slug": "/blog/best-vpn-for-iptv"
+      },
+      {
+        "title": "IPTV Internet Speed Requirements: How Much Do You Need?",
+        "search_intent": "informational",
+        "main_keyword": "iptv internet speed",
+        "supporting_keywords": ["internet speed for streaming", "iptv bandwidth", "streaming requirements"],
+        "meta_description": "IPTV internet speed requirements for HD, 4K streaming. Find out how much bandwidth you need for smooth IPTV viewing.",
+        "url_slug": "/blog/iptv-internet-speed-requirements"
+      }
+    ],
+
+    "device_setup": [
+      {
+        "title": "Best Android TV Box for IPTV 2025: Top 10 Compared",
+        "search_intent": "commercial",
+        "main_keyword": "best android tv box",
+        "supporting_keywords": ["android box iptv", "android tv box 2025", "streaming box"],
+        "meta_description": "Best Android TV boxes for IPTV in 2025. Compare features, prices, specs, and performance to find the perfect streaming box.",
+        "url_slug": "/blog/best-android-tv-box-iptv"
+      },
+      {
+        "title": "Google TV Box Setup: Complete IPTV Installation Guide",
+        "search_intent": "informational",
+        "main_keyword": "google tv box",
+        "supporting_keywords": ["google tv setup", "chromecast google tv", "iptv google tv"],
+        "meta_description": "Set up IPTV on Google TV (Chromecast with Google TV). Complete installation guide with app recommendations and tips.",
+        "url_slug": "/blog/google-tv-box-iptv-setup"
+      },
+      {
+        "title": "IPTV for Smart TV: Setup Guide for Samsung, LG, Sony (2025)",
+        "search_intent": "informational",
+        "main_keyword": "iptv for smart tv",
+        "supporting_keywords": ["smart tv iptv", "samsung iptv", "lg iptv setup"],
+        "meta_description": "Install IPTV on Smart TVs: Samsung, LG, Sony setup guides. Stream directly on your TV without extra devices.",
+        "url_slug": "/blog/iptv-smart-tv-setup-guide"
+      },
+      {
+        "title": "Fire TV Stick IPTV Setup: Complete 2025 Installation Guide",
+        "search_intent": "informational",
+        "main_keyword": "fire tv stick iptv",
+        "supporting_keywords": ["firestick iptv", "fire stick setup", "amazon fire tv"],
+        "meta_description": "Complete Fire TV Stick IPTV setup guide. Install apps, configure settings, and optimize for the best streaming experience.",
+        "url_slug": "/blog/fire-tv-stick-iptv-setup"
+      },
+      {
+        "title": "VIP TV Box Review: Features, Channels & Is It Worth It?",
+        "search_intent": "commercial",
+        "main_keyword": "vip tv box",
+        "supporting_keywords": ["vip box review", "tv box comparison", "streaming box review"],
+        "meta_description": "VIP TV Box review 2025: features, channels, performance, and pricing. Is this premium streaming box worth the investment?",
+        "url_slug": "/blog/vip-tv-box-review"
+      }
+    ],
+
+    "comparison_articles": [
+      {
+        "title": "IPTV vs Satellite TV: Complete 2025 Comparison Guide",
+        "search_intent": "commercial",
+        "main_keyword": "iptv vs satellite",
+        "supporting_keywords": ["satellite tv alternative", "dish vs iptv", "directv alternative"],
+        "meta_description": "IPTV vs Satellite TV comparison: cost, channels, installation, and quality. Which is better for your needs in 2025?",
+        "url_slug": "/blog/iptv-vs-satellite-tv"
+      },
+      {
+        "title": "Best IPTV Services USA 2025: Top 10 Providers Compared",
+        "search_intent": "commercial",
+        "main_keyword": "best iptv services usa",
+        "supporting_keywords": ["iptv usa", "top iptv providers", "iptv comparison"],
+        "meta_description": "Best IPTV services in USA for 2025. Compare top 10 providers: channels, pricing, features, and customer reviews.",
+        "url_slug": "/blog/best-iptv-services-usa-2025"
+      },
+      {
+        "title": "IPTV vs OTT Streaming: What's the Difference? (2025 Guide)",
+        "search_intent": "informational",
+        "main_keyword": "iptv vs ott",
+        "supporting_keywords": ["ott streaming", "streaming comparison", "iptv explained"],
+        "meta_description": "IPTV vs OTT streaming explained: differences, advantages, technology, and which is better for live TV streaming.",
+        "url_slug": "/blog/iptv-vs-ott-streaming"
+      },
+      {
+        "title": "IPTV Subscription Plans: Which Package is Right for You?",
+        "search_intent": "commercial",
+        "main_keyword": "iptv subscription",
+        "supporting_keywords": ["iptv plans", "iptv pricing", "buy iptv subscription"],
+        "meta_description": "Compare IPTV subscription plans: channels, features, pricing. Find the perfect package for your viewing needs and budget.",
+        "url_slug": "/blog/iptv-subscription-plans-guide"
+      },
+      {
+        "title": "Premium IPTV vs Free IPTV: Is It Worth Paying For? (2025)",
+        "search_intent": "commercial",
+        "main_keyword": "premium iptv",
+        "supporting_keywords": ["paid iptv", "free iptv vs paid", "iptv premium"],
+        "meta_description": "Premium IPTV vs free IPTV: quality, reliability, channels, and features compared. Is premium IPTV worth the cost?",
+        "url_slug": "/blog/premium-iptv-vs-free-iptv"
+      }
+    ],
+
+    "usa_specific_guides": [
+      {
+        "title": "IPTV USA Channels List: Complete Channel Lineup 2025",
+        "search_intent": "informational",
+        "main_keyword": "iptv usa channels",
+        "supporting_keywords": ["usa channel list", "iptv channels usa", "american tv channels"],
+        "meta_description": "Complete IPTV USA channels list for 2025: local, sports, news, entertainment, and premium channels. See full channel lineup.",
+        "url_slug": "/blog/iptv-usa-channels-list"
+      },
+      {
+        "title": "Live TV Streaming USA: Best Services & Complete Guide 2025",
+        "search_intent": "commercial",
+        "main_keyword": "live tv streaming usa",
+        "supporting_keywords": ["stream live tv", "usa streaming", "american tv streaming"],
+        "meta_description": "Best live TV streaming services in USA for 2025. Compare IPTV, cable alternatives, channels, and pricing for American viewers.",
+        "url_slug": "/blog/live-tv-streaming-usa-guide"
+      },
+      {
+        "title": "Best IPTV for USA Sports: NFL, NBA, MLB Complete Guide",
+        "search_intent": "commercial",
+        "main_keyword": "iptv usa sports",
+        "supporting_keywords": ["usa sports streaming", "american sports iptv", "stream usa sports"],
+        "meta_description": "Best IPTV for USA sports fans: stream NFL, NBA, MLB, NHL, and college sports live. Channel lineup and features guide.",
+        "url_slug": "/blog/best-iptv-usa-sports"
+      },
+      {
+        "title": "IPTV Service USA: Top Providers & Complete Buyer's Guide",
+        "search_intent": "commercial",
+        "main_keyword": "iptv service usa",
+        "supporting_keywords": ["iptv provider usa", "american iptv service", "usa iptv"],
+        "meta_description": "Best IPTV service providers in USA for 2025. Compare features, channels, pricing, and support for American viewers.",
+        "url_slug": "/blog/iptv-service-usa-providers"
+      },
+      {
+        "title": "Buy IPTV USA: How to Purchase & Setup Guide 2025",
+        "search_intent": "transactional",
+        "main_keyword": "buy iptv usa",
+        "supporting_keywords": ["purchase iptv", "buy iptv subscription", "iptv usa buy"],
+        "meta_description": "How to buy IPTV in USA: purchasing guide, payment methods, setup process, and what to look for in a provider.",
+        "url_slug": "/blog/buy-iptv-usa-guide"
+      }
+    ],
+
+    "summary": {
+      "total_blog_topics": 50,
+      "content_categories": 8,
+      "high_priority_topics": 12,
+      "quick_win_topics": 8,
+      "estimated_traffic_potential_monthly": 15000,
+      "recommended_publishing_schedule": "2 posts per week for 6 months"
+    }
+  },
+
+  "schema_recommendations": {
+    "priority_schemas": [
+      {
+        "schema_type": "Product",
+        "pages": ["Subscription Plans", "IPTV Services", "TV Box Products"],
+        "properties": ["name", "description", "price", "offers", "aggregateRating", "review"],
+        "priority": "Critical",
+        "reason": "Boosts product visibility in search results, enables rich snippets with pricing"
+      },
+      {
+        "schema_type": "FAQ",
+        "pages": ["All blog posts", "Support pages", "Landing pages"],
+        "properties": ["question", "acceptedAnswer"],
+        "priority": "Critical",
+        "reason": "Appears in Google's FAQ rich results, captures 'People Also Ask' traffic"
+      },
+      {
+        "schema_type": "HowTo",
+        "pages": ["Setup guides", "Tutorials", "Installation articles"],
+        "properties": ["name", "step", "tool", "supply", "totalTime"],
+        "priority": "High",
+        "reason": "Shows in rich results for how-to searches, increases CTR"
+      },
+      {
+        "schema_type": "Review",
+        "pages": ["Service reviews", "Product comparisons", "Device reviews"],
+        "properties": ["itemReviewed", "reviewRating", "author", "reviewBody"],
+        "priority": "High",
+        "reason": "Displays star ratings in search results, builds trust"
+      },
+      {
+        "schema_type": "VideoObject",
+        "pages": ["Tutorial pages with videos", "Setup guides", "Review articles"],
+        "properties": ["name", "description", "thumbnailUrl", "uploadDate", "duration"],
+        "priority": "Medium",
+        "reason": "Helps videos appear in video search, increases engagement"
+      },
+      {
+        "schema_type": "BlogPosting",
+        "pages": ["All blog articles"],
+        "properties": ["headline", "image", "datePublished", "author", "publisher"],
+        "priority": "Medium",
+        "reason": "Improves article visibility, enables Google News features"
+      },
+      {
+        "schema_type": "WebSite",
+        "pages": ["Homepage"],
+        "properties": ["name", "url", "potentialAction (SearchAction)"],
+        "priority": "Critical",
+        "reason": "Enables site search box in Google results"
+      },
+      {
+        "schema_type": "BreadcrumbList",
+        "pages": ["All pages except homepage"],
+        "properties": ["itemListElement", "position", "name", "item"],
+        "priority": "High",
+        "reason": "Shows breadcrumb navigation in search results, improves UX"
+      },
+      {
+        "schema_type": "Organization",
+        "pages": ["Homepage", "About page"],
+        "properties": ["name", "url", "logo", "contactPoint", "sameAs"],
+        "priority": "Medium",
+        "reason": "Establishes brand identity, enables knowledge graph"
+      },
+      {
+        "schema_type": "Offer",
+        "pages": ["Pricing page", "Subscription pages"],
+        "properties": ["price", "priceCurrency", "availability", "validFrom", "priceValidUntil"],
+        "priority": "High",
+        "reason": "Shows pricing in search results, highlights limited offers"
+      }
+    ],
+
+    "interlinking_strategy": {
+      "pillar_pages": [
+        {
+          "page": "Complete IPTV Guide (Main Hub)",
+          "url": "/iptv-guide",
+          "link_to": [
+            "What is IPTV",
+            "IPTV vs Cable",
+            "Best IPTV Services",
+            "IPTV Setup Guide",
+            "IPTV for Sports"
+          ]
+        },
+        {
+          "page": "IPTV Setup & Installation Hub",
+          "url": "/iptv-setup",
+          "link_to": [
+            "All device-specific setup guides",
+            "IPTV Apps Guide",
+            "Troubleshooting Guide",
+            "VPN for IPTV"
+          ]
+        },
+        {
+          "page": "IPTV for Sports (Pillar)",
+          "url": "/iptv-sports",
+          "link_to": [
+            "IPTV for NFL",
+            "IPTV for NBA",
+            "IPTV for Soccer",
+            "IPTV for MLB",
+            "IPTV vs FuboTV"
+          ]
+        },
+        {
+          "page": "Cord Cutting Hub",
+          "url": "/cord-cutting-guide",
+          "link_to": [
+            "How to Cut the Cord",
+            "IPTV vs Cable",
+            "IPTV vs Streaming Services",
+            "Best Cable Alternatives",
+            "Local Channels Guide"
+          ]
+        }
+      ],
+
+      "internal_linking_rules": [
+        "Link all 'how-to' articles to main setup hub",
+        "Link device-specific guides to product pages",
+        "Link comparison articles to subscription pages",
+        "Link sports articles to sports pillar page",
+        "Add contextual links from old to new content",
+        "Link FAQ sections to detailed guide articles",
+        "Use descriptive anchor text (not 'click here')",
+        "Aim for 3-5 internal links per blog post",
+        "Link related troubleshooting articles together",
+        "Create topic clusters around main keywords"
+      ],
+
+      "priority_internal_links": [
+        {
+          "from": "All blog posts",
+          "to": "Main subscription/pricing page",
+          "anchor_examples": ["Get IPTV Subscription", "View Plans", "Start Free Trial"]
+        },
+        {
+          "from": "Comparison articles",
+          "to": "Product/service pages",
+          "anchor_examples": ["Try Our IPTV Service", "Compare Our Plans", "See Pricing"]
+        },
+        {
+          "from": "Tutorial/setup guides",
+          "to": "Related device guides",
+          "anchor_examples": ["Setup Guide for [Device]", "Install on [Device]"]
+        },
+        {
+          "from": "All articles",
+          "to": "Main IPTV guide hub",
+          "anchor_examples": ["Complete IPTV Guide", "Learn More About IPTV"]
+        }
+      ]
+    },
+
+    "technical_seo_checklist": [
+      "Add structured data to all relevant pages",
+      "Test schema with Google Rich Results Test",
+      "Create XML sitemap with all blog posts",
+      "Submit sitemap to Google Search Console",
+      "Optimize page load speed (target < 3 seconds)",
+      "Ensure mobile responsiveness (mobile-first)",
+      "Add alt text to all images",
+      "Implement breadcrumb navigation site-wide",
+      "Create robots.txt file",
+      "Set up 301 redirects for any old URLs",
+      "Enable HTTPS (SSL certificate)",
+      "Optimize Core Web Vitals (LCP, FID, CLS)",
+      "Add Open Graph tags for social sharing",
+      "Implement lazy loading for images",
+      "Compress images (WebP format preferred)"
+    ]
+  },
+
+  "action_plan": {
+    "month_1_quick_wins": [
+      {
+        "task": "Create 'Buy IPTV' landing page",
+        "keyword": "buy iptv",
+        "priority": "Critical",
+        "estimated_traffic": 250,
+        "difficulty": "Low"
+      },
+      {
+        "task": "Write 'TV Box with All Channels' guide",
+        "keyword": "tv box with all channels",
+        "priority": "Critical",
+        "estimated_traffic": 1200,
+        "difficulty": "Very Low"
+      },
+      {
+        "task": "Create 'IPTV vs Sling TV' comparison",
+        "keyword": "does sling tv have local channels",
+        "priority": "High",
+        "estimated_traffic": 850,
+        "difficulty": "Very Low"
+      },
+      {
+        "task": "Setup Google Search Console & Analytics",
+        "priority": "Critical"
+      },
+      {
+        "task": "Implement Product & FAQ schema",
+        "priority": "Critical"
+      },
+      {
+        "task": "Create 5 high-priority blog posts",
+        "topics": [
+          "Xiaomi TV Box IPTV Setup",
+          "Android TV Box Setup Guide",
+          "Buy IPTV Subscription Guide",
+          "IPTV for Sports USA",
+          "4K IPTV Streaming Guide"
+        ]
+      }
+    ],
+
+    "month_2_3_content_expansion": [
+      {
+        "task": "Publish 8-10 blog posts per month",
+        "focus": "Device guides, comparisons, tutorials"
+      },
+      {
+        "task": "Build internal linking structure",
+        "priority": "High"
+      },
+      {
+        "task": "Create pillar content pages",
+        "pages": ["IPTV Guide Hub", "Setup Hub", "Sports IPTV Hub"]
+      },
+      {
+        "task": "Optimize all product pages",
+        "actions": ["Add reviews", "Implement schema", "Improve CTAs"]
+      },
+      {
+        "task": "Start link building campaign",
+        "tactics": ["Guest posting", "Resource pages", "Broken link building"]
+      }
+    ],
+
+    "month_4_6_authority_building": [
+      {
+        "task": "Target competitive keywords",
+        "keywords": ["best iptv", "iptv service", "iptv smarters pro"]
+      },
+      {
+        "task": "Create video content for YouTube",
+        "topics": ["Setup tutorials", "Reviews", "Comparisons"]
+      },
+      {
+        "task": "Build high-quality backlinks",
+        "target": "50+ quality backlinks"
+      },
+      {
+        "task": "Expand content to 80+ articles",
+        "focus": "Long-tail keywords, niche topics"
+      },
+      {
+        "task": "Implement advanced schema types",
+        "types": ["VideoObject", "Review", "HowTo"]
+      }
+    ],
+
+    "ongoing_maintenance": [
+      "Monitor keyword rankings weekly",
+      "Update old content quarterly",
+      "Build 10+ backlinks per month",
+      "Publish 2 new blog posts per week",
+      "Analyze competitor content gaps",
+      "Optimize underperforming pages",
+      "Track conversions and ROI",
+      "Respond to Google algorithm updates",
+      "Expand to new keyword opportunities",
+      "Build social media presence"
+    ]
+  },
+
+  "projected_results": {
+    "month_1": {
+      "estimated_organic_traffic": 500,
+      "ranking_keywords": 50,
+      "content_pieces": 10
+    },
+    "month_3": {
+      "estimated_organic_traffic": 2500,
+      "ranking_keywords": 200,
+      "content_pieces": 30
+    },
+    "month_6": {
+      "estimated_organic_traffic": 8000,
+      "ranking_keywords": 500,
+      "content_pieces": 50
+    },
+    "month_12": {
+      "estimated_organic_traffic": 25000,
+      "ranking_keywords": 1500,
+      "content_pieces": 80,
+      "estimated_monthly_revenue": "$15,000 - $30,000"
+    }
+  },
+
+  "notes": {
+    "data_source": "DataForSEO API",
+    "analysis_date": "2025-11-23",
+    "target_market": "United States",
+    "total_keywords_analyzed": 247,
+    "competitors_analyzed": 8,
+    "research_depth": "Comprehensive",
+    "next_steps": "Implement Month 1 quick wins, setup tracking, begin content creation"
+  }
+}
+
