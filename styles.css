@@ -241,8 +241,8 @@ p {
 /* Hero Section */
 .hero {
     padding-top: 100px;
-    padding-bottom: 100px;
-    /* Increased padding for spacing */
+    padding-bottom: 40px;
+    /* Reduced padding for less spacing */
     position: relative;
     overflow: visible;
     /* Allow posters to float out */
@@ -383,8 +383,8 @@ p {
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding-bottom: 160px;
-        /* Space for scrolling posters */
+        padding-bottom: 40px;
+        /* Reduced space for scrolling posters */
         display: block;
         /* Stack content */
         padding-top: 120px;
@@ -433,6 +433,12 @@ p {
         /* Smaller size (~30% reduction) */
         width: auto;
         margin: 0;
+    }
+
+    /* Reduce spacing between hero posters and marquee section on mobile */
+    .marquee-section {
+        margin-top: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -539,8 +545,8 @@ p {
 /* Marquee */
 .marquee-section {
     padding: 40px 0;
-    margin-top: 136px;
-    /* Added margin */
+    margin-top: 20px;
+    /* Reduced margin for less spacing */
     background-color: transparent;
     /* Removed background color */
     border-top: none;
@@ -1847,12 +1853,16 @@ input:checked+.slider:before {
 }
 
 .highlight-text {
-    color: #cbd5e1;
-    /* Light grey */
+    color: #ffffff !important;
+    /* White */
     margin-bottom: 30px;
     font-size: 0.95rem;
     line-height: 1.5;
     max-width: 95%;
+}
+
+.highlight-text strong {
+    color: #ffffff !important;
 }
 
 .highlight-plans {
@@ -1928,10 +1938,12 @@ input:checked+.slider:before {
 
     .highlight-title {
         font-size: 1.75rem;
+        color: #ffffff;
     }
 
     .highlight-text {
         font-size: 0.9rem;
+        color: #ffffff;
     }
 }
 
@@ -1945,6 +1957,21 @@ input:checked+.slider:before {
     .plan-right {
         width: 100%;
         justify-content: space-between;
+    }
+
+    .plan-price {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .plan-price span {
+        font-size: 0.7rem;
+    }
+
+    .highlight-plan-row .btn--sm {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 }
 
