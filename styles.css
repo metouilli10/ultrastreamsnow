@@ -2366,8 +2366,8 @@ input:checked+.slider:before {
     --color-premium-accent: #11BA82;
     --color-premium-accent-hover: #0D9668;
     --color-premium-accent-light: #D1FAE5;
-    --color-premium-text: #0F172A;
-    --color-premium-text-secondary: #475569;
+    --color-premium-text: #ffffff;
+    --color-premium-text-secondary: #e2e8f0;
     --color-premium-text-muted: #94A3B8;
     --color-premium-border: #E2E8F0;
     --color-premium-border-light: #F1F5F9;
