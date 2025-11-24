@@ -736,6 +736,13 @@ p {
     }
 }
 
+@media (max-width: 768px) {
+    .marquee-section {
+        margin-top: 68px;
+        padding: 20px 0;
+    }
+}
+
 .feature-card {
     background-color: var(--color-bg-main);
     padding: 48px 32px;
