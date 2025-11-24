@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ultrastreamnow.com"
+        }
+      ],
+      "destination": "https://ultrastreamnow.com/:1",
+      "permanent": true
+    }
+  ]
+}
+
