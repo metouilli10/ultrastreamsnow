@@ -124,27 +124,6 @@
     }
     </script>
 
-    <!-- Schema Markup - Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ultrastreamnow.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Free IPTV Trial",
-          "item": "https://ultrastreamnow.com/free-trial.html"
-        }
-      ]
-    }
-    </script>
 </head>
 
 <body>
@@ -152,43 +131,25 @@
     <!-- Navigation -->
     <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo-new.png" alt="UltraStreamNow Logo">
+            <a href="/" class="logo" aria-label="UltraStreamNow Home">
+                <img src="assets/logo-new.png" alt="UltraStreamNow IPTV Logo" width="180" height="40">
             </a>
-            <nav class="nav">
+            <nav class="nav" aria-label="Main Navigation">
                 <ul class="nav__list">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="blog.html" class="nav__link">Blog</a></li>
                     <li><a href="reseller.html" class="nav__link">Reseller</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-                <a href="free-trial.html" class="btn btn--primary">Free Trial</a>
+                <a href="free-trial.html" class="btn btn--primary">Start Free Trial</a>
             </nav>
-            <button class="mobile-toggle" aria-label="Toggle menu">
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
     </header>
-
-    <!-- Breadcrumb Navigation -->
-    <nav aria-label="Breadcrumb" class="breadcrumb">
-        <div class="container">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="index.html">
-                        <span itemprop="name">Home</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Free Trial</span>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
-        </div>
-    </nav>
 
     <!-- Free Trial Hero/Form Section -->
     <section class="free-trial-section">
@@ -202,16 +163,15 @@
                         commitment, no risk. Start your IPTV free test now and discover why thousands of Americans
                         choose UltraStreamNow.</p>
                     <ul class="trial-features">
-                        <li>✓ <strong>Instant Activation</strong> - Access in 1-2 minutes</li>
-                        <li>✓ <strong>No Credit Card Required</strong> - 100% risk-free trial</li>
-                        <li>✓ <strong>22,000+ Channels</strong> - Full library access</li>
-                        <li>✓ <strong>4K & HD Quality</strong> - Premium streaming quality</li>
-                        <li>✓ <strong>All Devices</strong> - Works on Firestick, Smart TV & more (<a href="blog.html">view setup guides</a>)</li>
-                        <li>✓ <strong>24/7 Support</strong> - Help when you need it (<a href="contact.html">contact us</a>)</li>
+                        <li><strong>Instant Activation</strong> - Access in 1-2 minutes</li>
+                        <li><strong>No Credit Card Required</strong> - 100% risk-free trial</li>
+                        <li><strong>22,000+ Channels</strong> - Full library access</li>
+                        <li><strong>4K & HD Quality</strong> - Premium streaming quality</li>
+                        <li><strong>24/7 Support</strong> - Help when you need it</li>
                     </ul>
                     <div class="trust-badges">
                         <div class="trust-badge">
-                            <strong>50,000+</strong>
+                            <strong>+5000</strong>
                             <span>Active Users</span>
                         </div>
                         <div class="trust-badge">
