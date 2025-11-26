@@ -285,40 +285,48 @@
                     <p>Join the elite circle of UltraStreamNow partners and start earning today.</p>
                 </div>
 
-                <form>
+                <form id="resellerForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8f2880a7-30ad-4ceb-be89-9753be742c9f">
+                    <input type="hidden" name="subject" value="New Reseller Application - UltraStreamNow">
+                    <input type="hidden" name="from_name" value="UltraStreamNow Reseller Form">
+                    <input type="hidden" name="to" value="ultrastreamnow1@gmail.com">
+                    <input type="hidden" name="redirect" value="false">
+                    
+                    <div id="reseller-form-message" style="display: none; padding: 12px; margin-bottom: 20px; border-radius: 8px; text-align: center;"></div>
+                    
                     <div class="form-group">
                         <label class="form-label">Full Name</label>
-                        <input type="text" class="premium-input" placeholder="John Doe" required>
+                        <input type="text" class="premium-input" name="name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Email Address</label>
-                        <input type="email" class="premium-input" placeholder="john@example.com" required>
+                        <input type="email" class="premium-input" name="email" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">WhatsApp / Telegram</label>
-                        <input type="text" class="premium-input" placeholder="+1 234 567 890" required>
+                        <input type="text" class="premium-input" name="whatsapp_telegram" placeholder="+1 234 567 890" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Current Experience</label>
-                        <select class="premium-input" required>
+                        <select class="premium-input" name="experience" required>
                             <option value="">Select your experience level</option>
-                            <option>New to Reselling</option>
-                            <option>1-2 Years</option>
-                            <option>3+ Years</option>
-                            <option>Expert / Large Network</option>
+                            <option value="new">New to Reselling</option>
+                            <option value="1-2">1-2 Years</option>
+                            <option value="3+">3+ Years</option>
+                            <option value="expert">Expert / Large Network</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Estimated Monthly Sales</label>
-                        <select class="premium-input" required>
+                        <select class="premium-input" name="monthly_sales" required>
                             <option value="">Select estimated sales</option>
-                            <option>10-50 Credits</option>
-                            <option>50-200 Credits</option>
-                            <option>200+ Credits</option>
+                            <option value="10-50">10-50 Credits</option>
+                            <option value="50-200">50-200 Credits</option>
+                            <option value="200+">200+ Credits</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="premium-btn" style="width: 100%; justify-content: center; margin-top: 16px;">
+                    <button type="submit" class="premium-btn" id="resellerSubmitBtn" style="width: 100%; justify-content: center; margin-top: 16px;">
                         Submit Application <i class="fas fa-arrow-right"></i>
                     </button>
 

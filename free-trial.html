@@ -185,24 +185,30 @@
                     </div>
                 </div>
                 <div class="trial-form-wrapper">
-                    <form class="trial-form" onsubmit="event.preventDefault();">
+                    <form class="trial-form" id="trialForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="736407d6-1607-4c00-9876-ca97e9d7ff51">
+                        <input type="hidden" name="subject" value="New Free Trial Request - UltraStreamNow">
+                        <input type="hidden" name="from_name" value="UltraStreamNow Free Trial Form">
+                        <input type="hidden" name="to" value="ultrastreamnow1@gmail.com">
+                        <input type="hidden" name="redirect" value="false">
                         <h3>🎁 Start Your Free Trial Now</h3>
                         <p class="form-subtitle">Get instant access to 22,000+ channels</p>
+                        <div id="form-message" style="display: none; padding: 12px; margin-bottom: 20px; border-radius: 8px; text-align: center;"></div>
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="john@example.com" required>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
                             <label for="whatsapp">WhatsApp Number (Optional)</label>
-                            <input type="tel" id="whatsapp" placeholder="+1 (555) 000-0000">
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 (555) 000-0000">
                         </div>
                         <div class="form-group">
                             <label for="device">Primary Device</label>
-                            <select id="device" required>
+                            <select id="device" name="device" required>
                                 <option value="" disabled selected>Select your device</option>
                                 <option value="firestick">Amazon Firestick / Fire TV</option>
                                 <option value="smarttv">Smart TV (Samsung/LG)</option>
@@ -216,14 +222,14 @@
                         </div>
                         <div class="form-group">
                             <label for="speed">Internet Speed</label>
-                            <select id="speed" required>
+                            <select id="speed" name="speed" required>
                                 <option value="" disabled selected>Select your speed</option>
                                 <option value="low">Less than 30 Mbps</option>
                                 <option value="medium">30 - 100 Mbps (Recommended)</option>
                                 <option value="high">More than 100 Mbps</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn--primary btn--full">🚀 Get Free Trial - Instant
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">🚀 Get Free Trial - Instant
                             Access</button>
                         <p class="form-note">✅ No credit card • ✅ No spam • ✅ Instant activation</p>
                     </form>

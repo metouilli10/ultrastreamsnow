@@ -120,4 +120,178 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Free Trial Form Submission Handler
+    const trialForm = document.getElementById('trialForm');
+    if (trialForm) {
+        trialForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('form-message');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '⏳ Submitting...';
+            formMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(trialForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Show success message
+                    formMessage.style.display = 'block';
+                    formMessage.style.backgroundColor = '#10b981';
+                    formMessage.style.color = '#fff';
+                    formMessage.textContent = '✅ Success! Your free trial request has been submitted. Check your email for login credentials!';
+                    
+                    // Reset form
+                    trialForm.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                formMessage.style.display = 'block';
+                formMessage.style.backgroundColor = '#ef4444';
+                formMessage.style.color = '#fff';
+                formMessage.textContent = '❌ Error: ' + (error.message || 'Failed to submit. Please try again or contact support.');
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        });
+    }
+
+    // Contact Form Submission Handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const formMessage = document.getElementById('contact-form-message');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '⏳ Sending...';
+            formMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Show success message
+                    formMessage.style.display = 'block';
+                    formMessage.style.backgroundColor = '#10b981';
+                    formMessage.style.color = '#fff';
+                    formMessage.textContent = '✅ Thank you! Your message has been sent successfully. We will get back to you within 24 hours.';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                formMessage.style.display = 'block';
+                formMessage.style.backgroundColor = '#ef4444';
+                formMessage.style.color = '#fff';
+                formMessage.textContent = '❌ Error: ' + (error.message || 'Failed to send message. Please try again or contact us directly at support@ultrastreamnow.com');
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        });
+    }
+
+    // Reseller Form Submission Handler
+    const resellerForm = document.getElementById('resellerForm');
+    if (resellerForm) {
+        resellerForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('resellerSubmitBtn');
+            const formMessage = document.getElementById('reseller-form-message');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '⏳ Submitting Application...';
+            formMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(resellerForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Show success message
+                    formMessage.style.display = 'block';
+                    formMessage.style.backgroundColor = '#10b981';
+                    formMessage.style.color = '#fff';
+                    formMessage.textContent = '✅ Success! Your reseller application has been submitted. Our team will review it and get back to you soon!';
+                    
+                    // Reset form
+                    resellerForm.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                formMessage.style.display = 'block';
+                formMessage.style.backgroundColor = '#ef4444';
+                formMessage.style.color = '#fff';
+                formMessage.textContent = '❌ Error: ' + (error.message || 'Failed to submit application. Please try again or contact us directly.');
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        });
+    }
 });
