@@ -84,6 +84,41 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://ultrastreamnow.com/blog/install-iptv-android-tv-box.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ultrastreamnow.com/blog/setup-iptv-smart-tv.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ultrastreamnow.com/blog/iptv-setup-iphone-ipad.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ultrastreamnow.com/blog/install-iptv-windows-pc.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ultrastreamnow.com/blog/iptv-setup-samsung-smart-tv.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Legal Pages -->
   <url>
     <loc>https://ultrastreamnow.com/privacy-policy.html</loc>
