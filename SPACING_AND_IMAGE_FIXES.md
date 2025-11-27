@@ -296,3 +296,6 @@ Updated mobile responsive:
 
 *Fixes completed on November 23, 2025*
 
+
+
+
