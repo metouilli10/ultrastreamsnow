@@ -7,9 +7,14 @@
     <title>Become a Reseller - UltraStreamNow</title>
     <meta name="description"
         content="Start your own profitable IPTV reseller business with UltraStreamNow. Best reseller panel with high profit margins, instant activation, 24/7 support, and white-label options. Join our reseller program today.">
-    <link rel="stylesheet" href="styles.css">
+    <!-- PERFORMANCE: Preload critical resources -->
+    <link rel="preload" href="styles.min.css" as="style">
+    <link rel="preload" href="assets/logo-new.webp" as="image" type="image/webp">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
@@ -395,7 +400,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.min.js" defer></script>
 </body>
 
 </html>

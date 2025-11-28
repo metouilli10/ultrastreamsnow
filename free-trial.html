@@ -7,9 +7,14 @@
     <title>Free IPTV Trial - 24 Hours No Credit Card Required | UltraStreamNow USA</title>
     <meta name="description"
         content="Start your free IPTV trial today! 24-hour IPTV free test with no credit card required. Access 22,000+ live channels in 4K/HD instantly. Best IPTV trial USA 2025.">
-    <link rel="stylesheet" href="styles.css">
+    <!-- PERFORMANCE: Preload critical resources -->
+    <link rel="preload" href="styles.min.css" as="style">
+    <link rel="preload" href="assets/logo-new.webp" as="image" type="image/webp">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-new.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-new.png">
@@ -568,7 +573,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.min.js" defer></script>
 </body>
 
 </html>
