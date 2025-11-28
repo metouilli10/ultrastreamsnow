@@ -33,10 +33,12 @@
     <meta property="og:title" content="Contact UltraStreamNow - 24/7 IPTV Customer Support USA">
     <meta property="og:description"
         content="Get 24/7 IPTV support in the USA. Instant help with subscription setup, Firestick activation, troubleshooting, and technical issues. Email and live chat available.">
-    <meta property="og:image" content="https://ultrastreamnow.com/assets/logo-new.png">
+    <!-- NOTE: Create dedicated OG image at 1200x630px for better social sharing -->
+    <meta property="og:image" content="https://ultrastreamnow.com/assets/og-contact.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Contact UltraStreamNow - 24/7 IPTV Support">
+    <meta property="og:image:alt" content="Contact UltraStreamNow - 24/7 IPTV Support | Get Help with Setup, Activation & Troubleshooting">
+    <meta property="og:image:type" content="image/png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -44,7 +46,47 @@
     <meta property="twitter:title" content="Contact UltraStreamNow - 24/7 IPTV Customer Support USA">
     <meta property="twitter:description"
         content="Get 24/7 IPTV support in the USA. Instant help with subscription setup, Firestick activation, troubleshooting, and technical issues. Email and live chat available.">
-    <meta property="twitter:image" content="https://ultrastreamnow.com/assets/logo-new.png">
+    <meta property="twitter:image" content="https://ultrastreamnow.com/assets/og-contact.png">
+    <meta property="twitter:image:alt" content="Contact UltraStreamNow - 24/7 IPTV Support">
+
+    <!-- ContactPage Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact UltraStreamNow - 24/7 IPTV Customer Support USA",
+      "description": "Contact UltraStreamNow for 24/7 IPTV support in the USA. Get instant help with subscription setup, Firestick activation, troubleshooting, and technical issues.",
+      "url": "https://ultrastreamnow.com/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "UltraStreamNow",
+        "url": "https://ultrastreamnow.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "support@ultrastreamnow.com",
+            "availableLanguage": ["English"],
+            "areaServed": "US",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
