@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-new.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-new.png">
@@ -158,7 +158,39 @@
 
         .header--floating .nav__link {
             color: #374151;
-            font-weight: 500
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .header--floating .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #850E35;
+            transition: width 0.3s ease;
+        }
+
+        .header--floating .nav__link:hover {
+            color: #850E35;
+        }
+
+        .header--floating .nav__link:hover::after {
+            width: 100%;
+        }
+
+        .header--floating .nav__link.active {
+            color: #850E35;
+            font-weight: 600;
+        }
+
+        .header--floating .nav__link.active::after {
+            width: 100%;
         }
 
         .header--floating .nav__list {
@@ -167,7 +199,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 14px
+            gap: 36px;
         }
 
         .header--floating .nav .btn {
@@ -299,7 +331,7 @@
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="blog.html" class="nav__link">Blog</a></li>
                     <li><a href="reseller.html" class="nav__link">Reseller</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li><a href="contact.html" class="nav__link active">Contact</a></li>
                 </ul>
                 <a href="free-trial.html" class="btn btn--primary">Start Free Trial</a>
             </nav>

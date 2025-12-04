@@ -21,11 +21,13 @@
     <!-- PERFORMANCE: Preload critical resources -->
     <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload" href="assets/logo-new.webp" as="image" type="image/webp">
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         as="style" crossorigin>
 
     <link rel="stylesheet" href="styles.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -33,9 +35,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- OPTIMIZED: Complete favicon set -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-new.png">
@@ -410,10 +410,10 @@
         }
 
         .hero-title {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            font-size: clamp(2.8rem, 5vw, 3.6rem);
-            line-height: 1.05;
-            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+            line-height: 1.25;
+            font-weight: 600;
             letter-spacing: -0.03em;
             color: #0F172A;
             text-align: center;
@@ -421,13 +421,34 @@
             margin: 0 auto 0.5rem;
         }
 
+        .section-title,
+        .highlight-title {
+            font-size: clamp(1.75rem, 3vw + 0.75rem, 2.75rem);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
         .hero-subtitle {
-            font-size: 1.05rem;
+            font-size: clamp(1rem, 2vw + 0.5rem, 1.125rem);
             line-height: 1.7;
             color: #6B7280;
             max-width: 38rem;
             text-align: center;
             margin: 0 auto 1.2rem;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+            line-height: 1.7;
+            color: #6B7280;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .feature-card p {
+            font-size: clamp(1rem, 1.5vw + 0.5rem, 1.0625rem);
+            line-height: 1.7;
+            color: #6B7280;
         }
 
         .hero-form {
@@ -474,26 +495,50 @@
         }
 
         .hero-button {
-            padding: 0.55rem 1.5rem;
+            padding: 0.7rem 2rem;
             border-radius: 999px;
-            background-color: #11BA82;
+            background: linear-gradient(135deg, #850E35 0%, #6B0B2A 100%);
             color: #FFFFFF;
             font-weight: 600;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
-            transition: background 160ms ease, box-shadow 160ms ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(133, 14, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .hero-button:hover::before {
+            left: 100%;
         }
 
         .hero-button:hover {
-            background-color: #0FA372;
-            box-shadow: 0 14px 30px rgba(17, 186, 130, 0.22);
-            transform: translateY(-1px);
+            background: linear-gradient(135deg, #6B0B2A 0%, #5A0923 100%);
+            box-shadow: 0 8px 24px rgba(133, 14, 53, 0.4);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .hero-button:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: 0 2px 8px rgba(133, 14, 53, 0.3);
         }
 
         .hero-note {
             font-size: 0.8rem;
             color: #9CA3AF;
-            margin-top: 0.45rem;
+            margin-top: 0.2rem;
             text-align: center;
         }
 
@@ -527,7 +572,7 @@
         .hero-logos-wrapper {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0));
             width: 100%;
-            margin-top: 0.7rem;
+            margin-top: -1rem;
         }
 
         .logo-slider {
@@ -619,14 +664,32 @@
             }
 
             .hero-title {
-                font-size: 1.75rem;
-                max-width: 100%;
-                padding: 0 1rem;
-                line-height: 1.2;
+                font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
+                line-height: 1.25;
+                max-width: 22ch;
+                padding: 0 0.5rem;
+                word-break: keep-all;
             }
 
-            .hero-subtitle {
-                margin-bottom: 0.5rem;
+            .section-title,
+            .highlight-title {
+                font-size: clamp(1.35rem, 3.5vw + 0.4rem, 1.75rem);
+                line-height: 1.3;
+                max-width: 30ch;
+                padding: 0 0.75rem;
+                word-break: keep-all;
+            }
+
+            .hero-subtitle,
+            .section-subtitle {
+                font-size: 1rem;
+                line-height: 1.65;
+                padding: 0 0.5rem;
+            }
+
+            .feature-card p {
+                font-size: 0.9375rem;
+                line-height: 1.65;
             }
 
             .hero-lite {
@@ -680,6 +743,38 @@
         .header--floating .nav__link {
             color: #374151;
             font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .header--floating .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #850E35;
+            transition: width 0.3s ease;
+        }
+
+        .header--floating .nav__link:hover {
+            color: #850E35;
+        }
+
+        .header--floating .nav__link:hover::after {
+            width: 100%;
+        }
+
+        .header--floating .nav__link.active {
+            color: #850E35;
+            font-weight: 600;
+        }
+
+        .header--floating .nav__link.active::after {
+            width: 100%;
         }
 
         .header--floating .nav__list {
@@ -688,7 +783,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 14px;
+            gap: 36px;
         }
 
         .header--floating .nav .btn {
@@ -741,7 +836,18 @@
                 margin: 0;
                 margin-top: 0;
                 border-radius: 0;
-                box-shadow: none;
+                box-shadow: var(--shadow-lg);
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 16px 18px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                z-index: 999;
+                display: none;
             }
 
             .header--floating .header__container {
@@ -767,11 +873,174 @@
 
             .header--floating .nav__list {
                 display: none;
+                width: 100%;
+                align-items: flex-start;
+                text-align: left;
+                padding: 8px 0 0;
             }
 
             body {
                 padding-top: 56px;
             }
+
+            /* Show mobile menu items when toggled */
+            .header--floating .nav.active {
+                display: flex;
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .header--floating .nav .btn {
+                width: 100%;
+                justify-content: center;
+                margin-top: 6px;
+            }
+
+            /* Hide CTA when nav is closed to avoid overlaying header */
+            .header--floating .nav:not(.active) .btn {
+                display: none;
+            }
+        }
+
+        /* Pricing Toggle Styles */
+        .pricing-toggle-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            background: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
+        }
+
+        .toggle-label {
+            font-weight: 700;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-label.active {
+            color: var(--color-text-main);
+        }
+
+        /* Custom Toggle Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 36px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e2e8f0;
+            transition: .4s;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 28px;
+            width: 28px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input:checked+.slider {
+            background-color: var(--color-accent);
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px var(--color-accent);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(28px);
+        }
+
+        .slider.round {
+            border-radius: 36px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Popular Badge */
+        .popular-badge {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #850E35;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 999px;
+            padding: 4px 12px;
+            z-index: 10;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Featured Card - Slightly Bigger */
+        .pricing-card--featured {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-toggle-wrapper {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 8px;
+            }
+
+            .pricing-toggle-wrapper .toggle-label {
+                padding: 8px 16px;
+                font-size: 0.875rem;
+            }
+
+            .pricing-card--featured {
+                transform: scale(1.02);
+            }
+        }
+
+        /* FAQ Interaction Styles */
+        .faq-item.active {
+            background-color: #FCF5EE;
+            border-color: #850E35;
+        }
+
+        .faq-item.active .faq-question {
+            color: #850E35;
+        }
+
+        .faq-item.active .faq-question .icon {
+            color: #850E35;
         }
     </style>
 </head>
@@ -789,12 +1058,12 @@
             </a>
             <nav class="nav" aria-label="Main Navigation">
                 <ul class="nav__list">
-                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#home" class="nav__link active">Home</a></li>
                     <li><a href="blog.html" class="nav__link">Blog</a></li>
                     <li><a href="reseller.html" class="nav__link">Reseller</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-                <a href="free-trial.html" class="btn btn--primary">Start Free Trial</a>
+                <a href="free-trial.html" class="btn btn--primary">Start 24h Free Trial</a>
             </nav>
             <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
@@ -821,7 +1090,7 @@
                 </svg>
                 <input type="email" name="email" placeholder="Enter your email for a 24h trial" required>
             </label>
-            <button class="hero-button" type="button">Get 24h Free Trial</button>
+            <button class="hero-button" type="button">Start 24h Free Trial</button>
         </div>
         <p class="hero-note">No spam, ever. We only use your email to send your activation details.</p>
     </section>
@@ -864,30 +1133,41 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <!-- OPTIMIZED: H2 with keywords -->
-                <h2 class="section-title">Why UltraStreamNow Is the Best IPTV Service in USA 2025</h2>
-            </div>
-            <div class="features__grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="feature-card">
-                    <h3>4K IPTV Streaming + Premium Sports Channels</h3>
-                    <p>Get access to <strong>NFL, NBA, UFC, PPV events</strong> & 22,000+ live channels in smooth 4K/HD
-                        — with <strong>no buffering</strong> guaranteed. Watch live sports streaming in crystal-clear
-                        quality. <a href="free-trial.html">Test our service free for 24 hours</a>.</p>
+    <section id="features" class="why-section">
+        <div class="why-container">
+            <h2 class="why-title">Why UltraStreamNow Is the Best IPTV Service in USA 2025</h2>
+            <p class="why-subtitle">Real 4K streams, massive content library and fast setup on every device.</p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-chip">4K Sports</div>
+                    <h3>4K IPTV Streaming + Premium Sports</h3>
+                    <ul>
+                        <li>NFL, NBA, UFC, PPV &amp; more in 4K/HD</li>
+                        <li>22,000+ live US &amp; international channels</li>
+                        <li>Optimized for <strong>no buffering</strong> on US traffic</li>
+                        <li><a href="free-trial.html">Test everything with a free 24h trial</a></li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>Massive VOD Library - 80,000+ Movies & Series</h3>
-                    <p>Enjoy 80,000+ movies, series & catch-up TV. New releases added daily. Everything available
-                        instantly in your IPTV player with full HD and 4K options. <a href="#pricing">View our
-                            affordable subscription plans</a> starting at just $29.</p>
+                <div class="why-card">
+                    <div class="why-chip">VOD Library</div>
+                    <h3>Massive VOD Library – 80,000+ Movies &amp; Series</h3>
+                    <ul>
+                        <li>80,000+ movies, series &amp; catch-up TV</li>
+                        <li>New releases added almost every day</li>
+                        <li>Full HD &amp; 4K VOD on all your devices</li>
+                        <li>Affordable plans starting at just $29</li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>IPTV for Firestick & All Devices</h3>
-                    <p>Optimized for <strong>IPTV on Firestick, Android TV, Smart TVs (Samsung/LG), iOS, Apple
-                            TV</strong> & more. <strong>Instant activation</strong> — setup takes less than 2 minutes.
-                        <a href="blog.html">View our device setup guides</a>.</p>
+                <div class="why-card">
+                    <div class="why-chip">All Devices</div>
+                    <h3>IPTV for Firestick &amp; All Devices</h3>
+                    <ul>
+                        <li>Works with Firestick, Android TV &amp; Smart TVs</li>
+                        <li>Also on iOS, Apple TV, Windows, Mac &amp; more</li>
+                        <li>Instant activation – setup in under 2 minutes</li>
+                        <li><a href="blog.html">Step-by-step guides + live support if you're stuck</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -994,7 +1274,7 @@
                         </p>
                     </div>
                     <ul class="pricing-card__features">
-                        <li class="device-count">Works on 1 Device</li>
+                        <li>1 Device</li>
                         <li>22,500+ Live Channels</li>
                         <li>80,000+ Movies & Series</li>
                         <li>4K & HD Quality</li>
@@ -1017,7 +1297,7 @@
                         </p>
                     </div>
                     <ul class="pricing-card__features">
-                        <li class="device-count">Works on 1 Device</li>
+                        <li>1 Device</li>
                         <li>22,500+ Live Channels</li>
                         <li>80,000+ Movies & Series</li>
                         <li>4K & HD Quality</li>
@@ -1029,32 +1309,9 @@
                     </div>
                 </div>
 
-                <!-- Plan 3: 24 Months (Best Value) -->
+                <!-- Plan 3: 12 Months (Recommended) -->
                 <div class="pricing-card pricing-card--featured">
-                    <div class="pricing-card__header">
-                        <h3>24 Months Pass</h3>
-                        <p class="price">
-                            <span class="currency">$</span>
-                            <span class="amount" data-standard="80" data-premium="90">80</span>
-                            <span class="period">/USD</span>
-                        </p>
-                    </div>
-                    <ul class="pricing-card__features">
-                        <li class="device-count">Works on 1 Device</li>
-                        <li>22,500+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
-                        <li>4K & HD Quality</li>
-                        <li>Anti-Freeze Technology</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <div class="pricing-card__footer">
-                        <a href="https://whop.com/checkout/plan_xLkcMohmfySKW" class="btn btn--primary"
-                            id="plan-24m-standard">Get Best Value</a>
-                    </div>
-                </div>
-
-                <!-- Plan 4: 12 Months -->
-                <div class="pricing-card">
+                    <div class="popular-badge">Most Popular</div>
                     <div class="pricing-card__header">
                         <h3>12 Months Pass</h3>
                         <p class="price">
@@ -1064,7 +1321,7 @@
                         </p>
                     </div>
                     <ul class="pricing-card__features">
-                        <li class="device-count">Works on 1 Device</li>
+                        <li>1 Device</li>
                         <li>22,500+ Live Channels</li>
                         <li>80,000+ Movies & Series</li>
                         <li>4K & HD Quality</li>
@@ -1072,8 +1329,32 @@
                         <li>Priority Support</li>
                     </ul>
                     <div class="pricing-card__footer">
-                        <a href="https://whop.com/checkout/plan_uIYGKgusOd8AU" class="btn btn--outline"
+                        <a href="https://whop.com/checkout/plan_uIYGKgusOd8AU" class="btn btn--primary"
                             id="plan-12m-standard">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Plan 4: 24 Months -->
+                <div class="pricing-card">
+                    <div class="pricing-card__header">
+                        <h3>24 Months Pass</h3>
+                        <p class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-standard="80" data-premium="90">80</span>
+                            <span class="period">/USD</span>
+                        </p>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li>1 Device</li>
+                        <li>22,500+ Live Channels</li>
+                        <li>80,000+ Movies & Series</li>
+                        <li>4K & HD Quality</li>
+                        <li>Anti-Freeze Technology</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="pricing-card__footer">
+                        <a href="https://whop.com/checkout/plan_xLkcMohmfySKW" class="btn btn--outline"
+                            id="plan-24m-standard">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -1094,7 +1375,7 @@
                 <p class="section-subtitle">Watch <strong>NFL, NBA, NHL, UFC, MLB, Premier League</strong>, and more
                     with the <strong>best IPTV for sports streaming USA</strong> — all in stunning HD/4K quality with no
                     buffering. <a href="blog.html">Check out our guide to the top sports channels on IPTV</a> or <a
-                        href="free-trial.html">start your free trial</a> to experience premium sports streaming.</p>
+                        href="free-trial.html">Start 24h Free Trial</a> to experience premium sports streaming.</p>
             </div>
         </div>
         <div class="carousel-wrapper">
@@ -1338,66 +1619,117 @@
     </section>
 
     <!-- Detailed Features Section -->
-    <section class="detailed-features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why 50,000+ Americans Choose UltraStreamNow as Their Top IPTV Provider</h2>
-                <p class="section-subtitle">Premium IPTV streaming technology with <strong>4K quality, no
-                        buffering</strong>, and the <strong>best IPTV service</strong> designed specifically for USA
-                    viewers in 2025</p>
-            </div>
-            <div class="detailed-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+    <section class="bg-[#FCF5EE] py-16">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 text-center">
+                Why 50,000+ Americans Choose UltraStreamNow as Their Top IPTV Provider
+            </h2>
+            <p class="mt-3 text-center text-sm md:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Premium IPTV streaming technology with <strong>4K quality, no buffering</strong>, and the <strong>best IPTV service</strong> designed specifically for USA viewers in 2025
+            </p>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-4">
                 <!-- Card 1 -->
-                <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
+                <div
+                    class="h-full rounded-3xl bg-white pt-5 pb-6 px-6 md:pt-5 md:pb-7 md:px-7 border border-[#FFE3E3]
+                           shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#850E35]
+                           transition-all duration-200 ease-out"
+                >
+                    <!-- icon chip -->
+                    <div class="inline-flex items-center justify-center rounded-2xl bg-[#FFC4C4]/80 p-2">
+                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#850E35]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4l7 3v4c0 5-3.5 9-7 9s-7-4-7-9V7l7-3z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.5l2 2 4-4" />
+                            </svg>
+                        </span>
                     </div>
-                    <h3>99.9% Server Uptime - No Buffering IPTV</h3>
-                    <p>Optimized U.S. servers for <strong>stable IPTV service</strong> with smooth, buffer-free
-                        streaming. Our <strong>no buffering IPTV</strong> technology ensures you watch what you want,
-                        when you want — even during peak hours.</p>
+
+                    <h3 class="mt-3 text-lg md:text-xl font-semibold text-slate-900 max-w-xs">
+                        99.9% Server Uptime — <br class="hidden md:block" /> No Buffering
+                    </h3>
+                    <ul class="mt-3 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-4">
+                        <li>U.S. servers optimized for IPTV</li>
+                        <li>Stable 4K/HD streams even at peak hours</li>
+                        <li>Built to avoid freezing and buffering</li>
+                    </ul>
                 </div>
+
                 <!-- Card 2 -->
-                <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
+                <div
+                    class="h-full rounded-3xl bg-white pt-5 pb-6 px-6 md:pt-5 md:pb-7 md:px-7 border border-[#FFE3E3]
+                           shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#850E35]
+                           transition-all duration-200 ease-out"
+                >
+                    <!-- icon chip -->
+                    <div class="inline-flex items-center justify-center rounded-2xl bg-[#FFC4C4]/80 p-2">
+                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#850E35]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.5 2.5 5 14h6l-1 7.5L19.5 12H13l1.5-9.5Z" />
+                            </svg>
+                        </span>
                     </div>
-                    <h3>Instant Activation & Easy Setup</h3>
-                    <p>Get started in under 2 minutes on any device with our <strong>instant activation</strong>. No
-                        technical skills required. <a href="blog.html">View our IPTV setup guides</a> for Firestick,
-                        Smart TV, and more.</p>
+
+                    <h3 class="mt-3 text-lg md:text-xl font-semibold text-slate-900 max-w-xs">
+                        Instant Activation &amp; <br class="hidden md:block" /> Easy Setup
+                    </h3>
+                    <ul class="mt-3 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-4">
+                        <li>Start watching in under 2 minutes</li>
+                        <li>Works on Firestick, Smart TV &amp; more</li>
+                        <li>No tech skills or PC required</li>
+                    </ul>
                 </div>
+
                 <!-- Card 3 -->
-                <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
+                <div
+                    class="h-full rounded-3xl bg-white pt-5 pb-6 px-6 md:pt-5 md:pb-7 md:px-7 border border-[#FFE3E3]
+                           shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#850E35]
+                           transition-all duration-200 ease-out"
+                >
+                    <!-- icon chip -->
+                    <div class="inline-flex items-center justify-center rounded-2xl bg-[#FFC4C4]/80 p-2">
+                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#850E35]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12v-1a7 7 0 1 1 14 0v1" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12v3a2 2 0 0 0 2 2h1m0-5v5m10-5v3a2 2 0 0 1-2 2h-1m0-5v5" />
+                            </svg>
+                        </span>
                     </div>
-                    <h3>24/7 USA-Based Support</h3>
-                    <p>Real IPTV experts ready to help anytime by live chat, email or WhatsApp. Get help with
-                        <strong>IPTV setup, troubleshooting</strong>, and technical questions. <a
-                            href="contact.html">Contact our support team</a>.</p>
+
+                    <h3 class="mt-3 text-lg md:text-xl font-semibold text-slate-900 max-w-xs">
+                        24/7 USA-Based <br class="hidden md:block" /> Support
+                    </h3>
+                    <ul class="mt-3 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-4">
+                        <li>Real agents, not bots</li>
+                        <li>Live chat, email &amp; WhatsApp</li>
+                        <li>Help with setup &amp; troubleshooting</li>
+                    </ul>
                 </div>
+
                 <!-- Card 4 -->
-                <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
+                <div
+                    class="h-full rounded-3xl bg-white pt-5 pb-6 px-6 md:pt-5 md:pb-7 md:px-7 border border-[#FFE3E3]
+                           shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#850E35]
+                           transition-all duration-200 ease-out"
+                >
+                    <!-- icon chip -->
+                    <div class="inline-flex items-center justify-center rounded-2xl bg-[#FFC4C4]/80 p-2">
+                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#850E35]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <rect x="3" y="7" width="12" height="9" rx="1.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 16v3h6.5A2.5 2.5 0 0 0 18 16v-6h2.5A1.5 1.5 0 0 1 22 11.5v4A1.5 1.5 0 0 1 20.5 17H18" />
+                            </svg>
+                        </span>
                     </div>
-                    <h3>Multi-Device IPTV Support</h3>
-                    <p><strong>IPTV for Firestick, Smart TV (Samsung/LG), Android TV, iOS, Apple TV, Mac/PC</strong> —
-                        full compatibility guaranteed. Stream on <strong>multiple devices</strong> simultaneously with
-                        our premium plans.</p>
+
+                    <h3 class="mt-3 text-lg md:text-xl font-semibold text-slate-900 max-w-xs">
+                        Multi-Device IPTV <br class="hidden md:block" /> Support
+                    </h3>
+                    <ul class="mt-3 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-4">
+                        <li>Firestick, Samsung/LG, Android TV</li>
+                        <li>iOS, Apple TV, Mac &amp; PC</li>
+                        <li>Stream on multiple devices with premium plans</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1434,7 +1766,7 @@
                                 <div class="plan-price">
                                     $0.00
                                 </div>
-                                <a href="free-trial.html" class="btn btn--primary btn--sm">FREE TRIAL</a>
+                                <a href="free-trial.html" class="btn btn--primary btn--sm">Start 24h Free Trial</a>
                             </div>
                         </div>
                         <div class="highlight-plan-row">
@@ -1534,9 +1866,7 @@
                         <p>Yes, we offer a risk-free 24-hour trial so you can test our channel stability and VOD library
                             before
                             committing to a monthly or yearly plan. <a href="free-trial.html"
-                                style="color: var(--color-accent); text-decoration: none; font-weight: 600;">Start your
-                                free
-                                trial now</a> - no credit card required.</p>
+                                style="color: var(--color-accent); text-decoration: none; font-weight: 600;">Start 24h Free Trial</a> - no credit card required.</p>
                     </div>
                 </div>
             </div>
@@ -1550,7 +1880,7 @@
                 <h2 class="section-title">The Complete IPTV Solution for American Viewers</h2>
             </div>
             <div
-                style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--color-text-secondary); text-align: justify;">
+                style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--color-text-secondary);">
                 <p style="margin-bottom: 20px;">
                     Looking for the <strong>best IPTV service in USA</strong>? UltraStreamNow delivers a premium
                     <strong>IPTV subscription</strong> that gives you access to over 22,000 live channels, 80,000+
@@ -1566,15 +1896,21 @@
                     Join 50,000+ satisfied customers who trust UltraStreamNow for their entertainment needs. With
                     <strong>instant activation, 24/7 USA-based support</strong>, and a <strong>30-day money-back
                         guarantee</strong>, you have nothing to lose. <a href="free-trial.html"
-                        style="color: var(--color-accent); font-weight: 600;">Start your free 24-hour trial</a> today
+                        style="color: var(--color-accent); font-weight: 600;">Start 24h Free Trial</a> today
                     and discover why we're rated the <strong>top IPTV provider in 2025</strong>.
                 </p>
+                <p style="margin-bottom: 20px;">
+                    <strong>Perfect for:</strong>
+                </p>
+                <ul style="margin-bottom: 20px; padding-left: 24px; line-height: 2;">
+                    <li>Cord-cutters looking for <strong>affordable IPTV service</strong> alternatives</li>
+                    <li>Sports fans who want <strong>4K IPTV</strong> streaming for NFL, NBA, UFC, and more</li>
+                    <li>International channel viewers seeking global content</li>
+                    <li>Movie enthusiasts who want 80,000+ titles in <strong>4K/HD quality</strong></li>
+                    <li>Anyone with <strong>Firestick</strong>, Smart TV, or mobile devices</li>
+                </ul>
                 <p>
-                    <strong>Perfect for:</strong> Cord-cutters, sports fans, international channel viewers, movie
-                    enthusiasts, and anyone looking for an <strong>affordable IPTV service</strong> that doesn't
-                    compromise on quality. Learn more about <a href="blog.html" style="color: var(--color-accent);">IPTV
-                        setup guides</a> or view our <a href="#pricing" style="color: var(--color-accent);">subscription
-                        plans</a>.
+                    Learn more about <a href="blog.html" style="color: var(--color-accent);">IPTV setup guides</a> or view our <a href="#pricing" style="color: var(--color-accent);">subscription plans</a>.
                 </p>
             </div>
         </div>

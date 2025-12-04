@@ -120,6 +120,38 @@
         .header--floating .nav__link {
             color: #374151;
             font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .header--floating .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #850E35;
+            transition: width 0.3s ease;
+        }
+
+        .header--floating .nav__link:hover {
+            color: #850E35;
+        }
+
+        .header--floating .nav__link:hover::after {
+            width: 100%;
+        }
+
+        .header--floating .nav__link.active {
+            color: #850E35;
+            font-weight: 600;
+        }
+
+        .header--floating .nav__link.active::after {
+            width: 100%;
         }
 
         .header--floating .nav__list {
@@ -128,7 +160,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 14px;
+            gap: 36px;
         }
 
         .header--floating .nav .btn {
@@ -257,7 +289,7 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="../index.html" class="nav__link">Home</a></li>
-                    <li><a href="../blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="../blog.html" class="nav__link active">Blog</a></li>
                     <li><a href="#" class="nav__link">Reseller</a></li>
                     <li><a href="../contact.html" class="nav__link">Contact</a></li>
                 </ul>

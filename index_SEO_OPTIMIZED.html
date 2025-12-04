@@ -14,7 +14,7 @@
     
     <!-- OPTIMIZED: Preload critical resources -->
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
     
     <link rel="stylesheet" href="styles.css">
     
@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     
     <!-- OPTIMIZED: Complete favicon set -->
@@ -293,7 +293,7 @@
             </a>
             <nav class="nav" aria-label="Main Navigation">
                 <ul class="nav__list">
-                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#home" class="nav__link active">Home</a></li>
                     <li><a href="blog.html" class="nav__link">Blog</a></li>
                     <li><a href="reseller.html" class="nav__link">Reseller</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
@@ -380,25 +380,41 @@
     </div>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <!-- OPTIMIZED: H2 with keywords -->
-                <h2 class="section-title">Why UltraStreamNow Is the Best IPTV Service in USA 2025</h2>
-            </div>
-            <div class="features__grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="feature-card">
-                    <h3>4K IPTV Streaming + Premium Sports Channels</h3>
-                    <p>Get access to <strong>NFL, NBA, UFC, PPV events</strong> & 22,000+ live channels in smooth 4K/HD — with <strong>no buffering</strong> guaranteed. Watch live sports streaming in crystal-clear quality. <a href="free-trial.html">Test our service free for 24 hours</a>.</p>
+    <section id="features" class="why-section">
+        <div class="why-container">
+            <h2 class="why-title">Why UltraStreamNow Is the Best IPTV Service in USA 2025</h2>
+            <p class="why-subtitle">Real 4K streams, massive content library and fast setup on every device.</p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-chip">4K Sports</div>
+                    <h3>4K IPTV Streaming + Premium Sports</h3>
+                    <ul>
+                        <li>NFL, NBA, UFC, PPV &amp; more in 4K/HD</li>
+                        <li>22,000+ live US &amp; international channels</li>
+                        <li>Optimized for <strong>no buffering</strong> on US traffic</li>
+                        <li><a href="free-trial.html">Test everything with a free 24h trial</a></li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>Massive VOD Library - 80,000+ Movies & Series</h3>
-                    <p>Enjoy 80,000+ movies, series & catch-up TV. New releases added daily. Everything available
-                        instantly in your IPTV player with full HD and 4K options.</p>
+                <div class="why-card">
+                    <div class="why-chip">VOD Library</div>
+                    <h3>Massive VOD Library – 80,000+ Movies &amp; Series</h3>
+                    <ul>
+                        <li>80,000+ movies, series &amp; catch-up TV</li>
+                        <li>New releases added almost every day</li>
+                        <li>Full HD &amp; 4K VOD on all your devices</li>
+                        <li>Affordable plans starting at just $29</li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>IPTV for Firestick & All Devices</h3>
-                    <p>Optimized for <strong>IPTV on Firestick, Android TV, Smart TVs (Samsung/LG), iOS, Apple TV</strong> & more. <strong>Instant activation</strong> — setup takes less than 2 minutes. <a href="blog.html">View our device setup guides</a>.</p>
+                <div class="why-card">
+                    <div class="why-chip">All Devices</div>
+                    <h3>IPTV for Firestick &amp; All Devices</h3>
+                    <ul>
+                        <li>Works with Firestick, Android TV &amp; Smart TVs</li>
+                        <li>Also on iOS, Apple TV, Windows, Mac &amp; more</li>
+                        <li>Instant activation – setup in under 2 minutes</li>
+                        <li><a href="blog.html">Step-by-step guides + live support if you're stuck</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -594,19 +610,6 @@
                     <p class="review-text">Setup was super easy, took me 5 minutes. The EPG works great too.</p>
                     <p class="review-author">David K.</p>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Great support team</h4>
-                    <p class="review-text">Had a small issue with setup and they fixed it instantly via chat. Highly
-                        recommend.</p>
-                    <p class="review-author">Jennifer L.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Crystal clear 4K</h4>
-                    <p class="review-text">The 4K movies load instantly. Better than Netflix honestly.</p>
-                    <p class="review-author">Robert M.</p>
-                </div>
                 <!-- Duplicate Set 1 -->
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
@@ -626,19 +629,6 @@
                     <h4 class="review-title">Works perfectly on Firestick</h4>
                     <p class="review-text">Setup was super easy, took me 5 minutes. The EPG works great too.</p>
                     <p class="review-author">David K.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Great support team</h4>
-                    <p class="review-text">Had a small issue with setup and they fixed it instantly via chat. Highly
-                        recommend.</p>
-                    <p class="review-author">Jennifer L.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Crystal clear 4K</h4>
-                    <p class="review-text">The 4K movies load instantly. Better than Netflix honestly.</p>
-                    <p class="review-author">Robert M.</p>
                 </div>
             </div>
         </div>
@@ -665,19 +655,6 @@
                     <p class="review-text">Tried 3 other providers before this one. This is by far the best quality.</p>
                     <p class="review-author">Thomas H.</p>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Love the sports packages</h4>
-                    <p class="review-text">Got to watch all the UFC fights in HD. Worth every penny.</p>
-                    <p class="review-author">Chris B.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Easy to use</h4>
-                    <p class="review-text">My parents are not tech savvy but they use this easily on their Samsung TV.
-                    </p>
-                    <p class="review-author">Lisa G.</p>
-                </div>
                 <!-- Duplicate Set 2 -->
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
@@ -697,19 +674,6 @@
                     <p class="review-text">Tried 3 other providers before this one. This is by far the best quality.</p>
                     <p class="review-author">Thomas H.</p>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Love the sports packages</h4>
-                    <p class="review-text">Got to watch all the UFC fights in HD. Worth every penny.</p>
-                    <p class="review-author">Chris B.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <h4 class="review-title">Easy to use</h4>
-                    <p class="review-text">My parents are not tech savvy but they use this easily on their Samsung TV.
-                    </p>
-                    <p class="review-author">Lisa G.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -724,47 +688,72 @@
             <div class="detailed-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                 <!-- Card 1 -->
                 <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    <div class="info-icon info-icon--shield">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s7-3 7-9V5l-7-3-7 3v8c0 6 7 9 7 9z" />
+                            <path d="M9 12l2 2 4-4" />
                         </svg>
                     </div>
-                    <h3>99.9% Server Uptime - No Buffering IPTV</h3>
-                    <p>Optimized U.S. servers for <strong>stable IPTV service</strong> with smooth, buffer-free streaming. Our <strong>no buffering IPTV</strong> technology ensures you watch what you want, when you want — even during peak hours.</p>
+                    <h3>99.9% Server Uptime — No Buffering</h3>
+                    <ul>
+                        <li>U.S. servers optimized for IPTV</li>
+                        <li>Stable 4K/HD streams even at peak hours</li>
+                        <li>Built to avoid freezing and buffering</li>
+                    </ul>
                 </div>
                 <!-- Card 2 -->
                 <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    <div class="info-icon info-icon--bolt">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h7l-1 8 10-12h-7z" />
                         </svg>
                     </div>
                     <h3>Instant Activation & Easy Setup</h3>
-                    <p>Get started in under 2 minutes on any device with our <strong>instant activation</strong>. No technical skills required. <a href="blog.html">View our IPTV setup guides</a> for Firestick, Smart TV, and more.</p>
+                    <ul>
+                        <li>Start watching in under 2 minutes</li>
+                        <li>Works on Firestick, Smart TV &amp; more</li>
+                        <li>No tech skills or PC required</li>
+                    </ul>
                 </div>
                 <!-- Card 3 -->
                 <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    <div class="info-icon info-icon--support">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 13v-2a8 8 0 0 1 16 0v2" />
+                            <rect x="4" y="11" width="4" height="6" rx="2" />
+                            <rect x="16" y="11" width="4" height="6" rx="2" />
+                            <path d="M8 15h8" />
+                            <path d="M9 21h6" />
                         </svg>
                     </div>
                     <h3>24/7 USA-Based Support</h3>
-                    <p>Real IPTV experts ready to help anytime by live chat, email or WhatsApp. Get help with <strong>IPTV setup, troubleshooting</strong>, and technical questions. <a href="contact.html">Contact our support team</a>.</p>
+                    <ul>
+                        <li>Real agents, not bots</li>
+                        <li>Live chat, email &amp; WhatsApp</li>
+                        <li>Help with setup &amp; troubleshooting</li>
+                    </ul>
                 </div>
                 <!-- Card 4 -->
                 <div class="info-card">
-                    <div class="info-icon info-icon--checkmark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            width="24" height="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    <div class="info-icon info-icon--devices">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="15" height="12" rx="2" />
+                            <path d="M9 20h6" />
+                            <path d="M11 16v4" />
+                            <path d="M13 16v4" />
+                            <rect x="19" y="7" width="3" height="8" rx="1" />
                         </svg>
                     </div>
                     <h3>Multi-Device IPTV Support</h3>
-                    <p><strong>IPTV for Firestick, Smart TV (Samsung/LG), Android TV, iOS, Apple TV, Mac/PC</strong> — full compatibility guaranteed. Stream on <strong>multiple devices</strong> simultaneously with our premium plans.</p>
+                    <ul>
+                        <li>Firestick, Samsung/LG, Android TV</li>
+                        <li>iOS, Apple TV, Mac &amp; PC</li>
+                        <li>Stream on multiple devices with premium plans</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -974,4 +963,3 @@
 </body>
 
 </html>
-
