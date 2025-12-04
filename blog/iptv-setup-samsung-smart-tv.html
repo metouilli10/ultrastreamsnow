@@ -69,12 +69,181 @@
       "keywords": "iptv setup samsung smart tv, samsung tv iptv, tizen iptv, install iptv on samsung tv, samsung smart tv iptv app"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -136,24 +305,38 @@
         <!-- Article Content -->
         <div class="article-content">
             <p class="lead" style="font-size: 1.25rem; color: #334155; margin-bottom: 2rem;">
-                Samsung Smart TVs run on Tizen OS, which has limited native IPTV app support compared to Android TV. However, there are still ways to enjoy IPTV on your Samsung Smart TV. This guide covers the best methods, from using external devices (recommended) to advanced sideloading techniques.
+                Samsung Smart TVs run on Tizen OS, which has limited native IPTV app support compared to Android TV.
+                However, there are still ways to enjoy IPTV on your Samsung Smart TV. This guide covers the best
+                methods, from using external devices (recommended) to advanced sideloading techniques.
             </p>
 
             <p>
-                While Samsung's App Store has very few IPTV apps, using an external streaming device like a Firestick or Android TV Box is the easiest and most reliable method. We'll cover both approaches so you can choose what works best for your setup.
+                While Samsung's App Store has very few IPTV apps, using an external streaming device like a Firestick or
+                Android TV Box is the easiest and most reliable method. We'll cover both approaches so you can choose
+                what works best for your setup.
             </p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#samsung-models" style="color: #3b82f6; text-decoration: none;">Samsung TV Models Compatibility</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-1" style="color: #3b82f6; text-decoration: none;">Method 1: Using External Device (Recommended)</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-2" style="color: #3b82f6; text-decoration: none;">Method 2: Using Samsung App Store</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#tizen-setup" style="color: #3b82f6; text-decoration: none;">Tizen OS Setup Guide</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#best-apps" style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for Samsung TV</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#network-settings" style="color: #3b82f6; text-decoration: none;">Network and Streaming Settings</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting Samsung TV Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#samsung-models"
+                            style="color: #3b82f6; text-decoration: none;">Samsung TV Models Compatibility</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-1"
+                            style="color: #3b82f6; text-decoration: none;">Method 1: Using External Device
+                            (Recommended)</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-2"
+                            style="color: #3b82f6; text-decoration: none;">Method 2: Using Samsung App Store</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#tizen-setup"
+                            style="color: #3b82f6; text-decoration: none;">Tizen OS Setup Guide</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#best-apps"
+                            style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for Samsung TV</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#network-settings"
+                            style="color: #3b82f6; text-decoration: none;">Network and Streaming Settings</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting Samsung TV Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -164,7 +347,8 @@
             </div>
 
             <h2 id="samsung-models">Samsung TV Models Compatibility</h2>
-            <p>Most Samsung Smart TVs from 2015 onwards support external devices and have Smart Hub functionality. Here's a breakdown:</p>
+            <p>Most Samsung Smart TVs from 2015 onwards support external devices and have Smart Hub functionality.
+                Here's a breakdown:</p>
 
             <h3>Compatible Models</h3>
             <ul>
@@ -182,12 +366,15 @@
             </ol>
 
             <h2 id="method-1">Method 1: Using External Device (Recommended)</h2>
-            <p>Using an external streaming device is the <strong>easiest and most reliable</strong> method for IPTV on Samsung Smart TV. This method works on all Samsung Smart TV models and gives you access to all IPTV apps.</p>
+            <p>Using an external streaming device is the <strong>easiest and most reliable</strong> method for IPTV on
+                Samsung Smart TV. This method works on all Samsung Smart TV models and gives you access to all IPTV
+                apps.</p>
 
             <h3>Why Use an External Device?</h3>
             <ul>
                 <li><strong>More App Options:</strong> Access to all IPTV apps (not limited by Samsung App Store)</li>
-                <li><strong>Better Performance:</strong> External devices often perform better than built-in Smart TV apps</li>
+                <li><strong>Better Performance:</strong> External devices often perform better than built-in Smart TV
+                    apps</li>
                 <li><strong>Easier Updates:</strong> Apps update independently of TV software</li>
                 <li><strong>Works on Any Samsung TV:</strong> Compatible with all Samsung Smart TV models</li>
                 <li><strong>Easy to Upgrade:</strong> Can upgrade device without replacing TV</li>
@@ -209,18 +396,22 @@
                 <li>Follow the device's initial setup (connect to Wi-Fi, sign in, etc.)</li>
                 <li>Install IPTV app on the external device:
                     <ul>
-                        <li>For Firestick: See our <a href="install-iptv-firestick-guide.html">Firestick setup guide</a></li>
-                        <li>For Android TV Box: See our <a href="install-iptv-android-tv-box.html">Android TV Box guide</a></li>
+                        <li>For Firestick: See our <a href="install-iptv-firestick-guide.html">Firestick setup guide</a>
+                        </li>
+                        <li>For Android TV Box: See our <a href="install-iptv-android-tv-box.html">Android TV Box
+                                guide</a></li>
                     </ul>
                 </li>
                 <li>Configure your IPTV service</li>
                 <li>Start streaming on your Samsung TV!</li>
             </ol>
 
-            <p><strong>Pro Tip:</strong> Using an external device also means you can easily move it between TVs or upgrade it without replacing your Samsung TV. It's the most future-proof solution.</p>
+            <p><strong>Pro Tip:</strong> Using an external device also means you can easily move it between TVs or
+                upgrade it without replacing your Samsung TV. It's the most future-proof solution.</p>
 
             <h2 id="method-2">Method 2: Using Samsung App Store</h2>
-            <p>Samsung App Store has very limited IPTV app availability. While some apps may be available, the selection is minimal compared to external devices.</p>
+            <p>Samsung App Store has very limited IPTV app availability. While some apps may be available, the selection
+                is minimal compared to external devices.</p>
 
             <h3>Checking Samsung App Store for IPTV Apps</h3>
             <ol>
@@ -231,10 +422,12 @@
                 <li>If apps are found, install and configure them</li>
             </ol>
 
-            <p><strong>Note:</strong> Most users find that Samsung App Store has very few or no IPTV apps available. This is why using an external device (Method 1) is strongly recommended.</p>
+            <p><strong>Note:</strong> Most users find that Samsung App Store has very few or no IPTV apps available.
+                This is why using an external device (Method 1) is strongly recommended.</p>
 
             <h2 id="tizen-setup">Tizen OS Setup Guide</h2>
-            <p>Samsung Smart TVs run on Tizen OS, which has different capabilities than Android TV. Here's what you need to know:</p>
+            <p>Samsung Smart TVs run on Tizen OS, which has different capabilities than Android TV. Here's what you need
+                to know:</p>
 
             <h3>Tizen OS Features</h3>
             <ul>
@@ -262,7 +455,8 @@
                 <li>Go to <strong>IP Settings</strong> → <strong>DNS Settings</strong></li>
                 <li>Change to <strong>Enter Manually</strong></li>
                 <li>Enter Google DNS: <strong>8.8.8.8</strong> (Primary) and <strong>8.8.4.4</strong> (Secondary)</li>
-                <li>Or use Cloudflare DNS: <strong>1.1.1.1</strong> (Primary) and <strong>1.0.0.1</strong> (Secondary)</li>
+                <li>Or use Cloudflare DNS: <strong>1.1.1.1</strong> (Primary) and <strong>1.0.0.1</strong> (Secondary)
+                </li>
                 <li>Save and restart your TV</li>
             </ol>
 
@@ -270,7 +464,8 @@
             <p>Due to limited availability in Samsung App Store, here are your options:</p>
 
             <h3>Available in Samsung App Store (Limited)</h3>
-            <p>Very few IPTV apps are available in Samsung App Store. Availability varies by region and TV model. If you find any, they may have limited features compared to apps on external devices.</p>
+            <p>Very few IPTV apps are available in Samsung App Store. Availability varies by region and TV model. If you
+                find any, they may have limited features compared to apps on external devices.</p>
 
             <h3>Best Solution: Use External Device</h3>
             <p>For the best IPTV experience on Samsung TV, use an external device with these apps:</p>
@@ -281,7 +476,8 @@
                 <li><strong>XCIPTV Player:</strong> Free, modern interface</li>
             </ul>
 
-            <p>All of these apps work perfectly when installed on a Firestick or Android TV Box connected to your Samsung TV.</p>
+            <p>All of these apps work perfectly when installed on a Firestick or Android TV Box connected to your
+                Samsung TV.</p>
 
             <h2 id="network-settings">Network and Streaming Settings</h2>
             <p>Optimizing your Samsung TV's network settings can improve IPTV streaming performance:</p>
@@ -298,7 +494,8 @@
             <h3>Optimize Wi-Fi Settings</h3>
             <p>If you must use Wi-Fi:</p>
             <ul>
-                <li><strong>Use 5GHz Band:</strong> If your router supports it, connect to 5GHz Wi-Fi for faster speeds</li>
+                <li><strong>Use 5GHz Band:</strong> If your router supports it, connect to 5GHz Wi-Fi for faster speeds
+                </li>
                 <li><strong>Position Router Closer:</strong> Reduce distance between router and TV</li>
                 <li><strong>Reduce Interference:</strong> Keep router away from other electronics</li>
                 <li><strong>Check Signal Strength:</strong> Ensure strong Wi-Fi signal (3+ bars)</li>
@@ -313,15 +510,20 @@
 
             <h3>TV Settings for Best Performance</h3>
             <ul>
-                <li><strong>Game Mode:</strong> Enable Game Mode for lower input lag (Settings → General → External Device Manager → Game Mode)</li>
-                <li><strong>HDMI UHD Color:</strong> Enable for 4K content (Settings → Picture → Expert Settings → HDMI UHD Color)</li>
-                <li><strong>Auto Motion Plus:</strong> Disable for smoother video (Settings → Picture → Expert Settings → Auto Motion Plus → Off)</li>
+                <li><strong>Game Mode:</strong> Enable Game Mode for lower input lag (Settings → General → External
+                    Device Manager → Game Mode)</li>
+                <li><strong>HDMI UHD Color:</strong> Enable for 4K content (Settings → Picture → Expert Settings → HDMI
+                    UHD Color)</li>
+                <li><strong>Auto Motion Plus:</strong> Disable for smoother video (Settings → Picture → Expert Settings
+                    → Auto Motion Plus → Off)</li>
             </ul>
 
             <h2 id="troubleshooting">Troubleshooting Samsung TV-Specific Issues</h2>
 
             <h3>No IPTV Apps in Samsung App Store</h3>
-            <p><strong>Solution:</strong> This is normal - Samsung App Store has very limited IPTV apps. Use an external streaming device (Firestick, Android Box) instead. This gives you access to all IPTV apps and better performance.</p>
+            <p><strong>Solution:</strong> This is normal - Samsung App Store has very limited IPTV apps. Use an external
+                streaming device (Firestick, Android Box) instead. This gives you access to all IPTV apps and better
+                performance.</p>
 
             <h3>External Device Not Displaying on TV</h3>
             <ul>
@@ -337,7 +539,8 @@
                 <li><strong>Check Internet Speed:</strong> Run speed test on another device</li>
                 <li><strong>Use Ethernet:</strong> Switch from Wi-Fi to wired connection if possible</li>
                 <li><strong>Close Other Apps:</strong> Close background apps on external device</li>
-                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
+                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a
+                        href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
                 <li><strong>Lower Quality:</strong> Try SD or HD instead of 4K</li>
                 <li><strong>Restart Devices:</strong> Restart both external device and Samsung TV</li>
             </ul>
@@ -353,11 +556,14 @@
 
             <h3>Samsung TV is Slow or Laggy</h3>
             <ul>
-                <li><strong>Clear Cache:</strong> Clear cache for apps (Settings → Support → Device Care → Manage Storage)</li>
+                <li><strong>Clear Cache:</strong> Clear cache for apps (Settings → Support → Device Care → Manage
+                    Storage)</li>
                 <li><strong>Uninstall Unused Apps:</strong> Free up storage space</li>
                 <li><strong>Restart TV:</strong> Unplug for 30 seconds weekly</li>
-                <li><strong>Update Firmware:</strong> Check for TV software updates (Settings → Support → Software Update)</li>
-                <li><strong>Use External Device:</strong> Older Samsung TVs may struggle - use Firestick or Android Box for better performance</li>
+                <li><strong>Update Firmware:</strong> Check for TV software updates (Settings → Support → Software
+                    Update)</li>
+                <li><strong>Use External Device:</strong> Older Samsung TVs may struggle - use Firestick or Android Box
+                    for better performance</li>
             </ul>
 
             <h3>HDMI Input Not Working</h3>
@@ -378,7 +584,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Samsung App Store has very limited IPTV app availability. While some apps may be available depending on your region and TV model, the selection is minimal. The best solution is to use an external streaming device like a Firestick or Android TV Box, which gives you access to all IPTV apps and better performance.</p>
+                        <p>Samsung App Store has very limited IPTV app availability. While some apps may be available
+                            depending on your region and TV model, the selection is minimal. The best solution is to use
+                            an external streaming device like a Firestick or Android TV Box, which gives you access to
+                            all IPTV apps and better performance.</p>
                     </div>
                 </div>
 
@@ -388,7 +597,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>While not always required, using an external device is strongly recommended for Samsung Smart TVs. Samsung App Store has very few IPTV apps, so external devices like Firestick or Android TV Box provide more options, better performance, and easier updates. It's the most reliable method for IPTV on Samsung TV.</p>
+                        <p>While not always required, using an external device is strongly recommended for Samsung Smart
+                            TVs. Samsung App Store has very few IPTV apps, so external devices like Firestick or Android
+                            TV Box provide more options, better performance, and easier updates. It's the most reliable
+                            method for IPTV on Samsung TV.</p>
                     </div>
                 </div>
 
@@ -398,7 +610,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>For most users, Amazon Firestick is the best choice - it's affordable ($30-50), easy to use, and works excellently for IPTV. For more advanced users, an Android TV Box offers more power and Ethernet support. For the best performance, NVIDIA Shield TV is top-tier but more expensive.</p>
+                        <p>For most users, Amazon Firestick is the best choice - it's affordable ($30-50), easy to use,
+                            and works excellently for IPTV. For more advanced users, an Android TV Box offers more power
+                            and Ethernet support. For the best performance, NVIDIA Shield TV is top-tier but more
+                            expensive.</p>
                     </div>
                 </div>
 
@@ -408,7 +623,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Samsung App Store has very limited IPTV app availability due to content licensing restrictions and Tizen OS limitations. This is why using an external streaming device is recommended - it gives you access to all IPTV apps regardless of your TV's app store limitations.</p>
+                        <p>Samsung App Store has very limited IPTV app availability due to content licensing
+                            restrictions and Tizen OS limitations. This is why using an external streaming device is
+                            recommended - it gives you access to all IPTV apps regardless of your TV's app store
+                            limitations.</p>
                     </div>
                 </div>
 
@@ -418,7 +636,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Most IPTV providers, including UltraStreamNow, allow you to use your account on multiple devices. You can use the same account on your Samsung TV (via external device), phone, tablet, and other devices. However, there's usually a limit on simultaneous streams (typically 1-3 devices at once).</p>
+                        <p>Yes! Most IPTV providers, including UltraStreamNow, allow you to use your account on multiple
+                            devices. You can use the same account on your Samsung TV (via external device), phone,
+                            tablet, and other devices. However, there's usually a limit on simultaneous streams
+                            (typically 1-3 devices at once).</p>
                     </div>
                 </div>
 
@@ -434,7 +655,8 @@
                             <li><strong>HD Quality:</strong> 25 Mbps recommended</li>
                             <li><strong>4K Quality:</strong> 50+ Mbps recommended</li>
                         </ul>
-                        <p>Using a wired Ethernet connection (if available) provides more stable streaming than Wi-Fi.</p>
+                        <p>Using a wired Ethernet connection (if available) provides more stable streaming than Wi-Fi.
+                        </p>
                     </div>
                 </div>
 
@@ -450,7 +672,8 @@
                             <li>Uninstall unused apps to free up storage</li>
                             <li>Restart your TV weekly (unplug for 30 seconds)</li>
                             <li>Update TV firmware (Settings → Support → Software Update)</li>
-                            <li>Use an external device (Firestick/Android Box) - they often perform better than built-in Smart TV apps</li>
+                            <li>Use an external device (Firestick/Android Box) - they often perform better than built-in
+                                Smart TV apps</li>
                         </ul>
                     </div>
                 </div>
@@ -461,27 +684,36 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Recording capabilities depend on your IPTV player and setup. Most built-in Samsung TV apps don't support recording. However, if you use an external device like an Android TV Box with a player like TiviMate, and connect external storage, you can record shows. Some IPTV services also offer cloud-based DVR features.</p>
+                        <p>Recording capabilities depend on your IPTV player and setup. Most built-in Samsung TV apps
+                            don't support recording. However, if you use an external device like an Android TV Box with
+                            a player like TiviMate, and connect external storage, you can record shows. Some IPTV
+                            services also offer cloud-based DVR features.</p>
                     </div>
                 </div>
             </div>
 
             <h2>Conclusion</h2>
             <p>
-                While Samsung Smart TVs have limited native IPTV app support, you can easily enjoy IPTV by using an external streaming device like a Firestick or Android TV Box. This method works on all Samsung Smart TV models and provides access to all IPTV apps with better performance than built-in solutions.
+                While Samsung Smart TVs have limited native IPTV app support, you can easily enjoy IPTV by using an
+                external streaming device like a Firestick or Android TV Box. This method works on all Samsung Smart TV
+                models and provides access to all IPTV apps with better performance than built-in solutions.
             </p>
             <p>
-                The setup is straightforward - simply connect your external device to an HDMI port, install your preferred IPTV app, and start streaming. This approach is more reliable, offers more features, and is easier to update than trying to use limited Samsung App Store options.
+                The setup is straightforward - simply connect your external device to an HDMI port, install your
+                preferred IPTV app, and start streaming. This approach is more reliable, offers more features, and is
+                easier to update than trying to use limited Samsung App Store options.
             </p>
             <p>
-                For detailed setup instructions, check out our <a href="install-iptv-firestick-guide.html">Firestick setup guide</a> or <a href="setup-iptv-smart-tv.html">general Smart TV guide</a>.
+                For detailed setup instructions, check out our <a href="install-iptv-firestick-guide.html">Firestick
+                    setup guide</a> or <a href="setup-iptv-smart-tv.html">general Smart TV guide</a>.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming on Your Samsung TV?</h3>
                 <p>Get access to 22,000+ live channels and 80,000+ movies and shows with UltraStreamNow.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>

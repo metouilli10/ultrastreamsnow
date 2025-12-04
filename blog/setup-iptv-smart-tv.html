@@ -69,12 +69,181 @@
       "keywords": "setup iptv on smart tv, iptv smart tv guide, install iptv on samsung tv, iptv lg tv setup, smart tv iptv"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -136,24 +305,38 @@
         <!-- Article Content -->
         <div class="article-content">
             <p class="lead" style="font-size: 1.25rem; color: #334155; margin-bottom: 2rem;">
-                Modern Smart TVs offer multiple ways to access IPTV content. Whether you have a Samsung, LG, Sony, or another brand, you can enjoy thousands of live channels and on-demand content directly on your TV. This guide covers all the methods to set up IPTV on your Smart TV.
+                Modern Smart TVs offer multiple ways to access IPTV content. Whether you have a Samsung, LG, Sony, or
+                another brand, you can enjoy thousands of live channels and on-demand content directly on your TV. This
+                guide covers all the methods to set up IPTV on your Smart TV.
             </p>
 
             <p>
-                There are two main approaches: using your Smart TV's built-in app store (if available) or using an external streaming device like a Firestick or Android TV Box. We'll cover both methods so you can choose what works best for your TV model.
+                There are two main approaches: using your Smart TV's built-in app store (if available) or using an
+                external streaming device like a Firestick or Android TV Box. We'll cover both methods so you can choose
+                what works best for your TV model.
             </p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#compatible-brands" style="color: #3b82f6; text-decoration: none;">Compatible Smart TV Brands</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-1" style="color: #3b82f6; text-decoration: none;">Method 1: Using Built-in App Store</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-2" style="color: #3b82f6; text-decoration: none;">Method 2: Using External Device (Recommended)</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#brand-specific" style="color: #3b82f6; text-decoration: none;">Brand-Specific Setup Guides</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#best-apps" style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for Smart TVs</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#network-config" style="color: #3b82f6; text-decoration: none;">Network Configuration Tips</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting Smart TV Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#compatible-brands"
+                            style="color: #3b82f6; text-decoration: none;">Compatible Smart TV Brands</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-1"
+                            style="color: #3b82f6; text-decoration: none;">Method 1: Using Built-in App Store</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-2"
+                            style="color: #3b82f6; text-decoration: none;">Method 2: Using External Device
+                            (Recommended)</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#brand-specific"
+                            style="color: #3b82f6; text-decoration: none;">Brand-Specific Setup Guides</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#best-apps"
+                            style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for Smart TVs</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#network-config"
+                            style="color: #3b82f6; text-decoration: none;">Network Configuration Tips</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting Smart TV Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -167,7 +350,8 @@
             <p>Most modern Smart TVs support IPTV in some form. Here's a breakdown by brand:</p>
 
             <h3>Samsung Smart TVs (Tizen OS)</h3>
-            <p>Samsung Smart TVs run on Tizen OS and have their own app store. While IPTV apps are limited in the Samsung App Store, you can use external devices or sideload apps on some models.</p>
+            <p>Samsung Smart TVs run on Tizen OS and have their own app store. While IPTV apps are limited in the
+                Samsung App Store, you can use external devices or sideload apps on some models.</p>
             <ul>
                 <li><strong>Models:</strong> All Samsung Smart TVs from 2015 onwards</li>
                 <li><strong>App Store:</strong> Samsung App Store (limited IPTV apps)</li>
@@ -175,7 +359,8 @@
             </ul>
 
             <h3>LG Smart TVs (webOS)</h3>
-            <p>LG Smart TVs use webOS and have a good selection of apps. Some IPTV apps are available, but external devices often provide better performance.</p>
+            <p>LG Smart TVs use webOS and have a good selection of apps. Some IPTV apps are available, but external
+                devices often provide better performance.</p>
             <ul>
                 <li><strong>Models:</strong> All LG Smart TVs from 2014 onwards</li>
                 <li><strong>App Store:</strong> LG Content Store</li>
@@ -183,7 +368,8 @@
             </ul>
 
             <h3>Sony Smart TVs (Android TV)</h3>
-            <p>Sony Smart TVs run Android TV, giving you access to the Google Play Store and a wide range of IPTV apps.</p>
+            <p>Sony Smart TVs run Android TV, giving you access to the Google Play Store and a wide range of IPTV apps.
+            </p>
             <ul>
                 <li><strong>Models:</strong> Most Sony Smart TVs from 2015 onwards</li>
                 <li><strong>App Store:</strong> Google Play Store</li>
@@ -199,7 +385,8 @@
             </ul>
 
             <h2 id="method-1">Method 1: Using Built-in App Store</h2>
-            <p>If your Smart TV has access to an app store with IPTV apps, this is the simplest method. However, availability varies by brand and region.</p>
+            <p>If your Smart TV has access to an app store with IPTV apps, this is the simplest method. However,
+                availability varies by brand and region.</p>
 
             <h3>For Android TV (Sony, TCL, Hisense)</h3>
             <p>Android TV Smart TVs have full access to Google Play Store:</p>
@@ -255,12 +442,15 @@
                 <li>Connect the device to power</li>
                 <li>Switch your TV input to the HDMI port where the device is connected</li>
                 <li>Follow the device's initial setup (connect to Wi-Fi, sign in, etc.)</li>
-                <li>Install IPTV app on the external device (see our <a href="install-iptv-firestick-guide.html">Firestick guide</a> or <a href="install-iptv-android-tv-box.html">Android TV Box guide</a>)</li>
+                <li>Install IPTV app on the external device (see our <a
+                        href="install-iptv-firestick-guide.html">Firestick guide</a> or <a
+                        href="install-iptv-android-tv-box.html">Android TV Box guide</a>)</li>
                 <li>Configure your IPTV service</li>
                 <li>Start streaming!</li>
             </ol>
 
-            <p><strong>Pro Tip:</strong> Using an external device also means you can easily move it between TVs or upgrade it without replacing your entire Smart TV.</p>
+            <p><strong>Pro Tip:</strong> Using an external device also means you can easily move it between TVs or
+                upgrade it without replacing your entire Smart TV.</p>
 
             <h2 id="brand-specific">Brand-Specific Setup Guides</h2>
 
@@ -275,10 +465,13 @@
             </ol>
 
             <h4>Option B: Sideload IPTV App (Advanced)</h4>
-            <p>Some newer Samsung Smart TVs allow sideloading apps, but this process is complex and not recommended for beginners. For detailed instructions, see our <a href="iptv-setup-samsung-smart-tv.html">dedicated Samsung Smart TV guide</a>.</p>
+            <p>Some newer Samsung Smart TVs allow sideloading apps, but this process is complex and not recommended for
+                beginners. For detailed instructions, see our <a href="iptv-setup-samsung-smart-tv.html">dedicated
+                    Samsung Smart TV guide</a>.</p>
 
             <h3>LG Smart TV Setup</h3>
-            <p>LG Smart TVs use webOS. While some IPTV apps are available in the LG Content Store, using an external device is often easier:</p>
+            <p>LG Smart TVs use webOS. While some IPTV apps are available in the LG Content Store, using an external
+                device is often easier:</p>
             <ol>
                 <li>Connect external device (Firestick recommended) to HDMI port</li>
                 <li>Switch TV input to the device</li>
@@ -307,10 +500,12 @@
             </ul>
 
             <h3>For Samsung Tizen OS</h3>
-            <p>Very limited options. Recommended: Use external device (Firestick/Android Box) for better app selection.</p>
+            <p>Very limited options. Recommended: Use external device (Firestick/Android Box) for better app selection.
+            </p>
 
             <h3>For LG webOS</h3>
-            <p>Limited IPTV apps available. Some users report success with sideloaded apps, but external device is recommended for reliability.</p>
+            <p>Limited IPTV apps available. Some users report success with sideloaded apps, but external device is
+                recommended for reliability.</p>
 
             <h2 id="network-config">Network Configuration Tips</h2>
             <p>Proper network configuration is crucial for smooth IPTV streaming on Smart TVs:</p>
@@ -326,7 +521,8 @@
             <h3>Optimize Wi-Fi Settings</h3>
             <p>If you must use Wi-Fi:</p>
             <ul>
-                <li><strong>Use 5GHz Band:</strong> If your router supports it, connect to 5GHz Wi-Fi for faster speeds</li>
+                <li><strong>Use 5GHz Band:</strong> If your router supports it, connect to 5GHz Wi-Fi for faster speeds
+                </li>
                 <li><strong>Position Router Closer:</strong> Reduce distance between router and TV</li>
                 <li><strong>Reduce Interference:</strong> Keep router away from other electronics</li>
                 <li><strong>Check Signal Strength:</strong> Ensure strong Wi-Fi signal (3+ bars)</li>
@@ -351,7 +547,8 @@
             <h2 id="troubleshooting">Troubleshooting Smart TV-Specific Issues</h2>
 
             <h3>IPTV App Not Available in App Store</h3>
-            <p><strong>Solution:</strong> Use an external streaming device (Firestick, Android Box) instead. This gives you access to all IPTV apps and better performance.</p>
+            <p><strong>Solution:</strong> Use an external streaming device (Firestick, Android Box) instead. This gives
+                you access to all IPTV apps and better performance.</p>
 
             <h3>App Installs But Won't Open</h3>
             <ul>
@@ -366,7 +563,8 @@
                 <li><strong>Check Internet Speed:</strong> Run speed test on your TV or another device</li>
                 <li><strong>Use Ethernet:</strong> Switch from Wi-Fi to wired connection if possible</li>
                 <li><strong>Close Other Apps:</strong> Close background apps to free up resources</li>
-                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
+                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a
+                        href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
                 <li><strong>Lower Quality:</strong> Try SD or HD instead of 4K</li>
             </ul>
 
@@ -384,11 +582,14 @@
                 <li><strong>Uninstall Unused Apps:</strong> Free up storage and RAM</li>
                 <li><strong>Restart TV:</strong> Unplug for 30 seconds weekly</li>
                 <li><strong>Update Firmware:</strong> Check for TV software updates</li>
-                <li><strong>Use External Device:</strong> Older Smart TVs may struggle - use Firestick or Android Box</li>
+                <li><strong>Use External Device:</strong> Older Smart TVs may struggle - use Firestick or Android Box
+                </li>
             </ul>
 
             <h3>Can't Find IPTV App in Store</h3>
-            <p><strong>Solution:</strong> This is common, especially on Samsung and LG Smart TVs. The best solution is to use an external streaming device like a Firestick, which has access to all IPTV apps and provides better performance.</p>
+            <p><strong>Solution:</strong> This is common, especially on Samsung and LG Smart TVs. The best solution is
+                to use an external streaming device like a Firestick, which has access to all IPTV apps and provides
+                better performance.</p>
 
             <h2 id="faq">Frequently Asked Questions</h2>
 
@@ -399,7 +600,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>It depends on your Smart TV brand. Android TV Smart TVs (Sony, some TCL/Hisense models) can install IPTV apps directly from Google Play Store. Samsung and LG Smart TVs have very limited IPTV app availability, so using an external device (Firestick, Android Box) is recommended for better options and performance.</p>
+                        <p>It depends on your Smart TV brand. Android TV Smart TVs (Sony, some TCL/Hisense models) can
+                            install IPTV apps directly from Google Play Store. Samsung and LG Smart TVs have very
+                            limited IPTV app availability, so using an external device (Firestick, Android Box) is
+                            recommended for better options and performance.</p>
                     </div>
                 </div>
 
@@ -409,7 +613,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Android TV Smart TVs (Sony, some TCL/Hisense models) are best for IPTV because they have full access to Google Play Store with many IPTV apps available. However, using an external device like a Firestick or Android TV Box works great on any Smart TV brand and often provides better performance and more app options.</p>
+                        <p>Android TV Smart TVs (Sony, some TCL/Hisense models) are best for IPTV because they have full
+                            access to Google Play Store with many IPTV apps available. However, using an external device
+                            like a Firestick or Android TV Box works great on any Smart TV brand and often provides
+                            better performance and more app options.</p>
                     </div>
                 </div>
 
@@ -419,7 +626,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Not always, but it's often recommended. Android TV Smart TVs can install IPTV apps directly, but Samsung and LG Smart TVs have limited options. External devices like Firestick or Android TV Box provide more IPTV app choices, better performance, easier updates, and work on any Smart TV brand.</p>
+                        <p>Not always, but it's often recommended. Android TV Smart TVs can install IPTV apps directly,
+                            but Samsung and LG Smart TVs have limited options. External devices like Firestick or
+                            Android TV Box provide more IPTV app choices, better performance, easier updates, and work
+                            on any Smart TV brand.</p>
                     </div>
                 </div>
 
@@ -429,7 +639,9 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Many Smart TV app stores (especially Samsung and LG) have limited IPTV app availability due to content licensing restrictions. This is why using an external streaming device is recommended - it gives you access to all IPTV apps regardless of your TV brand.</p>
+                        <p>Many Smart TV app stores (especially Samsung and LG) have limited IPTV app availability due
+                            to content licensing restrictions. This is why using an external streaming device is
+                            recommended - it gives you access to all IPTV apps regardless of your TV brand.</p>
                     </div>
                 </div>
 
@@ -439,7 +651,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, most IPTV providers, including UltraStreamNow, allow you to use your account on multiple devices. However, there's usually a limit on simultaneous streams (typically 1-3 devices at once). Check your subscription details or contact your provider to confirm how many devices you can use simultaneously.</p>
+                        <p>Yes, most IPTV providers, including UltraStreamNow, allow you to use your account on multiple
+                            devices. However, there's usually a limit on simultaneous streams (typically 1-3 devices at
+                            once). Check your subscription details or contact your provider to confirm how many devices
+                            you can use simultaneously.</p>
                     </div>
                 </div>
 
@@ -455,7 +670,8 @@
                             <li><strong>HD Quality:</strong> 25 Mbps recommended</li>
                             <li><strong>4K Quality:</strong> 50+ Mbps recommended</li>
                         </ul>
-                        <p>Using a wired Ethernet connection (if available) provides more stable streaming than Wi-Fi.</p>
+                        <p>Using a wired Ethernet connection (if available) provides more stable streaming than Wi-Fi.
+                        </p>
                     </div>
                 </div>
 
@@ -471,7 +687,8 @@
                             <li>Uninstall unused apps to free up storage</li>
                             <li>Restart your TV weekly (unplug for 30 seconds)</li>
                             <li>Update TV firmware</li>
-                            <li>Consider using an external device (Firestick/Android Box) - they often perform better than built-in Smart TV apps</li>
+                            <li>Consider using an external device (Firestick/Android Box) - they often perform better
+                                than built-in Smart TV apps</li>
                         </ul>
                     </div>
                 </div>
@@ -482,27 +699,36 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Recording capabilities depend on your IPTV player and Smart TV. Most built-in Smart TV IPTV apps don't support recording. However, if you use an external device like an Android TV Box with a player like TiviMate, and connect external storage, you can record shows. Some IPTV services also offer cloud-based DVR features.</p>
+                        <p>Recording capabilities depend on your IPTV player and Smart TV. Most built-in Smart TV IPTV
+                            apps don't support recording. However, if you use an external device like an Android TV Box
+                            with a player like TiviMate, and connect external storage, you can record shows. Some IPTV
+                            services also offer cloud-based DVR features.</p>
                     </div>
                 </div>
             </div>
 
             <h2>Conclusion</h2>
             <p>
-                Setting up IPTV on your Smart TV opens up thousands of channels and on-demand content. While some Smart TVs can install IPTV apps directly, using an external streaming device like a Firestick or Android TV Box often provides better performance, more app options, and easier setup.
+                Setting up IPTV on your Smart TV opens up thousands of channels and on-demand content. While some Smart
+                TVs can install IPTV apps directly, using an external streaming device like a Firestick or Android TV
+                Box often provides better performance, more app options, and easier setup.
             </p>
             <p>
-                The method you choose depends on your Smart TV brand and model. Android TV Smart TVs offer the most flexibility, while Samsung and LG Smart TVs work best with external devices. Either way, you'll be able to enjoy a vast library of entertainment at a fraction of the cost of cable.
+                The method you choose depends on your Smart TV brand and model. Android TV Smart TVs offer the most
+                flexibility, while Samsung and LG Smart TVs work best with external devices. Either way, you'll be able
+                to enjoy a vast library of entertainment at a fraction of the cost of cable.
             </p>
             <p>
-                For more detailed guides, check out our <a href="install-iptv-firestick-guide.html">Firestick setup guide</a> or <a href="understanding-iptv-beginner-guide.html">beginner's guide to IPTV</a>.
+                For more detailed guides, check out our <a href="install-iptv-firestick-guide.html">Firestick setup
+                    guide</a> or <a href="understanding-iptv-beginner-guide.html">beginner's guide to IPTV</a>.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming on Your Smart TV?</h3>
                 <p>Get access to 22,000+ live channels and 80,000+ movies and shows with UltraStreamNow.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>

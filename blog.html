@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="assets/logo-new.png">
 
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="IPTV guide, IPTV tutorial, IPTV setup, IPTV tips, streaming guide, firestick setup, how to setup IPTV on Firestick, IPTV vs cable, best VPN for IPTV">
+    <meta name="keywords"
+        content="IPTV guide, IPTV tutorial, IPTV setup, IPTV tips, streaming guide, firestick setup, how to setup IPTV on Firestick, IPTV vs cable, best VPN for IPTV">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://ultrastreamnow.com/blog.html">
 
@@ -70,12 +71,182 @@
       ]
     }
     </script>
+
+    <!-- Floating Header Styles -->
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="/" class="logo" aria-label="UltraStreamNow Home">
                 <picture>
@@ -119,14 +290,16 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/firestick-setup.webp" type="image/webp">
-                            <img src="assets/blog/firestick-setup.png" alt="How to Install IPTV on Amazon Firestick 2025 - Step by Step Guide" loading="lazy">
+                            <img src="assets/blog/firestick-setup.png"
+                                alt="How to Install IPTV on Amazon Firestick 2025 - Step by Step Guide" loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>How to Set Up IPTV on Amazon Firestick (2025 Guide)</h2>
                         <p>Step-by-step instructions to install and configure IPTV on your Amazon Firestick in under 5
-                            minutes. No technical skills required. <a href="free-trial.html">Get your free IPTV trial</a> to test the setup.</p>
+                            minutes. No technical skills required. <a href="free-trial.html">Get your free IPTV
+                                trial</a> to test the setup.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">5 min read</span>
                             <a href="blog/install-iptv-firestick-guide.html" class="read-more">Read More →</a>
@@ -139,14 +312,17 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/iptv-vs-cable.webp" type="image/webp">
-                            <img src="assets/blog/iptv-vs-cable.png" alt="IPTV vs Cable TV Comparison 2025 - Cost, Channels, Quality Comparison" loading="lazy">
+                            <img src="assets/blog/iptv-vs-cable.png"
+                                alt="IPTV vs Cable TV Comparison 2025 - Cost, Channels, Quality Comparison"
+                                loading="lazy">
                         </picture>
                         <span class="blog-category">Comparison</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>IPTV vs Cable TV: Which is Better in 2025?</h2>
                         <p>Comprehensive comparison of IPTV and traditional cable TV covering cost, channel selection,
-                            quality, and flexibility. <a href="index.html#pricing">See our affordable IPTV plans</a> starting at $25/month.</p>
+                            quality, and flexibility. <a href="index.html#pricing">See our affordable IPTV plans</a>
+                            starting at $25/month.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">7 min read</span>
                             <a href="blog/iptv-vs-cable-2025.html" class="read-more">Read More →</a>
@@ -159,7 +335,8 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/vpn-security.webp" type="image/webp">
-                            <img src="assets/blog/vpn-security.png" alt="Best VPN for IPTV Streaming USA 2025 - Security and Privacy Guide" loading="lazy">
+                            <img src="assets/blog/vpn-security.png"
+                                alt="Best VPN for IPTV Streaming USA 2025 - Security and Privacy Guide" loading="lazy">
                         </picture>
                         <span class="blog-category">Security</span>
                     </div>
@@ -179,7 +356,8 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/beginner-guide.webp" type="image/webp">
-                            <img src="assets/blog/beginner-guide.png" alt="Complete IPTV Beginner Guide 2025 - Understanding IPTV Technology" loading="lazy">
+                            <img src="assets/blog/beginner-guide.png"
+                                alt="Complete IPTV Beginner Guide 2025 - Understanding IPTV Technology" loading="lazy">
                         </picture>
                         <span class="blog-category">Guide</span>
                     </div>
@@ -199,7 +377,8 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/sports-channels.webp" type="image/webp">
-                            <img src="assets/blog/sports-channels.png" alt="Top 10 Sports Channels on IPTV - NFL, NBA, MLB, NHL Streaming" loading="lazy">
+                            <img src="assets/blog/sports-channels.png"
+                                alt="Top 10 Sports Channels on IPTV - NFL, NBA, MLB, NHL Streaming" loading="lazy">
                         </picture>
                         <span class="blog-category">Entertainment</span>
                     </div>
@@ -219,14 +398,16 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/fix-buffering.webp" type="image/webp">
-                            <img src="assets/blog/fix-buffering.png" alt="How to Fix IPTV Buffering Issues - Troubleshooting Guide 2025" loading="lazy">
+                            <img src="assets/blog/fix-buffering.png"
+                                alt="How to Fix IPTV Buffering Issues - Troubleshooting Guide 2025" loading="lazy">
                         </picture>
                         <span class="blog-category">Troubleshooting</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>How to Fix IPTV Buffering Issues</h2>
                         <p>Proven solutions to eliminate buffering and freezing on your IPTV service. Improve stream
-                            quality and enjoy uninterrupted viewing. <a href="contact.html">Contact our support team</a> if you need additional help.</p>
+                            quality and enjoy uninterrupted viewing. <a href="contact.html">Contact our support team</a>
+                            if you need additional help.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">5 min read</span>
                             <a href="blog/fix-iptv-buffering-issues.html" class="read-more">Read More →</a>
@@ -239,13 +420,15 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/android-tv-box.webp" type="image/webp">
-                            <img src="assets/blog/android-tv-box.png" alt="How to Install IPTV on Android TV Box 2025 - Complete Setup Guide" loading="lazy">
+                            <img src="assets/blog/android-tv-box.png"
+                                alt="How to Install IPTV on Android TV Box 2025 - Complete Setup Guide" loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>How to Install IPTV on Android TV Box (2025 Guide)</h2>
-                        <p>Complete step-by-step guide to set up IPTV on Android TV Box. Learn about the best Android TV Box models, IPTV players, and optimization tips.</p>
+                        <p>Complete step-by-step guide to set up IPTV on Android TV Box. Learn about the best Android TV
+                            Box models, IPTV players, and optimization tips.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">6 min read</span>
                             <a href="blog/install-iptv-android-tv-box.html" class="read-more">Read More →</a>
@@ -258,13 +441,15 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/smart-tv-iptv.webp" type="image/webp">
-                            <img src="assets/blog/smart-tv-iptv.png" alt="How to Set Up IPTV on Smart TV - Complete Guide 2025" loading="lazy">
+                            <img src="assets/blog/smart-tv-iptv.png"
+                                alt="How to Set Up IPTV on Smart TV - Complete Guide 2025" loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>How to Set Up IPTV on Smart TV (Complete Guide 2025)</h2>
-                        <p>Step-by-step instructions for setting up IPTV on Samsung, LG, Sony, and other Smart TV brands. Best methods and troubleshooting tips.</p>
+                        <p>Step-by-step instructions for setting up IPTV on Samsung, LG, Sony, and other Smart TV
+                            brands. Best methods and troubleshooting tips.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">7 min read</span>
                             <a href="blog/setup-iptv-smart-tv.html" class="read-more">Read More →</a>
@@ -277,13 +462,15 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/iphone-ipad-iptv.webp" type="image/webp">
-                            <img src="assets/blog/iphone-ipad-iptv.png" alt="IPTV Setup Guide for iPhone and iPad 2025" loading="lazy">
+                            <img src="assets/blog/iphone-ipad-iptv.png" alt="IPTV Setup Guide for iPhone and iPad 2025"
+                                loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>IPTV Setup Guide for iPhone and iPad (2025)</h2>
-                        <p>Complete guide to set up IPTV on iPhone and iPad. Best IPTV apps for iOS, AirPlay setup, and troubleshooting tips for mobile streaming.</p>
+                        <p>Complete guide to set up IPTV on iPhone and iPad. Best IPTV apps for iOS, AirPlay setup, and
+                            troubleshooting tips for mobile streaming.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">5 min read</span>
                             <a href="blog/iptv-setup-iphone-ipad.html" class="read-more">Read More →</a>
@@ -296,13 +483,15 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/windows-pc-iptv.webp" type="image/webp">
-                            <img src="assets/blog/windows-pc-iptv.png" alt="How to Install IPTV on Windows PC 2025 - Complete Tutorial" loading="lazy">
+                            <img src="assets/blog/windows-pc-iptv.png"
+                                alt="How to Install IPTV on Windows PC 2025 - Complete Tutorial" loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>How to Install IPTV on Windows PC (2025 Tutorial)</h2>
-                        <p>Complete guide to install IPTV on Windows 10 and Windows 11. Learn how to use VLC, Kodi, and dedicated IPTV software for Windows.</p>
+                        <p>Complete guide to install IPTV on Windows 10 and Windows 11. Learn how to use VLC, Kodi, and
+                            dedicated IPTV software for Windows.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">6 min read</span>
                             <a href="blog/install-iptv-windows-pc.html" class="read-more">Read More →</a>
@@ -315,13 +504,15 @@
                     <div class="blog-card__image">
                         <picture>
                             <source srcset="assets/blog/samsung-tv-iptv.webp" type="image/webp">
-                            <img src="assets/blog/samsung-tv-iptv.png" alt="IPTV Setup for Samsung Smart TV - Step-by-Step Guide 2025" loading="lazy">
+                            <img src="assets/blog/samsung-tv-iptv.png"
+                                alt="IPTV Setup for Samsung Smart TV - Step-by-Step Guide 2025" loading="lazy">
                         </picture>
                         <span class="blog-category">Tutorial</span>
                     </div>
                     <div class="blog-card__content">
                         <h2>IPTV Setup for Samsung Smart TV (Step-by-Step Guide)</h2>
-                        <p>Complete guide to set up IPTV on Samsung Smart TV with Tizen OS. Best methods, app recommendations, and Samsung TV-specific troubleshooting.</p>
+                        <p>Complete guide to set up IPTV on Samsung Smart TV with Tizen OS. Best methods, app
+                            recommendations, and Samsung TV-specific troubleshooting.</p>
                         <div class="blog-card__meta">
                             <span class="read-time">5 min read</span>
                             <a href="blog/iptv-setup-samsung-smart-tv.html" class="read-more">Read More →</a>

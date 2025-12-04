@@ -69,12 +69,181 @@
       "keywords": "install iptv on windows pc, iptv windows 10, iptv windows 11, vlc iptv, kodi iptv windows, iptv player windows"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -136,24 +305,38 @@
         <!-- Article Content -->
         <div class="article-content">
             <p class="lead" style="font-size: 1.25rem; color: #334155; margin-bottom: 2rem;">
-                Windows PC is an excellent platform for IPTV streaming. With powerful processors, large displays, and the ability to connect to TVs via HDMI, Windows offers a great IPTV experience. This guide covers multiple methods to set up IPTV on Windows 10 and Windows 11.
+                Windows PC is an excellent platform for IPTV streaming. With powerful processors, large displays, and
+                the ability to connect to TVs via HDMI, Windows offers a great IPTV experience. This guide covers
+                multiple methods to set up IPTV on Windows 10 and Windows 11.
             </p>
 
             <p>
-                Whether you want to watch IPTV on your computer monitor or connect your PC to your TV for a big-screen experience, there are several excellent IPTV players available for Windows. We'll cover the best options, from free solutions like VLC to dedicated IPTV software.
+                Whether you want to watch IPTV on your computer monitor or connect your PC to your TV for a big-screen
+                experience, there are several excellent IPTV players available for Windows. We'll cover the best
+                options, from free solutions like VLC to dedicated IPTV software.
             </p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#best-players" style="color: #3b82f6; text-decoration: none;">Best IPTV Players for Windows</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-vlc" style="color: #3b82f6; text-decoration: none;">Method 1: Using VLC Media Player</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-dedicated" style="color: #3b82f6; text-decoration: none;">Method 2: Using Dedicated IPTV Software</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#method-kodi" style="color: #3b82f6; text-decoration: none;">Method 3: Using Kodi with IPTV Addon</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#connect-tv" style="color: #3b82f6; text-decoration: none;">Connecting PC to TV for Viewing</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#windows-config" style="color: #3b82f6; text-decoration: none;">Windows-Specific Configuration Tips</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting Windows Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#best-players"
+                            style="color: #3b82f6; text-decoration: none;">Best IPTV Players for Windows</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-vlc"
+                            style="color: #3b82f6; text-decoration: none;">Method 1: Using VLC Media Player</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-dedicated"
+                            style="color: #3b82f6; text-decoration: none;">Method 2: Using Dedicated IPTV Software</a>
+                    </li>
+                    <li style="margin: 0.5rem 0;"><a href="#method-kodi"
+                            style="color: #3b82f6; text-decoration: none;">Method 3: Using Kodi with IPTV Addon</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#connect-tv"
+                            style="color: #3b82f6; text-decoration: none;">Connecting PC to TV for Viewing</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#windows-config"
+                            style="color: #3b82f6; text-decoration: none;">Windows-Specific Configuration Tips</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting Windows Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -168,7 +351,9 @@
 
             <h3>1. VLC Media Player (Free - Recommended for Beginners)</h3>
             <p><strong>Best For:</strong> Users who want a free, simple solution</p>
-            <p>VLC is a free, open-source media player that supports IPTV streaming. It's lightweight, reliable, and supports M3U playlists. While it doesn't have advanced features like EPG, it's perfect for basic IPTV streaming.</p>
+            <p>VLC is a free, open-source media player that supports IPTV streaming. It's lightweight, reliable, and
+                supports M3U playlists. While it doesn't have advanced features like EPG, it's perfect for basic IPTV
+                streaming.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Completely free and open-source</li>
@@ -180,7 +365,8 @@
 
             <h3>2. IPTV Smarters Pro (Free)</h3>
             <p><strong>Best For:</strong> Users who want a dedicated IPTV app with good features</p>
-            <p>IPTV Smarters Pro is available for Windows and offers a user-friendly interface with good EPG support. It's the same app used on Android and Firestick devices.</p>
+            <p>IPTV Smarters Pro is available for Windows and offers a user-friendly interface with good EPG support.
+                It's the same app used on Android and Firestick devices.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Free to use</li>
@@ -193,7 +379,8 @@
 
             <h3>3. Kodi with IPTV Addon (Free - Advanced)</h3>
             <p><strong>Best For:</strong> Power users who want a full media center experience</p>
-            <p>Kodi is a powerful media center that can be configured with IPTV addons. It offers extensive customization and advanced features, but requires more setup time.</p>
+            <p>Kodi is a powerful media center that can be configured with IPTV addons. It offers extensive
+                customization and advanced features, but requires more setup time.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Free and open-source</li>
@@ -221,7 +408,8 @@
 
             <h3>Step 1: Install VLC Media Player</h3>
             <ol>
-                <li>Visit the official VLC website: <a href="https://www.videolan.org/vlc/" target="_blank" rel="nofollow">videolan.org</a></li>
+                <li>Visit the official VLC website: <a href="https://www.videolan.org/vlc/" target="_blank"
+                        rel="nofollow">videolan.org</a></li>
                 <li>Click <strong>Download VLC</strong></li>
                 <li>Run the installer and follow the installation wizard</li>
                 <li>Complete the installation</li>
@@ -255,10 +443,12 @@
                 <li>Use the playlist to switch between channels</li>
             </ul>
 
-            <p><strong>Note:</strong> VLC doesn't support Xtream Codes API, so you'll need an M3U playlist URL. Most IPTV providers offer M3U URLs as an alternative to Xtream Codes.</p>
+            <p><strong>Note:</strong> VLC doesn't support Xtream Codes API, so you'll need an M3U playlist URL. Most
+                IPTV providers offer M3U URLs as an alternative to Xtream Codes.</p>
 
             <h2 id="method-dedicated">Method 2: Using Dedicated IPTV Software</h2>
-            <p>Dedicated IPTV software offers better features than VLC, including EPG support and better organization. Here's how to use IPTV Smarters Pro on Windows:</p>
+            <p>Dedicated IPTV software offers better features than VLC, including EPG support and better organization.
+                Here's how to use IPTV Smarters Pro on Windows:</p>
 
             <h3>Step 1: Download IPTV Smarters Pro</h3>
             <ol>
@@ -305,11 +495,13 @@
             </ul>
 
             <h2 id="method-kodi">Method 3: Using Kodi with IPTV Addon</h2>
-            <p>Kodi is a powerful media center that can be configured with IPTV addons. This method is more advanced but offers the most features.</p>
+            <p>Kodi is a powerful media center that can be configured with IPTV addons. This method is more advanced but
+                offers the most features.</p>
 
             <h3>Step 1: Install Kodi</h3>
             <ol>
-                <li>Visit the official Kodi website: <a href="https://kodi.tv/download" target="_blank" rel="nofollow">kodi.tv</a></li>
+                <li>Visit the official Kodi website: <a href="https://kodi.tv/download" target="_blank"
+                        rel="nofollow">kodi.tv</a></li>
                 <li>Select <strong>Windows</strong> and download the installer</li>
                 <li>Run the installer and follow the setup wizard</li>
                 <li>Launch Kodi</li>
@@ -333,10 +525,13 @@
                 <li>Go back to <strong>Settings</strong> → <strong>Add-ons</strong> → <strong>My Add-ons</strong></li>
                 <li>Select <strong>PVR Clients</strong> → <strong>PVR IPTV Simple Client</strong></li>
                 <li>Click <strong>Configure</strong></li>
-                <li>In the <strong>General</strong> tab, enter your M3U playlist URL in the <strong>M3U Play List URL</strong> field</li>
-                <li>If your provider offers EPG, enter the EPG URL in the <strong>Electronic Program Guide (EPG) URL</strong> field</li>
+                <li>In the <strong>General</strong> tab, enter your M3U playlist URL in the <strong>M3U Play List
+                        URL</strong> field</li>
+                <li>If your provider offers EPG, enter the EPG URL in the <strong>Electronic Program Guide (EPG)
+                        URL</strong> field</li>
                 <li>Click <strong>OK</strong> to save</li>
-                <li>Go to <strong>Settings</strong> → <strong>TV</strong> → Enable <strong>Enable</strong> to activate the PVR client</li>
+                <li>Go to <strong>Settings</strong> → <strong>TV</strong> → Enable <strong>Enable</strong> to activate
+                    the PVR client</li>
                 <li>Kodi will now load your IPTV channels</li>
             </ol>
 
@@ -349,7 +544,8 @@
             </ul>
 
             <h2 id="connect-tv">Connecting PC to TV for Viewing</h2>
-            <p>One of the advantages of using Windows PC for IPTV is the ability to connect to your TV for a big-screen experience:</p>
+            <p>One of the advantages of using Windows PC for IPTV is the ability to connect to your TV for a big-screen
+                experience:</p>
 
             <h3>Method 1: HDMI Cable (Recommended)</h3>
             <p>This is the simplest and most reliable method:</p>
@@ -378,7 +574,8 @@
 
             <h3>Optimizing Display Settings</h3>
             <ul>
-                <li><strong>Resolution:</strong> Set TV resolution to match its native resolution (usually 1080p or 4K)</li>
+                <li><strong>Resolution:</strong> Set TV resolution to match its native resolution (usually 1080p or 4K)
+                </li>
                 <li><strong>Refresh Rate:</strong> Set to 60Hz for smooth video playback</li>
                 <li><strong>Audio Output:</strong> Ensure audio is set to output to TV speakers</li>
                 <li><strong>Scaling:</strong> Adjust text and app scaling if needed for readability</li>
@@ -407,8 +604,10 @@
 
             <h3>Network Optimization</h3>
             <ul>
-                <li><strong>Use Ethernet:</strong> Connect via Ethernet cable instead of Wi-Fi for more stable streaming</li>
-                <li><strong>Close Bandwidth-Heavy Apps:</strong> Close downloads, updates, and other apps using internet</li>
+                <li><strong>Use Ethernet:</strong> Connect via Ethernet cable instead of Wi-Fi for more stable streaming
+                </li>
+                <li><strong>Close Bandwidth-Heavy Apps:</strong> Close downloads, updates, and other apps using internet
+                </li>
                 <li><strong>Disable Windows Updates During Streaming:</strong> Pause Windows updates while watching</li>
                 <li><strong>Use Quality DNS:</strong> Change DNS to Google (8.8.8.8) or Cloudflare (1.1.1.1)</li>
             </ul>
@@ -446,7 +645,8 @@
                 <li><strong>Check Internet Speed:</strong> Run speed test (need 25+ Mbps for HD, 50+ for 4K)</li>
                 <li><strong>Use Ethernet:</strong> Switch from Wi-Fi to wired Ethernet connection</li>
                 <li><strong>Close Other Apps:</strong> Close bandwidth-heavy applications</li>
-                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
+                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a
+                        href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
                 <li><strong>Lower Quality:</strong> Try SD or HD instead of 4K</li>
                 <li><strong>Update Network Drivers:</strong> Update your network adapter drivers</li>
             </ul>
@@ -478,7 +678,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>For beginners, VLC Media Player is the easiest free option. For better features like EPG support, IPTV Smarters Pro is excellent and free. For advanced users who want a full media center experience, Kodi with IPTV addon offers the most features and customization options.</p>
+                        <p>For beginners, VLC Media Player is the easiest free option. For better features like EPG
+                            support, IPTV Smarters Pro is excellent and free. For advanced users who want a full media
+                            center experience, Kodi with IPTV addon offers the most features and customization options.
+                        </p>
                     </div>
                 </div>
 
@@ -488,7 +691,9 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! All IPTV players for Windows work on both Windows 10 and Windows 11. VLC, IPTV Smarters Pro, Kodi, and other IPTV software are compatible with both operating systems. The setup process is identical for both versions.</p>
+                        <p>Yes! All IPTV players for Windows work on both Windows 10 and Windows 11. VLC, IPTV Smarters
+                            Pro, Kodi, and other IPTV software are compatible with both operating systems. The setup
+                            process is identical for both versions.</p>
                     </div>
                 </div>
 
@@ -498,7 +703,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP throttling (which causes buffering), protects your privacy, and can improve streaming performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a> to find the right one for you.</p>
+                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP
+                            throttling (which causes buffering), protects your privacy, and can improve streaming
+                            performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for
+                                IPTV</a> to find the right one for you.</p>
                     </div>
                 </div>
 
@@ -508,7 +716,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! You can connect your Windows PC to your TV using an HDMI cable for the best experience. Simply connect the HDMI cable from your PC to your TV, switch your TV input to the HDMI port, and launch your IPTV player. You can also use Windows' wireless display feature (Windows Key + K) if your TV supports Miracast.</p>
+                        <p>Yes! You can connect your Windows PC to your TV using an HDMI cable for the best experience.
+                            Simply connect the HDMI cable from your PC to your TV, switch your TV input to the HDMI
+                            port, and launch your IPTV player. You can also use Windows' wireless display feature
+                            (Windows Key + K) if your TV supports Miracast.</p>
                     </div>
                 </div>
 
@@ -526,7 +737,8 @@
                             <li>Other apps using bandwidth (close downloads, updates, etc.)</li>
                             <li>Windows Firewall blocking connections</li>
                         </ul>
-                        <p>Check our <a href="fix-iptv-buffering-issues.html">buffering troubleshooting guide</a> for detailed solutions.</p>
+                        <p>Check our <a href="fix-iptv-buffering-issues.html">buffering troubleshooting guide</a> for
+                            detailed solutions.</p>
                     </div>
                 </div>
 
@@ -536,7 +748,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Kodi with IPTV addon supports recording if you configure it properly. Some dedicated IPTV software also supports recording. VLC can record streams using its recording feature. However, recording capabilities vary by software - check the documentation for your specific IPTV player.</p>
+                        <p>Yes! Kodi with IPTV addon supports recording if you configure it properly. Some dedicated
+                            IPTV software also supports recording. VLC can record streams using its recording feature.
+                            However, recording capabilities vary by software - check the documentation for your specific
+                            IPTV player.</p>
                     </div>
                 </div>
 
@@ -546,27 +761,39 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>VLC is great for basic IPTV streaming and is completely free. However, dedicated IPTV software like IPTV Smarters Pro offers better features like EPG (Electronic Program Guide), better channel organization, VOD support, and a more user-friendly interface. For most users, dedicated IPTV software provides a better experience, but VLC works fine for basic streaming needs.</p>
+                        <p>VLC is great for basic IPTV streaming and is completely free. However, dedicated IPTV
+                            software like IPTV Smarters Pro offers better features like EPG (Electronic Program Guide),
+                            better channel organization, VOD support, and a more user-friendly interface. For most
+                            users, dedicated IPTV software provides a better experience, but VLC works fine for basic
+                            streaming needs.</p>
                     </div>
                 </div>
             </div>
 
             <h2>Conclusion</h2>
             <p>
-                Windows PC is an excellent platform for IPTV streaming, offering powerful performance, large displays, and the ability to connect to TVs. Whether you choose VLC for simplicity, IPTV Smarters Pro for features, or Kodi for advanced customization, you'll be able to enjoy thousands of channels and on-demand content.
+                Windows PC is an excellent platform for IPTV streaming, offering powerful performance, large displays,
+                and the ability to connect to TVs. Whether you choose VLC for simplicity, IPTV Smarters Pro for
+                features, or Kodi for advanced customization, you'll be able to enjoy thousands of channels and
+                on-demand content.
             </p>
             <p>
-                The setup process is straightforward, and once configured, you'll have access to a vast library of entertainment. Connecting your PC to your TV via HDMI gives you a big-screen experience that rivals dedicated streaming devices.
+                The setup process is straightforward, and once configured, you'll have access to a vast library of
+                entertainment. Connecting your PC to your TV via HDMI gives you a big-screen experience that rivals
+                dedicated streaming devices.
             </p>
             <p>
-                For more help, check out our other guides on <a href="understanding-iptv-beginner-guide.html">understanding IPTV</a> and <a href="fix-iptv-buffering-issues.html">fixing buffering issues</a>.
+                For more help, check out our other guides on <a
+                    href="understanding-iptv-beginner-guide.html">understanding IPTV</a> and <a
+                    href="fix-iptv-buffering-issues.html">fixing buffering issues</a>.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming on Your Windows PC?</h3>
                 <p>Get access to 22,000+ live channels and 80,000+ movies and shows with UltraStreamNow.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>

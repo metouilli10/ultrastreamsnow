@@ -72,12 +72,184 @@
     }
     </script>
 
+    <!-- Floating Header Styles -->
+    <style>
+        /* Floating Header Styles */
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200;
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0;
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0;
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px;
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none;
+        }
+
+        body {
+            padding-top: 110px;
+        }
+
+        @media (max-width: 768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 12px;
+                top: 12px;
+            }
+
+            .header--floating .header__container {
+                gap: 8px;
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto;
+            }
+
+            body {
+                padding-top: 90px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0;
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0;
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto;
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px;
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex;
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%;
+            }
+
+            body {
+                padding-top: 56px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -147,18 +319,28 @@
                 ability to sideload apps. Whether you have the Fire TV Stick 4K, Fire TV Stick Lite, or the Fire TV
                 Cube, this guide works for all models.</p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#prerequisites" style="color: #3b82f6; text-decoration: none;">Prerequisites</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#step1" style="color: #3b82f6; text-decoration: none;">Step 1: Prepare Your Firestick</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#step2" style="color: #3b82f6; text-decoration: none;">Step 2: Install Downloader App</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#step3" style="color: #3b82f6; text-decoration: none;">Step 3: Install IPTV Player</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#step4" style="color: #3b82f6; text-decoration: none;">Step 4: Log in to IPTV Service</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#alternative-players" style="color: #3b82f6; text-decoration: none;">Alternative IPTV Players</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting Common Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#advanced-tips" style="color: #3b82f6; text-decoration: none;">Advanced Tips & Optimization</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#prerequisites"
+                            style="color: #3b82f6; text-decoration: none;">Prerequisites</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#step1" style="color: #3b82f6; text-decoration: none;">Step
+                            1: Prepare Your Firestick</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#step2" style="color: #3b82f6; text-decoration: none;">Step
+                            2: Install Downloader App</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#step3" style="color: #3b82f6; text-decoration: none;">Step
+                            3: Install IPTV Player</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#step4" style="color: #3b82f6; text-decoration: none;">Step
+                            4: Log in to IPTV Service</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#alternative-players"
+                            style="color: #3b82f6; text-decoration: none;">Alternative IPTV Players</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting Common Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#advanced-tips"
+                            style="color: #3b82f6; text-decoration: none;">Advanced Tips & Optimization</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -200,63 +382,93 @@
             </ol>
 
             <h2 id="step3">Step 3: Install IPTV Smarters Pro (Recommended Player)</h2>
-            <p>IPTV Smarters Pro is one of the best and most user-friendly IPTV players available. It supports both Xtream Codes API and M3U playlists, has a clean interface, and includes features like EPG (Electronic Program Guide), favorites, and catch-up TV.</p>
+            <p>IPTV Smarters Pro is one of the best and most user-friendly IPTV players available. It supports both
+                Xtream Codes API and M3U playlists, has a clean interface, and includes features like EPG (Electronic
+                Program Guide), favorites, and catch-up TV.</p>
 
             <div class="step-box">
                 <ol>
                     <li>Open the <strong>Downloader</strong> app. You'll see a URL box at the top of the screen.</li>
                     <li>In the URL box, type this code: <strong>78522</strong> (or enter
-                        <code>https://www.iptvsmarters.com/smarters.apk</code>). The code method is faster as it uses a shortlink service.
+                        <code>https://www.iptvsmarters.com/smarters.apk</code>). The code method is faster as it uses a
+                        shortlink service.
                     </li>
-                    <li>Click <strong>Go</strong> or press the OK button on your remote. The file will start downloading. This typically takes 30-60 seconds depending on your internet speed.</li>
-                    <li>Once downloaded, you'll see an "Install" button. Click it and wait for the installation to complete (usually 10-20 seconds).</li>
-                    <li>After installation, you'll see options to "Open" or "Done". Click <strong>Open</strong> to launch the app immediately, or you can find it later in your Apps section.</li>
+                    <li>Click <strong>Go</strong> or press the OK button on your remote. The file will start
+                        downloading. This typically takes 30-60 seconds depending on your internet speed.</li>
+                    <li>Once downloaded, you'll see an "Install" button. Click it and wait for the installation to
+                        complete (usually 10-20 seconds).</li>
+                    <li>After installation, you'll see options to "Open" or "Done". Click <strong>Open</strong> to
+                        launch the app immediately, or you can find it later in your Apps section.</li>
                 </ol>
             </div>
 
-            <p><strong>Note:</strong> If you see a warning about installing from unknown sources, click "Install anyway" or "Allow". This is normal and safe when installing IPTV players.</p>
+            <p><strong>Note:</strong> If you see a warning about installing from unknown sources, click "Install anyway"
+                or "Allow". This is normal and safe when installing IPTV players.</p>
 
             <h2 id="step4">Step 4: Log in to Your IPTV Service</h2>
-            <p>Now that you have the player installed, it's time to connect your service. IPTV Smarters Pro supports multiple login methods, but we'll use Xtream Codes API as it's the most reliable and feature-rich option.</p>
-            
+            <p>Now that you have the player installed, it's time to connect your service. IPTV Smarters Pro supports
+                multiple login methods, but we'll use Xtream Codes API as it's the most reliable and feature-rich
+                option.</p>
+
             <div class="step-box">
                 <ol>
-                    <li>Open IPTV Smarters Pro from your Apps section or the home screen if you clicked "Open" after installation.</li>
-                    <li>On the welcome screen, you'll see several login options. Select <strong>Login with Xtream Codes API</strong> (this is the easiest and most reliable method).</li>
+                    <li>Open IPTV Smarters Pro from your Apps section or the home screen if you clicked "Open" after
+                        installation.</li>
+                    <li>On the welcome screen, you'll see several login options. Select <strong>Login with Xtream Codes
+                            API</strong> (this is the easiest and most reliable method).</li>
                     <li>Enter the details provided by your IPTV provider in your welcome email:
                         <ul>
-                            <li><strong>Any Name:</strong> Enter "UltraStreamNow" (or any name you like). This is just a label for your account.</li>
-                            <li><strong>Username:</strong> Your IPTV username (usually your email or a username provided by the service).</li>
-                            <li><strong>Password:</strong> Your IPTV password (case-sensitive, so be careful with capitalization).</li>
-                            <li><strong>URL:</strong> The server URL provided in your welcome email. It typically looks like <code>http://server.ultrastreamnow.com:port</code> or similar. Make sure to include the full URL including http:// or https://.</li>
+                            <li><strong>Any Name:</strong> Enter "UltraStreamNow" (or any name you like). This is just a
+                                label for your account.</li>
+                            <li><strong>Username:</strong> Your IPTV username (usually your email or a username provided
+                                by the service).</li>
+                            <li><strong>Password:</strong> Your IPTV password (case-sensitive, so be careful with
+                                capitalization).</li>
+                            <li><strong>URL:</strong> The server URL provided in your welcome email. It typically looks
+                                like <code>http://server.ultrastreamnow.com:port</code> or similar. Make sure to include
+                                the full URL including http:// or https://.</li>
                         </ul>
                     </li>
-                    <li>Double-check all fields for typos, then click <strong>Add User</strong> or <strong>Login</strong>.</li>
-                    <li>Wait 10-30 seconds for the app to connect to the server and load your channel list, movies, and series. You'll see a loading indicator during this process.</li>
+                    <li>Double-check all fields for typos, then click <strong>Add User</strong> or
+                        <strong>Login</strong>.</li>
+                    <li>Wait 10-30 seconds for the app to connect to the server and load your channel list, movies, and
+                        series. You'll see a loading indicator during this process.</li>
                 </ol>
             </div>
 
-            <p><strong>Alternative Login Method:</strong> If your provider only gave you an M3U URL, you can select "Login with M3U URL" instead. Simply paste your M3U playlist URL in the provided field. However, Xtream Codes API offers better features like EPG and catch-up TV.</p>
+            <p><strong>Alternative Login Method:</strong> If your provider only gave you an M3U URL, you can select
+                "Login with M3U URL" instead. Simply paste your M3U playlist URL in the provided field. However, Xtream
+                Codes API offers better features like EPG and catch-up TV.</p>
 
-            <p>Once your channels load, you're all set! Navigate through the categories (Live TV, Movies, Series) using your Firestick remote. Press the center button to select a channel or content, and use the back button to return to the menu.</p>
+            <p>Once your channels load, you're all set! Navigate through the categories (Live TV, Movies, Series) using
+                your Firestick remote. Press the center button to select a channel or content, and use the back button
+                to return to the menu.</p>
 
             <h2 id="alternative-players">Alternative IPTV Players for Firestick</h2>
-            <p>While IPTV Smarters Pro is our top recommendation, there are several other excellent players you can try. Each has its own strengths, so choose based on your preferences.</p>
+            <p>While IPTV Smarters Pro is our top recommendation, there are several other excellent players you can try.
+                Each has its own strengths, so choose based on your preferences.</p>
 
             <h3>1. TiviMate (Premium Option - $5-10/year)</h3>
             <p><strong>Best For:</strong> Power users who want the most customizable experience.</p>
-            <p>TiviMate is widely considered the best IPTV player for Android devices, including Firestick. It offers a beautiful interface, advanced EPG, recording capabilities, and extensive customization options. However, it's a paid app (one-time or annual subscription).</p>
-            <p><strong>Installation:</strong> Download from the Google Play Store on your phone, then sideload the APK to Firestick, or use Downloader with code <strong>85947</strong>.</p>
+            <p>TiviMate is widely considered the best IPTV player for Android devices, including Firestick. It offers a
+                beautiful interface, advanced EPG, recording capabilities, and extensive customization options. However,
+                it's a paid app (one-time or annual subscription).</p>
+            <p><strong>Installation:</strong> Download from the Google Play Store on your phone, then sideload the APK
+                to Firestick, or use Downloader with code <strong>85947</strong>.</p>
 
             <h3>2. Perfect Player (Free)</h3>
             <p><strong>Best For:</strong> Users who want a simple, lightweight player.</p>
-            <p>Perfect Player is a free, no-frills IPTV player that focuses on performance. It's lightweight, fast, and works great on older Firestick models. It supports M3U playlists and has basic EPG support.</p>
-            <p><strong>Installation:</strong> Use Downloader with code <strong>58963</strong> or search for "Perfect Player IPTV" APK.</p>
+            <p>Perfect Player is a free, no-frills IPTV player that focuses on performance. It's lightweight, fast, and
+                works great on older Firestick models. It supports M3U playlists and has basic EPG support.</p>
+            <p><strong>Installation:</strong> Use Downloader with code <strong>58963</strong> or search for "Perfect
+                Player IPTV" APK.</p>
 
             <h3>3. Kodi with IPTV Addon (Advanced)</h3>
             <p><strong>Best For:</strong> Users who want a full media center experience.</p>
-            <p>Kodi is a powerful media center that can be configured with IPTV addons like Simple IPTV or PVR IPTV Simple Client. It offers extensive customization but requires more setup time.</p>
-            <p><strong>Installation:</strong> Install Kodi from the Amazon App Store, then add the IPTV Simple Client addon from the official Kodi repository.</p>
+            <p>Kodi is a powerful media center that can be configured with IPTV addons like Simple IPTV or PVR IPTV
+                Simple Client. It offers extensive customization but requires more setup time.</p>
+            <p><strong>Installation:</strong> Install Kodi from the Amazon App Store, then add the IPTV Simple Client
+                addon from the official Kodi repository.</p>
 
             <div class="table-container" style="overflow-x: auto; margin: 2rem 0;">
                 <table style="width: 100%; border-collapse: collapse; text-align: left;">
@@ -271,7 +483,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV Smarters Pro</strong></td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV Smarters Pro</strong>
+                            </td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Free</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Yes</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">No</td>
@@ -303,59 +516,85 @@
             </div>
 
             <h2 id="troubleshooting">Troubleshooting Common Issues</h2>
-            
+
             <h3>App Won't Install</h3>
             <p>If you're having trouble installing the IPTV player app:</p>
             <ul>
-                <li><strong>Check Unknown Sources:</strong> Make sure "Apps from Unknown Sources" is enabled in Developer Options. Go to Settings → My Fire TV → Developer Options.</li>
-                <li><strong>Clear Downloader Cache:</strong> In Downloader app, go to Settings → Clear Cache, then try downloading again.</li>
-                <li><strong>Check Storage Space:</strong> Firestick needs at least 500MB free space. Go to Settings → Applications → Manage Installed Applications to see available storage.</li>
-                <li><strong>Restart Firestick:</strong> Unplug your Firestick for 30 seconds, plug it back in, and try again.</li>
+                <li><strong>Check Unknown Sources:</strong> Make sure "Apps from Unknown Sources" is enabled in
+                    Developer Options. Go to Settings → My Fire TV → Developer Options.</li>
+                <li><strong>Clear Downloader Cache:</strong> In Downloader app, go to Settings → Clear Cache, then try
+                    downloading again.</li>
+                <li><strong>Check Storage Space:</strong> Firestick needs at least 500MB free space. Go to Settings →
+                    Applications → Manage Installed Applications to see available storage.</li>
+                <li><strong>Restart Firestick:</strong> Unplug your Firestick for 30 seconds, plug it back in, and try
+                    again.</li>
             </ul>
 
             <h3>Can't Connect to Server</h3>
             <p>If you can't connect to your IPTV service after entering credentials:</p>
             <ul>
-                <li><strong>Verify Credentials:</strong> Double-check your username, password, and server URL. One typo will prevent connection. Make sure there are no extra spaces.</li>
-                <li><strong>Check Server URL Format:</strong> The URL should start with <code>http://</code> or <code>https://</code> and include the port number if required (e.g., <code>http://server.com:8080</code>).</li>
-                <li><strong>Test Internet Connection:</strong> Go to Settings → Network and run a connection test. You need at least 10 Mbps for basic streaming.</li>
-                <li><strong>Contact Your Provider:</strong> If credentials are correct, your provider's server might be temporarily down. Check their status page or contact support.</li>
+                <li><strong>Verify Credentials:</strong> Double-check your username, password, and server URL. One typo
+                    will prevent connection. Make sure there are no extra spaces.</li>
+                <li><strong>Check Server URL Format:</strong> The URL should start with <code>http://</code> or
+                    <code>https://</code> and include the port number if required (e.g.,
+                    <code>http://server.com:8080</code>).</li>
+                <li><strong>Test Internet Connection:</strong> Go to Settings → Network and run a connection test. You
+                    need at least 10 Mbps for basic streaming.</li>
+                <li><strong>Contact Your Provider:</strong> If credentials are correct, your provider's server might be
+                    temporarily down. Check their status page or contact support.</li>
             </ul>
 
             <h3>Channels Not Loading</h3>
             <p>If channels appear in the list but won't play:</p>
             <ul>
-                <li><strong>Check Internet Speed:</strong> Run a speed test. You need 25+ Mbps for HD and 50+ Mbps for 4K. Use the Speedtest app from the Amazon App Store.</li>
-                <li><strong>Try a Different Channel:</strong> Some channels may be temporarily unavailable. Try multiple channels to see if it's a specific channel issue.</li>
-                <li><strong>Restart the App:</strong> Force close the IPTV app (Settings → Applications → Manage Installed Applications → [Your App] → Force Stop), then reopen it.</li>
-                <li><strong>Clear App Cache:</strong> In the app settings or Firestick settings, clear the cache for your IPTV player.</li>
+                <li><strong>Check Internet Speed:</strong> Run a speed test. You need 25+ Mbps for HD and 50+ Mbps for
+                    4K. Use the Speedtest app from the Amazon App Store.</li>
+                <li><strong>Try a Different Channel:</strong> Some channels may be temporarily unavailable. Try multiple
+                    channels to see if it's a specific channel issue.</li>
+                <li><strong>Restart the App:</strong> Force close the IPTV app (Settings → Applications → Manage
+                    Installed Applications → [Your App] → Force Stop), then reopen it.</li>
+                <li><strong>Clear App Cache:</strong> In the app settings or Firestick settings, clear the cache for
+                    your IPTV player.</li>
             </ul>
 
             <h3>Buffering or Freezing?</h3>
             <p>If you experience constant buffering or freezing:</p>
             <ul>
-                <li><strong>Check your internet speed:</strong> You need at least 25 Mbps for smooth HD streaming. Test at <a href="https://www.speedtest.net" target="_blank" rel="nofollow">Speedtest.net</a>.</li>
-                <li><strong>Use Ethernet Connection:</strong> If possible, connect your Firestick directly to your router with an Ethernet adapter. Wi-Fi can be unstable for streaming.</li>
-                <li><strong>Restart your router:</strong> Unplug it for 30 seconds and plug it back in. This clears network congestion.</li>
-                <li><strong>Use a VPN:</strong> Sometimes ISPs throttle streaming traffic. A VPN can prevent this. See our guide on <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a>.</li>
-                <li><strong>Lower Video Quality:</strong> In your IPTV player settings, try reducing the stream quality from 4K to HD or HD to SD temporarily to test if it's a bandwidth issue.</li>
-                <li><strong>Close Other Apps:</strong> Make sure no other apps are running in the background. Go to Settings → Applications → Manage Installed Applications and force stop unused apps.</li>
+                <li><strong>Check your internet speed:</strong> You need at least 25 Mbps for smooth HD streaming. Test
+                    at <a href="https://www.speedtest.net" target="_blank" rel="nofollow">Speedtest.net</a>.</li>
+                <li><strong>Use Ethernet Connection:</strong> If possible, connect your Firestick directly to your
+                    router with an Ethernet adapter. Wi-Fi can be unstable for streaming.</li>
+                <li><strong>Restart your router:</strong> Unplug it for 30 seconds and plug it back in. This clears
+                    network congestion.</li>
+                <li><strong>Use a VPN:</strong> Sometimes ISPs throttle streaming traffic. A VPN can prevent this. See
+                    our guide on <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a>.</li>
+                <li><strong>Lower Video Quality:</strong> In your IPTV player settings, try reducing the stream quality
+                    from 4K to HD or HD to SD temporarily to test if it's a bandwidth issue.</li>
+                <li><strong>Close Other Apps:</strong> Make sure no other apps are running in the background. Go to
+                    Settings → Applications → Manage Installed Applications and force stop unused apps.</li>
             </ul>
 
             <h3>Device-Specific Issues</h3>
-            <p><strong>Fire TV Stick 4K:</strong> Should handle IPTV smoothly. If experiencing issues, ensure you're using the latest Fire OS version (Settings → My Fire TV → About → Check for Updates).</p>
-            <p><strong>Fire TV Stick Lite:</strong> Has less RAM than the 4K model. Close background apps regularly and avoid running multiple apps simultaneously.</p>
-            <p><strong>Fire TV Cube:</strong> Most powerful option. Should have no issues, but ensure adequate cooling (don't stack items on top).</p>
+            <p><strong>Fire TV Stick 4K:</strong> Should handle IPTV smoothly. If experiencing issues, ensure you're
+                using the latest Fire OS version (Settings → My Fire TV → About → Check for Updates).</p>
+            <p><strong>Fire TV Stick Lite:</strong> Has less RAM than the 4K model. Close background apps regularly and
+                avoid running multiple apps simultaneously.</p>
+            <p><strong>Fire TV Cube:</strong> Most powerful option. Should have no issues, but ensure adequate cooling
+                (don't stack items on top).</p>
 
             <h2 id="advanced-tips">Advanced Tips & Optimization</h2>
-            
+
             <h3>Optimizing Firestick Performance</h3>
             <p>To ensure the best IPTV streaming experience on your Firestick:</p>
             <ul>
-                <li><strong>Keep Fire OS Updated:</strong> Regular updates include performance improvements. Go to Settings → My Fire TV → About → Check for Updates monthly.</li>
-                <li><strong>Disable Data Monitoring:</strong> Go to Settings → Preferences → Data Monitoring and turn it off. This prevents Amazon from limiting background data.</li>
-                <li><strong>Turn Off Notifications:</strong> Reduce interruptions by going to Settings → Preferences → Notification Settings and disabling unnecessary notifications.</li>
-                <li><strong>Use External Storage:</strong> If you have a Firestick with USB support, use external storage for app data to free up internal memory.</li>
+                <li><strong>Keep Fire OS Updated:</strong> Regular updates include performance improvements. Go to
+                    Settings → My Fire TV → About → Check for Updates monthly.</li>
+                <li><strong>Disable Data Monitoring:</strong> Go to Settings → Preferences → Data Monitoring and turn it
+                    off. This prevents Amazon from limiting background data.</li>
+                <li><strong>Turn Off Notifications:</strong> Reduce interruptions by going to Settings → Preferences →
+                    Notification Settings and disabling unnecessary notifications.</li>
+                <li><strong>Use External Storage:</strong> If you have a Firestick with USB support, use external
+                    storage for app data to free up internal memory.</li>
             </ul>
 
             <h3>Clearing Cache and Data</h3>
@@ -366,7 +605,8 @@
                 <li>Click "Clear Cache" (this won't delete your login info).</li>
                 <li>If issues persist, click "Clear Data" (you'll need to log in again).</li>
             </ol>
-            <p><strong>Note:</strong> Clear cache weekly, but only clear data if you're experiencing persistent issues.</p>
+            <p><strong>Note:</strong> Clear cache weekly, but only clear data if you're experiencing persistent issues.
+            </p>
 
             <h3>Using External Storage</h3>
             <p>If you have a Fire TV Stick 4K Max or Fire TV Cube with USB ports, you can use external storage:</p>
@@ -378,14 +618,18 @@
 
             <h3>Network Optimization Tips</h3>
             <ul>
-                <li><strong>Use 5GHz Wi-Fi:</strong> If your router supports it, connect your Firestick to the 5GHz band for faster, more stable connections.</li>
-                <li><strong>Position Router Closer:</strong> Reduce distance between your Firestick and router, or use a Wi-Fi extender if needed.</li>
-                <li><strong>Limit Other Devices:</strong> During important streams, pause downloads and limit other devices using your network.</li>
-                <li><strong>Use Quality DNS:</strong> Change your DNS to Google (8.8.8.8) or Cloudflare (1.1.1.1) in Network settings for faster lookups.</li>
+                <li><strong>Use 5GHz Wi-Fi:</strong> If your router supports it, connect your Firestick to the 5GHz band
+                    for faster, more stable connections.</li>
+                <li><strong>Position Router Closer:</strong> Reduce distance between your Firestick and router, or use a
+                    Wi-Fi extender if needed.</li>
+                <li><strong>Limit Other Devices:</strong> During important streams, pause downloads and limit other
+                    devices using your network.</li>
+                <li><strong>Use Quality DNS:</strong> Change your DNS to Google (8.8.8.8) or Cloudflare (1.1.1.1) in
+                    Network settings for faster lookups.</li>
             </ul>
 
             <h2 id="faq">Frequently Asked Questions</h2>
-            
+
             <div style="margin: 2rem 0;">
                 <div class="faq-item">
                     <button class="faq-question">
@@ -393,7 +637,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, IPTV technology itself is completely legal. The legality depends on the content being streamed and whether the provider has proper licensing. UltraStreamNow provides access to legally licensed content. However, using IPTV to access pirated content is illegal. Always use legitimate IPTV services that have proper content licensing agreements.</p>
+                        <p>Yes, IPTV technology itself is completely legal. The legality depends on the content being
+                            streamed and whether the provider has proper licensing. UltraStreamNow provides access to
+                            legally licensed content. However, using IPTV to access pirated content is illegal. Always
+                            use legitimate IPTV services that have proper content licensing agreements.</p>
                     </div>
                 </div>
 
@@ -403,7 +650,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP throttling (which causes buffering), protects your privacy, and can help bypass geo-restrictions. Many users report significantly better streaming performance when using a VPN. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a> to find the right one for you.</p>
+                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP
+                            throttling (which causes buffering), protects your privacy, and can help bypass
+                            geo-restrictions. Many users report significantly better streaming performance when using a
+                            VPN. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a>
+                            to find the right one for you.</p>
                     </div>
                 </div>
 
@@ -413,7 +664,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>This depends on your IPTV provider's policy. Most providers, including UltraStreamNow, allow you to use your account on multiple devices, but typically limit simultaneous streams (usually 1-3 devices at once). Check your subscription details or contact your provider to confirm how many devices you can use simultaneously. For multiple simultaneous streams, you may need a multi-device plan.</p>
+                        <p>This depends on your IPTV provider's policy. Most providers, including UltraStreamNow, allow
+                            you to use your account on multiple devices, but typically limit simultaneous streams
+                            (usually 1-3 devices at once). Check your subscription details or contact your provider to
+                            confirm how many devices you can use simultaneously. For multiple simultaneous streams, you
+                            may need a multi-device plan.</p>
                     </div>
                 </div>
 
@@ -429,7 +684,9 @@
                             <li><strong>HD Quality:</strong> Minimum 25 Mbps (recommended)</li>
                             <li><strong>4K Quality:</strong> Minimum 50 Mbps (recommended)</li>
                         </ul>
-                        <p>Keep in mind that other devices using your network will share this bandwidth, so having extra speed is beneficial. Also, ISPs often throttle streaming, so having 50+ Mbps gives you a buffer.</p>
+                        <p>Keep in mind that other devices using your network will share this bandwidth, so having extra
+                            speed is beneficial. Also, ISPs often throttle streaming, so having 50+ Mbps gives you a
+                            buffer.</p>
                     </div>
                 </div>
 
@@ -445,7 +702,8 @@
                             <li>Enter the same download code or URL you used initially</li>
                             <li>Download and install the new version (it will replace the old one)</li>
                         </ol>
-                        <p>Alternatively, if you installed from the Amazon App Store, updates happen automatically. For apps like TiviMate, check the official website for the latest version.</p>
+                        <p>Alternatively, if you installed from the Amazon App Store, updates happen automatically. For
+                            apps like TiviMate, check the official website for the latest version.</p>
                     </div>
                 </div>
 
@@ -455,7 +713,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Basic IPTV players like IPTV Smarters Pro don't support recording. However, premium players like TiviMate offer recording capabilities if you have external storage connected. Some IPTV services also offer cloud-based DVR features. Check with your provider about recording options, or consider upgrading to a player that supports local recording.</p>
+                        <p>Basic IPTV players like IPTV Smarters Pro don't support recording. However, premium players
+                            like TiviMate offer recording capabilities if you have external storage connected. Some IPTV
+                            services also offer cloud-based DVR features. Check with your provider about recording
+                            options, or consider upgrading to a player that supports local recording.</p>
                     </div>
                 </div>
 
@@ -480,17 +741,24 @@
 
             <h2>Conclusion</h2>
             <p>Setting up IPTV on your Firestick opens up a world of entertainment. With thousands of channels at your
-                fingertips, you'll never run out of things to watch. The process is straightforward, and once set up, you'll enjoy a cable-like experience at a fraction of the cost.</p>
+                fingertips, you'll never run out of things to watch. The process is straightforward, and once set up,
+                you'll enjoy a cable-like experience at a fraction of the cost.</p>
 
-            <p>Remember, the key to a great IPTV experience is choosing a reliable provider with stable servers and good customer support. If you haven't signed up yet, check out our premium service for the best stability, channel selection, and 24/7 support.</p>
+            <p>Remember, the key to a great IPTV experience is choosing a reliable provider with stable servers and good
+                customer support. If you haven't signed up yet, check out our premium service for the best stability,
+                channel selection, and 24/7 support.</p>
 
-            <p>For more help, check out our other guides on <a href="fix-iptv-buffering-issues.html">fixing buffering issues</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV streaming.</p>
+            <p>For more help, check out our other guides on <a href="fix-iptv-buffering-issues.html">fixing buffering
+                    issues</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV streaming.
+            </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming?</h3>
-                <p>Join thousands of happy customers with UltraStreamNow. Get access to 22,000+ channels and 80,000+ movies and shows.</p>
+                <p>Join thousands of happy customers with UltraStreamNow. Get access to 22,000+ channels and 80,000+
+                    movies and shows.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>

@@ -133,12 +133,180 @@
     }
     </script>
 
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="/" class="logo" aria-label="UltraStreamNow Home">
                 <picture>
@@ -205,7 +373,9 @@
                         <input type="hidden" name="redirect" value="false">
                         <h3>🎁 Start Your Free Trial Now</h3>
                         <p class="form-subtitle">Get instant access to 22,000+ channels</p>
-                        <div id="form-message" style="display: none; padding: 12px; margin-bottom: 20px; border-radius: 8px; text-align: center;"></div>
+                        <div id="form-message"
+                            style="display: none; padding: 12px; margin-bottom: 20px; border-radius: 8px; text-align: center;">
+                        </div>
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -241,7 +411,8 @@
                                 <option value="high">More than 100 Mbps</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">🚀 Get Free Trial - Instant
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">🚀 Get Free Trial -
+                            Instant
                             Access</button>
                         <p class="form-note">✅ No credit card • ✅ No spam • ✅ Instant activation</p>
                     </form>
@@ -262,7 +433,8 @@
                 <div class="feature-card">
                     <h3>22,000+ Live Channels</h3>
                     <p>Access our complete channel library including USA networks, sports, movies, international
-                        channels, and more. No restrictions during your <a href="free-trial.html" class="inline-link">free
+                        channels, and more. No restrictions during your <a href="free-trial.html"
+                            class="inline-link">free
                             IPTV trial</a>.</p>
                 </div>
                 <div class="feature-card">

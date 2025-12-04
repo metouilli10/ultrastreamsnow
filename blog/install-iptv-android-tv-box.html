@@ -69,12 +69,181 @@
       "keywords": "install iptv on android tv box, android tv box iptv setup, iptv android tv guide, best android tv box for iptv"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -136,25 +305,39 @@
         <!-- Article Content -->
         <div class="article-content">
             <p class="lead" style="font-size: 1.25rem; color: #334155; margin-bottom: 2rem;">
-                Android TV Boxes are powerful streaming devices that offer excellent performance for IPTV. With more processing power and RAM than most streaming sticks, Android TV Boxes provide smoother streaming, better multitasking, and support for advanced IPTV features like recording and multi-screen viewing.
+                Android TV Boxes are powerful streaming devices that offer excellent performance for IPTV. With more
+                processing power and RAM than most streaming sticks, Android TV Boxes provide smoother streaming, better
+                multitasking, and support for advanced IPTV features like recording and multi-screen viewing.
             </p>
 
             <p>
-                Whether you have a budget-friendly Android TV Box or a premium model, setting up IPTV is straightforward. This guide will walk you through the entire process, from choosing the right IPTV player to optimizing your setup for the best streaming experience.
+                Whether you have a budget-friendly Android TV Box or a premium model, setting up IPTV is
+                straightforward. This guide will walk you through the entire process, from choosing the right IPTV
+                player to optimizing your setup for the best streaming experience.
             </p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#why-android-tv-box" style="color: #3b82f6; text-decoration: none;">Why Choose Android TV Box for IPTV?</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#prerequisites" style="color: #3b82f6; text-decoration: none;">Prerequisites</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#enable-developer" style="color: #3b82f6; text-decoration: none;">Step 1: Enable Developer Options</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#install-player" style="color: #3b82f6; text-decoration: none;">Step 2: Install IPTV Player App</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#configure-iptv" style="color: #3b82f6; text-decoration: none;">Step 3: Configure IPTV Service</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#best-boxes" style="color: #3b82f6; text-decoration: none;">Best Android TV Box Models for IPTV</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#alternative-players" style="color: #3b82f6; text-decoration: none;">Alternative IPTV Players</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting Common Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#why-android-tv-box"
+                            style="color: #3b82f6; text-decoration: none;">Why Choose Android TV Box for IPTV?</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#prerequisites"
+                            style="color: #3b82f6; text-decoration: none;">Prerequisites</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#enable-developer"
+                            style="color: #3b82f6; text-decoration: none;">Step 1: Enable Developer Options</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#install-player"
+                            style="color: #3b82f6; text-decoration: none;">Step 2: Install IPTV Player App</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#configure-iptv"
+                            style="color: #3b82f6; text-decoration: none;">Step 3: Configure IPTV Service</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#best-boxes"
+                            style="color: #3b82f6; text-decoration: none;">Best Android TV Box Models for IPTV</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#alternative-players"
+                            style="color: #3b82f6; text-decoration: none;">Alternative IPTV Players</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting Common Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -167,11 +350,14 @@
             <h2 id="why-android-tv-box">Why Choose Android TV Box for IPTV?</h2>
             <p>Android TV Boxes offer several advantages over other streaming devices for IPTV:</p>
             <ul>
-                <li><strong>More Processing Power:</strong> Better CPUs and more RAM mean smoother streaming, especially for 4K content</li>
-                <li><strong>Ethernet Support:</strong> Most Android TV Boxes have Ethernet ports for stable, wired connections</li>
+                <li><strong>More Processing Power:</strong> Better CPUs and more RAM mean smoother streaming, especially
+                    for 4K content</li>
+                <li><strong>Ethernet Support:</strong> Most Android TV Boxes have Ethernet ports for stable, wired
+                    connections</li>
                 <li><strong>USB Ports:</strong> Connect external storage for recording shows and movies</li>
                 <li><strong>Full Android Experience:</strong> Access to Google Play Store and all Android apps</li>
-                <li><strong>Better Multitasking:</strong> Run multiple apps simultaneously without performance issues</li>
+                <li><strong>Better Multitasking:</strong> Run multiple apps simultaneously without performance issues
+                </li>
                 <li><strong>Advanced Features:</strong> Support for recording, timeshift, and advanced EPG features</li>
             </ul>
 
@@ -186,24 +372,30 @@
             </ul>
 
             <h2 id="enable-developer">Step 1: Enable Developer Options</h2>
-            <p>To install IPTV apps from sources other than the Google Play Store, you'll need to enable Developer Options. This is safe and allows you to install apps from trusted sources.</p>
+            <p>To install IPTV apps from sources other than the Google Play Store, you'll need to enable Developer
+                Options. This is safe and allows you to install apps from trusted sources.</p>
 
-            <div class="step-box" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <div class="step-box"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
                 <h3 style="margin-top: 0;">Enable Developer Options:</h3>
                 <ol>
                     <li>Go to <strong>Settings</strong> on your Android TV Box</li>
                     <li>Scroll down to <strong>About</strong> or <strong>Device Preferences</strong></li>
                     <li>Find <strong>Build Number</strong> or <strong>Android Version</strong></li>
-                    <li>Click on <strong>Build Number</strong> 7 times rapidly (you'll see a message saying "You are now a developer")</li>
+                    <li>Click on <strong>Build Number</strong> 7 times rapidly (you'll see a message saying "You are now
+                        a developer")</li>
                     <li>Go back to Settings and you'll now see <strong>Developer Options</strong></li>
-                    <li>Open Developer Options and enable <strong>USB Debugging</strong> and <strong>Install from Unknown Sources</strong></li>
+                    <li>Open Developer Options and enable <strong>USB Debugging</strong> and <strong>Install from
+                            Unknown Sources</strong></li>
                 </ol>
             </div>
 
-            <p><strong>Note:</strong> The exact menu names may vary slightly depending on your Android TV Box model and Android version, but the process is similar across all devices.</p>
+            <p><strong>Note:</strong> The exact menu names may vary slightly depending on your Android TV Box model and
+                Android version, but the process is similar across all devices.</p>
 
             <h2 id="install-player">Step 2: Install IPTV Player App</h2>
-            <p>There are several excellent IPTV players available for Android TV Boxes. We'll cover the two most popular methods:</p>
+            <p>There are several excellent IPTV players available for Android TV Boxes. We'll cover the two most popular
+                methods:</p>
 
             <h3>Method 1: Install from Google Play Store (Recommended)</h3>
             <p>If your Android TV Box has Google Play Store access, this is the easiest method:</p>
@@ -237,10 +429,12 @@
             </ul>
 
             <h2 id="configure-iptv">Step 3: Configure IPTV Service</h2>
-            <p>Once you have your IPTV player installed, it's time to add your IPTV service. The process varies slightly depending on which player you're using, but the general steps are similar.</p>
+            <p>Once you have your IPTV player installed, it's time to add your IPTV service. The process varies slightly
+                depending on which player you're using, but the general steps are similar.</p>
 
             <h3>Using Xtream Codes API (Recommended)</h3>
-            <p>Most IPTV providers, including UltraStreamNow, support Xtream Codes API, which provides better features than M3U playlists:</p>
+            <p>Most IPTV providers, including UltraStreamNow, support Xtream Codes API, which provides better features
+                than M3U playlists:</p>
             <ol>
                 <li>Open your IPTV player app</li>
                 <li>Select <strong>Add User</strong> or <strong>Add Playlist</strong></li>
@@ -267,10 +461,12 @@
                 <li>Wait for channels to load</li>
             </ol>
 
-            <p><strong>Pro Tip:</strong> Xtream Codes API offers better features like EPG (Electronic Program Guide), catch-up TV, and better organization. If your provider supports it, use Xtream Codes instead of M3U.</p>
+            <p><strong>Pro Tip:</strong> Xtream Codes API offers better features like EPG (Electronic Program Guide),
+                catch-up TV, and better organization. If your provider supports it, use Xtream Codes instead of M3U.</p>
 
             <h2 id="best-boxes">Best Android TV Box Models for IPTV</h2>
-            <p>Not all Android TV Boxes are created equal. Here are the best models for IPTV streaming, organized by budget:</p>
+            <p>Not all Android TV Boxes are created equal. Here are the best models for IPTV streaming, organized by
+                budget:</p>
 
             <h3>Budget Options ($30-60)</h3>
             <ul>
@@ -288,30 +484,39 @@
 
             <h3>Premium Options ($120+)</h3>
             <ul>
-                <li><strong>NVIDIA Shield TV Pro:</strong> Top-tier performance, 3GB RAM, AI upscaling, best for power users</li>
-                <li><strong>Formuler Z11 Pro Max:</strong> 4GB RAM, dedicated IPTV features, excellent for IPTV enthusiasts</li>
+                <li><strong>NVIDIA Shield TV Pro:</strong> Top-tier performance, 3GB RAM, AI upscaling, best for power
+                    users</li>
+                <li><strong>Formuler Z11 Pro Max:</strong> 4GB RAM, dedicated IPTV features, excellent for IPTV
+                    enthusiasts</li>
                 <li><strong>Ugoos AM6B Plus:</strong> 4GB RAM, powerful CPU, great for advanced users</li>
             </ul>
 
-            <p><strong>Recommendation:</strong> For most users, the NVIDIA Shield TV (2019) or Chromecast with Google TV offer the best balance of performance and price. If you're on a tight budget, the Xiaomi Mi Box S is an excellent choice.</p>
+            <p><strong>Recommendation:</strong> For most users, the NVIDIA Shield TV (2019) or Chromecast with Google TV
+                offer the best balance of performance and price. If you're on a tight budget, the Xiaomi Mi Box S is an
+                excellent choice.</p>
 
             <h2 id="alternative-players">Alternative IPTV Players for Android TV</h2>
             <p>While IPTV Smarters Pro and TiviMate are the most popular, there are several other excellent options:</p>
 
             <h3>1. Perfect Player (Free)</h3>
             <p><strong>Best For:</strong> Users who want a simple, lightweight player</p>
-            <p>Perfect Player is a free, no-frills IPTV player that focuses on performance. It's lightweight, fast, and works great on older or lower-end Android TV Boxes. It supports M3U playlists and has basic EPG support.</p>
+            <p>Perfect Player is a free, no-frills IPTV player that focuses on performance. It's lightweight, fast, and
+                works great on older or lower-end Android TV Boxes. It supports M3U playlists and has basic EPG support.
+            </p>
             <p><strong>Key Features:</strong> Lightweight, fast, free, basic EPG, simple interface</p>
 
             <h3>2. XCIPTV Player (Free)</h3>
             <p><strong>Best For:</strong> Users who want a modern interface with good features</p>
-            <p>XCIPTV Player offers a modern, user-friendly interface with good EPG support and organization. It's free and works well on most Android TV Boxes.</p>
+            <p>XCIPTV Player offers a modern, user-friendly interface with good EPG support and organization. It's free
+                and works well on most Android TV Boxes.</p>
             <p><strong>Key Features:</strong> Modern interface, good EPG support, free, easy to use</p>
 
             <h3>3. Kodi with IPTV Addon (Advanced)</h3>
             <p><strong>Best For:</strong> Power users who want a full media center experience</p>
-            <p>Kodi is a powerful media center that can be configured with IPTV addons like Simple IPTV or PVR IPTV Simple Client. It offers extensive customization but requires more setup time.</p>
-            <p><strong>Key Features:</strong> Full media center, extensive customization, supports many addons, advanced features</p>
+            <p>Kodi is a powerful media center that can be configured with IPTV addons like Simple IPTV or PVR IPTV
+                Simple Client. It offers extensive customization but requires more setup time.</p>
+            <p><strong>Key Features:</strong> Full media center, extensive customization, supports many addons, advanced
+                features</p>
 
             <div class="table-container" style="overflow-x: auto; margin: 2rem 0;">
                 <table style="width: 100%; border-collapse: collapse; text-align: left;">
@@ -326,7 +531,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV Smarters Pro</strong></td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV Smarters Pro</strong>
+                            </td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Free</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Yes</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">No</td>
@@ -369,18 +575,23 @@
 
             <h3>Channels Not Loading</h3>
             <ul>
-                <li><strong>Check Internet Connection:</strong> Ensure your Android TV Box is connected to Wi-Fi or Ethernet</li>
+                <li><strong>Check Internet Connection:</strong> Ensure your Android TV Box is connected to Wi-Fi or
+                    Ethernet</li>
                 <li><strong>Verify Credentials:</strong> Double-check your username, password, and server URL</li>
-                <li><strong>Test on Another Device:</strong> Try logging in on your phone to verify your IPTV account is working</li>
+                <li><strong>Test on Another Device:</strong> Try logging in on your phone to verify your IPTV account is
+                    working</li>
                 <li><strong>Clear App Cache:</strong> Go to Settings → Apps → Your IPTV App → Clear Cache</li>
-                <li><strong>Restart Device:</strong> Unplug your Android TV Box for 30 seconds, then plug it back in</li>
+                <li><strong>Restart Device:</strong> Unplug your Android TV Box for 30 seconds, then plug it back in
+                </li>
             </ul>
 
             <h3>Buffering or Freezing</h3>
             <ul>
                 <li><strong>Check Internet Speed:</strong> Run a speed test (need 25+ Mbps for HD, 50+ for 4K)</li>
-                <li><strong>Use Ethernet:</strong> Connect via Ethernet cable instead of Wi-Fi for more stable connection</li>
-                <li><strong>Use a VPN:</strong> ISP throttling can cause buffering - check our <a href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
+                <li><strong>Use Ethernet:</strong> Connect via Ethernet cable instead of Wi-Fi for more stable
+                    connection</li>
+                <li><strong>Use a VPN:</strong> ISP throttling can cause buffering - check our <a
+                        href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
                 <li><strong>Close Background Apps:</strong> Free up RAM by closing other apps</li>
                 <li><strong>Lower Stream Quality:</strong> Try SD or HD instead of 4K if your connection is slow</li>
             </ul>
@@ -388,9 +599,11 @@
             <h3>App Crashes or Freezes</h3>
             <ul>
                 <li><strong>Update the App:</strong> Check for app updates in Google Play Store</li>
-                <li><strong>Clear App Data:</strong> Settings → Apps → Your IPTV App → Clear Data (you'll need to re-enter credentials)</li>
+                <li><strong>Clear App Data:</strong> Settings → Apps → Your IPTV App → Clear Data (you'll need to
+                    re-enter credentials)</li>
                 <li><strong>Reinstall the App:</strong> Uninstall and reinstall the IPTV player</li>
-                <li><strong>Check Storage Space:</strong> Ensure you have enough free storage on your Android TV Box</li>
+                <li><strong>Check Storage Space:</strong> Ensure you have enough free storage on your Android TV Box
+                </li>
                 <li><strong>Restart Device:</strong> Sometimes a simple restart fixes app issues</li>
             </ul>
 
@@ -399,7 +612,8 @@
                 <li><strong>Check EPG URL:</strong> Ensure your IPTV provider has provided an EPG URL</li>
                 <li><strong>Update EPG:</strong> In your IPTV app settings, manually refresh the EPG</li>
                 <li><strong>Check EPG Settings:</strong> Verify EPG is enabled in your app settings</li>
-                <li><strong>Contact Provider:</strong> Some providers don't offer EPG - check with your IPTV service</li>
+                <li><strong>Contact Provider:</strong> Some providers don't offer EPG - check with your IPTV service
+                </li>
             </ul>
 
             <h3>No Sound or Audio Issues</h3>
@@ -407,7 +621,8 @@
                 <li><strong>Check TV Volume:</strong> Ensure your TV volume is up and not muted</li>
                 <li><strong>Check HDMI Connection:</strong> Ensure HDMI cable is securely connected</li>
                 <li><strong>Audio Settings:</strong> Check Android TV Box audio settings</li>
-                <li><strong>Try Different Channel:</strong> Some channels may have audio issues - try another channel</li>
+                <li><strong>Try Different Channel:</strong> Some channels may have audio issues - try another channel
+                </li>
             </ul>
 
             <h2 id="faq">Frequently Asked Questions</h2>
@@ -419,7 +634,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>For most users, the NVIDIA Shield TV (2019) offers the best balance of performance and price. It has excellent processing power, 4K support, and handles IPTV streaming smoothly. For budget-conscious users, the Xiaomi Mi Box S or Chromecast with Google TV are excellent choices. Premium users might prefer the NVIDIA Shield TV Pro for its advanced features.</p>
+                        <p>For most users, the NVIDIA Shield TV (2019) offers the best balance of performance and price.
+                            It has excellent processing power, 4K support, and handles IPTV streaming smoothly. For
+                            budget-conscious users, the Xiaomi Mi Box S or Chromecast with Google TV are excellent
+                            choices. Premium users might prefer the NVIDIA Shield TV Pro for its advanced features.</p>
                     </div>
                 </div>
 
@@ -429,7 +647,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP throttling (which causes buffering), protects your privacy, and can improve streaming performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a> to find the right one for you.</p>
+                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP
+                            throttling (which causes buffering), protects your privacy, and can improve streaming
+                            performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for
+                                IPTV</a> to find the right one for you.</p>
                     </div>
                 </div>
 
@@ -439,7 +660,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Android TV Boxes support recording if you use a player that supports it (like TiviMate) and have external storage connected. Connect a USB drive or external hard drive to your Android TV Box, then configure recording in your IPTV player settings. Some IPTV services also offer cloud-based DVR features.</p>
+                        <p>Yes! Android TV Boxes support recording if you use a player that supports it (like TiviMate)
+                            and have external storage connected. Connect a USB drive or external hard drive to your
+                            Android TV Box, then configure recording in your IPTV player settings. Some IPTV services
+                            also offer cloud-based DVR features.</p>
                     </div>
                 </div>
 
@@ -455,7 +679,8 @@
                             <li><strong>HD Quality:</strong> Minimum 25 Mbps (recommended)</li>
                             <li><strong>4K Quality:</strong> Minimum 50 Mbps (recommended)</li>
                         </ul>
-                        <p>Android TV Boxes with Ethernet ports can provide more stable connections than Wi-Fi, which is especially important for 4K streaming.</p>
+                        <p>Android TV Boxes with Ethernet ports can provide more stable connections than Wi-Fi, which is
+                            especially important for 4K streaming.</p>
                     </div>
                 </div>
 
@@ -465,7 +690,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>This depends on your IPTV provider's policy. Most providers, including UltraStreamNow, allow you to use your account on multiple devices, but typically limit simultaneous streams (usually 1-3 devices at once). Check your subscription details or contact your provider to confirm how many devices you can use simultaneously.</p>
+                        <p>This depends on your IPTV provider's policy. Most providers, including UltraStreamNow, allow
+                            you to use your account on multiple devices, but typically limit simultaneous streams
+                            (usually 1-3 devices at once). Check your subscription details or contact your provider to
+                            confirm how many devices you can use simultaneously.</p>
                     </div>
                 </div>
 
@@ -493,13 +721,15 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>If you installed from Google Play Store, updates happen automatically. To manually check for updates:</p>
+                        <p>If you installed from Google Play Store, updates happen automatically. To manually check for
+                            updates:</p>
                         <ol>
                             <li>Open Google Play Store</li>
                             <li>Go to My Apps</li>
                             <li>Find your IPTV app and click Update if available</li>
                         </ol>
-                        <p>If you sideloaded the app, download the latest APK from the official website and install it (it will replace the old version).</p>
+                        <p>If you sideloaded the app, download the latest APK from the official website and install it
+                            (it will replace the old version).</p>
                     </div>
                 </div>
 
@@ -509,27 +739,36 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>No, IPTV requires an active internet connection because it streams content over the internet in real-time. Unlike cable TV which uses dedicated cables, IPTV relies entirely on your internet connection. If your internet goes down, IPTV won't work.</p>
+                        <p>No, IPTV requires an active internet connection because it streams content over the internet
+                            in real-time. Unlike cable TV which uses dedicated cables, IPTV relies entirely on your
+                            internet connection. If your internet goes down, IPTV won't work.</p>
                     </div>
                 </div>
             </div>
 
             <h2>Conclusion</h2>
             <p>
-                Setting up IPTV on an Android TV Box is straightforward and opens up a world of entertainment. With more processing power than streaming sticks, Android TV Boxes provide smoother streaming, better multitasking, and support for advanced features like recording.
+                Setting up IPTV on an Android TV Box is straightforward and opens up a world of entertainment. With more
+                processing power than streaming sticks, Android TV Boxes provide smoother streaming, better
+                multitasking, and support for advanced features like recording.
             </p>
             <p>
-                Whether you choose a budget-friendly option like the Xiaomi Mi Box S or a premium device like the NVIDIA Shield TV Pro, you'll be able to enjoy thousands of channels and on-demand content. The key is choosing a reliable IPTV provider with stable servers and good customer support.
+                Whether you choose a budget-friendly option like the Xiaomi Mi Box S or a premium device like the NVIDIA
+                Shield TV Pro, you'll be able to enjoy thousands of channels and on-demand content. The key is choosing
+                a reliable IPTV provider with stable servers and good customer support.
             </p>
             <p>
-                For more help, check out our other guides on <a href="fix-iptv-buffering-issues.html">fixing buffering issues</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV streaming.
+                For more help, check out our other guides on <a href="fix-iptv-buffering-issues.html">fixing buffering
+                    issues</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV streaming.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming?</h3>
-                <p>Join thousands of happy customers with UltraStreamNow. Get access to 22,000+ channels and 80,000+ movies and shows.</p>
+                <p>Join thousands of happy customers with UltraStreamNow. Get access to 22,000+ channels and 80,000+
+                    movies and shows.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>

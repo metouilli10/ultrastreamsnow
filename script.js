@@ -5,19 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav__link');
 
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
+    if (mobileToggle && nav) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             nav.classList.toggle('active');
             mobileToggle.classList.toggle('active');
+            const isExpanded = nav.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', isExpanded);
         });
     }
 
     // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            mobileToggle.classList.remove('active');
+    if (navLinks.length > 0 && nav && mobileToggle) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
         });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (nav && mobileToggle && nav.classList.contains('active')) {
+            if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+                nav.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
     });
 
     // FAQ Accordion

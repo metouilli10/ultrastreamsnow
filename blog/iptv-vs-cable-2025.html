@@ -69,12 +69,181 @@
       "keywords": "iptv vs cable, cable vs iptv, cut the cord, streaming vs cable, iptv benefits, cable tv alternatives"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -214,23 +383,28 @@
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Watch Anywhere</td>
                         </tr>
                         <tr>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Installation Time</strong></td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Installation Time</strong>
+                            </td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">1-3 hours (technician visit)</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">5-10 minutes (DIY)</td>
                         </tr>
                         <tr>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Contract Requirements</strong></td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Contract Requirements</strong>
+                            </td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Usually 1-2 year contract</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">No contract, cancel anytime</td>
                         </tr>
                         <tr>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Equipment Costs</strong></td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;">$5-15/month per box + installation fees</td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;">One-time device purchase ($30-50 for Firestick)</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;">$5-15/month per box + installation
+                                fees</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;">One-time device purchase ($30-50 for
+                                Firestick)</td>
                         </tr>
                         <tr>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Hidden Fees</strong></td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;">HD fee, DVR fee, regional sports fee, broadcast fee</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;">HD fee, DVR fee, regional sports fee,
+                                broadcast fee</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">None - price is all-inclusive</td>
                         </tr>
                         <tr>
@@ -241,7 +415,8 @@
                         <tr>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Reliability</strong></td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Very reliable (99%+ uptime)</td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;">Depends on provider (99%+ with premium services)</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;">Depends on provider (99%+ with premium
+                                services)</td>
                         </tr>
                         <tr>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>Picture Quality</strong></td>
@@ -251,7 +426,8 @@
                         <tr>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>DVR/Recording</strong></td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">Available (extra monthly fee)</td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;">Catch-up TV included, recording depends on player</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;">Catch-up TV included, recording
+                                depends on player</td>
                         </tr>
                     </tbody>
                 </table>
@@ -310,15 +486,20 @@
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">-</td>
                         </tr>
                         <tr>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV (UltraStreamNow)</strong></td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0;"><strong>IPTV (UltraStreamNow)</strong>
+                            </td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">$240</td>
                             <td style="padding: 12px; border: 1px solid #e2e8f0;">$1,200</td>
-                            <td style="padding: 12px; border: 1px solid #e2e8f0; color: #10b981; font-weight: bold;">$7,800 saved</td>
+                            <td style="padding: 12px; border: 1px solid #e2e8f0; color: #10b981; font-weight: bold;">
+                                $7,800 saved</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p><strong>ROI Calculation:</strong> By switching to IPTV, you could save over $7,800 in 5 years. That's enough for a family vacation, a down payment on a car, or significant savings for retirement. Even if you factor in a one-time Firestick purchase ($50) and occasional internet upgrades, the savings are substantial.</p>
+            <p><strong>ROI Calculation:</strong> By switching to IPTV, you could save over $7,800 in 5 years. That's
+                enough for a family vacation, a down payment on a car, or significant savings for retirement. Even if
+                you factor in a one-time Firestick purchase ($50) and occasional internet upgrades, the savings are
+                substantial.</p>
 
             <h2>2. Content Variety: More Than You Can Watch</h2>
             <p>
@@ -346,7 +527,7 @@
             </p>
 
             <h2>Pros and Cons: Honest Assessment</h2>
-            
+
             <h3>IPTV Pros (Advantages)</h3>
             <ul>
                 <li><strong>Massive Cost Savings:</strong> Save 80-90% compared to cable bills</li>
@@ -365,12 +546,18 @@
 
             <h3>IPTV Cons (Disadvantages)</h3>
             <ul>
-                <li><strong>Internet Dependence:</strong> Requires stable internet (25+ Mbps recommended). If your internet goes down, your TV goes down.</li>
-                <li><strong>Setup Required:</strong> You need to install an app yourself (though it's very easy - see our <a href="install-iptv-firestick-guide.html">Firestick Setup Guide</a>)</li>
-                <li><strong>Quality Varies:</strong> Service quality depends on your chosen provider. Premium providers like UltraStreamNow offer 99.9% uptime, but cheaper services may have issues.</li>
-                <li><strong>Learning Curve:</strong> Slight learning curve for first-time users, though most apps are user-friendly</li>
-                <li><strong>Legal Considerations:</strong> Must choose a legitimate provider with proper licensing (always use reputable services)</li>
-                <li><strong>Potential Buffering:</strong> Can experience buffering if internet is slow or during peak hours (solved with VPN - see our <a href="best-vpn-for-iptv-usa.html">VPN guide</a>)</li>
+                <li><strong>Internet Dependence:</strong> Requires stable internet (25+ Mbps recommended). If your
+                    internet goes down, your TV goes down.</li>
+                <li><strong>Setup Required:</strong> You need to install an app yourself (though it's very easy - see
+                    our <a href="install-iptv-firestick-guide.html">Firestick Setup Guide</a>)</li>
+                <li><strong>Quality Varies:</strong> Service quality depends on your chosen provider. Premium providers
+                    like UltraStreamNow offer 99.9% uptime, but cheaper services may have issues.</li>
+                <li><strong>Learning Curve:</strong> Slight learning curve for first-time users, though most apps are
+                    user-friendly</li>
+                <li><strong>Legal Considerations:</strong> Must choose a legitimate provider with proper licensing
+                    (always use reputable services)</li>
+                <li><strong>Potential Buffering:</strong> Can experience buffering if internet is slow or during peak
+                    hours (solved with VPN - see our <a href="best-vpn-for-iptv-usa.html">VPN guide</a>)</li>
             </ul>
 
             <h3>Cable TV Pros (Advantages)</h3>
@@ -387,7 +574,8 @@
             <ul>
                 <li><strong>Extremely Expensive:</strong> $100-200+ per month with all fees</li>
                 <li><strong>Long-Term Contracts:</strong> Usually locked into 1-2 year contracts</li>
-                <li><strong>Hidden Fees:</strong> Broadcast fees, regional sports fees, HD fees, DVR fees add up quickly</li>
+                <li><strong>Hidden Fees:</strong> Broadcast fees, regional sports fees, HD fees, DVR fees add up quickly
+                </li>
                 <li><strong>Limited Channels:</strong> Only 100-300 channels, many you'll never watch</li>
                 <li><strong>Equipment Rental Fees:</strong> $10-15/month per cable box (most homes need 2-3)</li>
                 <li><strong>No Flexibility:</strong> Tied to your home, can't watch on the go</li>
@@ -400,18 +588,28 @@
             </ul>
 
             <h2>Real-World Examples: Success Stories</h2>
-            
+
             <h3>Sarah's Story: Saving $1,200 Per Year</h3>
-            <p>Sarah, a 35-year-old marketing professional from California, was paying $150/month for cable with two HD boxes, DVR service, and HBO. That's $1,800 per year. After switching to IPTV, she now pays $15/month ($180/year) and gets access to more channels, including international content she couldn't get with cable. <strong>Annual savings: $1,620</strong>. She used the savings to take her family on a vacation they'd been putting off.</p>
+            <p>Sarah, a 35-year-old marketing professional from California, was paying $150/month for cable with two HD
+                boxes, DVR service, and HBO. That's $1,800 per year. After switching to IPTV, she now pays $15/month
+                ($180/year) and gets access to more channels, including international content she couldn't get with
+                cable. <strong>Annual savings: $1,620</strong>. She used the savings to take her family on a vacation
+                they'd been putting off.</p>
 
             <h3>Mike's Experience: Sports Fan Perspective</h3>
-            <p>Mike, a die-hard sports fan, was paying $180/month for cable plus $300/year for NFL Sunday Ticket and $200/year for NBA League Pass. Total: $2,660/year. With IPTV, he gets all NFL games, NBA games, and every other sport for just $20/month ($240/year). <strong>Annual savings: $2,420</strong>. Plus, he can watch games on his phone while traveling, something cable couldn't offer.</p>
+            <p>Mike, a die-hard sports fan, was paying $180/month for cable plus $300/year for NFL Sunday Ticket and
+                $200/year for NBA League Pass. Total: $2,660/year. With IPTV, he gets all NFL games, NBA games, and
+                every other sport for just $20/month ($240/year). <strong>Annual savings: $2,420</strong>. Plus, he can
+                watch games on his phone while traveling, something cable couldn't offer.</p>
 
             <h3>The Johnson Family: Multi-TV Household</h3>
-            <p>The Johnson family had 4 TVs in their home, requiring 4 cable boxes at $12/month each ($48/month just for boxes). Their total cable bill was $165/month. They switched to IPTV and use Firesticks on each TV (one-time $200 investment). Their monthly cost is now $20. <strong>Annual savings: $1,740</strong>, and they have more channels and better content selection.</p>
+            <p>The Johnson family had 4 TVs in their home, requiring 4 cable boxes at $12/month each ($48/month just for
+                boxes). Their total cable bill was $165/month. They switched to IPTV and use Firesticks on each TV
+                (one-time $200 investment). Their monthly cost is now $20. <strong>Annual savings: $1,740</strong>, and
+                they have more channels and better content selection.</p>
 
             <h2>Who Should Choose What?</h2>
-            
+
             <h3>Choose IPTV If You:</h3>
             <ul>
                 <li>Want to save money (who doesn't?)</li>
@@ -437,10 +635,12 @@
                 <li>Prefer the traditional cable box interface (though IPTV apps are often better)</li>
             </ul>
 
-            <p><strong>Note:</strong> Even if you fall into the "stick with cable" category, we still recommend trying IPTV with a free trial. You might be surprised at how easy it is and how much you save. Most people who try IPTV never go back to cable.</p>
+            <p><strong>Note:</strong> Even if you fall into the "stick with cable" category, we still recommend trying
+                IPTV with a free trial. You might be surprised at how easy it is and how much you save. Most people who
+                try IPTV never go back to cable.</p>
 
             <h2 id="faq">Frequently Asked Questions</h2>
-            
+
             <div style="margin: 2rem 0;">
                 <div class="faq-item">
                     <button class="faq-question">
@@ -448,7 +648,9 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Most IPTV services, including UltraStreamNow, include local channels like ABC, CBS, NBC, FOX, and PBS. You'll get the same local news, weather, and programming you're used to with cable. Some services even offer multiple local channel options from different cities.</p>
+                        <p>Yes! Most IPTV services, including UltraStreamNow, include local channels like ABC, CBS, NBC,
+                            FOX, and PBS. You'll get the same local news, weather, and programming you're used to with
+                            cable. Some services even offer multiple local channel options from different cities.</p>
                     </div>
                 </div>
 
@@ -458,7 +660,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>With a premium IPTV provider like UltraStreamNow, reliability is excellent (99.9%+ uptime). However, reliability depends on your chosen provider. Reputable providers invest in robust server infrastructure and CDN networks to ensure stable streaming. Cheaper, less reputable services may have more downtime. Always choose a well-established provider with good reviews and 24/7 support.</p>
+                        <p>With a premium IPTV provider like UltraStreamNow, reliability is excellent (99.9%+ uptime).
+                            However, reliability depends on your chosen provider. Reputable providers invest in robust
+                            server infrastructure and CDN networks to ensure stable streaming. Cheaper, less reputable
+                            services may have more downtime. Always choose a well-established provider with good reviews
+                            and 24/7 support.</p>
                     </div>
                 </div>
 
@@ -468,7 +674,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>If your internet connection goes down, IPTV won't work since it requires an internet connection. This is the main trade-off compared to cable. However, most people have reliable internet these days, and internet outages are typically rare and brief. If you experience frequent internet outages, you might want to stick with cable or invest in a backup internet connection.</p>
+                        <p>If your internet connection goes down, IPTV won't work since it requires an internet
+                            connection. This is the main trade-off compared to cable. However, most people have reliable
+                            internet these days, and internet outages are typically rare and brief. If you experience
+                            frequent internet outages, you might want to stick with cable or invest in a backup internet
+                            connection.</p>
                     </div>
                 </div>
 
@@ -478,7 +688,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Many IPTV services offer catch-up TV (watching shows from the past 24-48 hours) which is included. For traditional DVR recording, it depends on your IPTV player. Premium players like TiviMate support recording to external storage. Some IPTV providers also offer cloud-based DVR services. Cable typically includes DVR, but you pay extra for it ($10-20/month).</p>
+                        <p>Many IPTV services offer catch-up TV (watching shows from the past 24-48 hours) which is
+                            included. For traditional DVR recording, it depends on your IPTV player. Premium players
+                            like TiviMate support recording to external storage. Some IPTV providers also offer
+                            cloud-based DVR services. Cable typically includes DVR, but you pay extra for it
+                            ($10-20/month).</p>
                     </div>
                 </div>
 
@@ -506,7 +720,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Most likely not. Premium IPTV services like UltraStreamNow include all major cable channels: ESPN, CNN, HBO, Showtime, Discovery, History Channel, and thousands more. In fact, you'll probably gain access to channels you didn't have with cable, including international channels. Before switching, you can check with the IPTV provider to confirm specific channels are included, or try a free trial to see the full channel list.</p>
+                        <p>Most likely not. Premium IPTV services like UltraStreamNow include all major cable channels:
+                            ESPN, CNN, HBO, Showtime, Discovery, History Channel, and thousands more. In fact, you'll
+                            probably gain access to channels you didn't have with cable, including international
+                            channels. Before switching, you can check with the IPTV provider to confirm specific
+                            channels are included, or try a free trial to see the full channel list.</p>
                     </div>
                 </div>
 
@@ -516,7 +734,11 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>IPTV technology itself is 100% legal. The legality depends on the content being streamed and whether the provider has proper licensing. Legitimate IPTV providers like UltraStreamNow work with content distributors and have proper licensing agreements. Always use reputable IPTV services that operate legally. Using IPTV to access pirated content is illegal, so choose your provider carefully.</p>
+                        <p>IPTV technology itself is 100% legal. The legality depends on the content being streamed and
+                            whether the provider has proper licensing. Legitimate IPTV providers like UltraStreamNow
+                            work with content distributors and have proper licensing agreements. Always use reputable
+                            IPTV services that operate legally. Using IPTV to access pirated content is illegal, so
+                            choose your provider carefully.</p>
                     </div>
                 </div>
             </div>
@@ -528,24 +750,33 @@
                 clinging to older business models that no longer serve the consumer.
             </p>
             <p>
-                The numbers don't lie: you can save thousands of dollars over just a few years by switching to IPTV, while getting access to more channels and better features. The setup is simple (5-10 minutes), and once you're set up, you'll wonder why you didn't switch sooner.
+                The numbers don't lie: you can save thousands of dollars over just a few years by switching to IPTV,
+                while getting access to more channels and better features. The setup is simple (5-10 minutes), and once
+                you're set up, you'll wonder why you didn't switch sooner.
             </p>
             <p>
-                If you have a decent internet connection (25+ Mbps) and want to save money without sacrificing entertainment,
-                making the switch is a no-brainer. The only real advantage cable has is that it doesn't require internet, but with modern internet reliability, this is rarely an issue.
+                If you have a decent internet connection (25+ Mbps) and want to save money without sacrificing
+                entertainment,
+                making the switch is a no-brainer. The only real advantage cable has is that it doesn't require
+                internet, but with modern internet reliability, this is rarely an issue.
             </p>
             <p>
-                Ready to make the switch? Start with a free trial to experience the difference yourself. Most people who try IPTV never look back.
+                Ready to make the switch? Start with a free trial to experience the difference yourself. Most people who
+                try IPTV never look back.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Cut the Cord?</h3>
-                <p>Join thousands who have already made the switch. Get access to 22,000+ channels and save over $1,000 per year.</p>
+                <p>Join thousands who have already made the switch. Get access to 22,000+ channels and save over $1,000
+                    per year.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • Cancel anytime</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • Cancel
+                    anytime</p>
             </div>
 
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;">For more information, check out our guides on <a href="install-iptv-firestick-guide.html">setting up IPTV on Firestick</a> and <a href="understanding-iptv-beginner-guide.html">understanding IPTV technology</a>.</p>
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;">For more information, check out our guides
+                on <a href="install-iptv-firestick-guide.html">setting up IPTV on Firestick</a> and <a
+                    href="understanding-iptv-beginner-guide.html">understanding IPTV technology</a>.</p>
         </div>
     </article>
 

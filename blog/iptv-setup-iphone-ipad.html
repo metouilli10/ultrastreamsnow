@@ -69,12 +69,181 @@
       "keywords": "iptv setup iphone ipad, iptv ios app, iptv iphone guide, iptv ipad setup, best iptv app iphone"
     }
     </script>
+
+    <style>
+        .header--floating {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1260px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+            padding: 0.7rem 18px;
+            z-index: 1200
+        }
+
+        .header--floating .container {
+            max-width: 1180px;
+            padding: 0
+        }
+
+        .header--floating .header__container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .logo {
+            flex-shrink: 0
+        }
+
+        .header--floating .nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            gap: 12px;
+            width: 100%
+        }
+
+        .header--floating .nav__link {
+            color: #374151;
+            font-weight: 500
+        }
+
+        .header--floating .nav__list {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 14px
+        }
+
+        .header--floating .nav .btn {
+            position: static;
+            transform: none
+        }
+
+        body {
+            padding-top: 110px
+        }
+
+        @media (max-width:768px) {
+            .header--floating {
+                width: calc(100% - 20px);
+                padding: 6px 12px;
+                border-radius: 12px;
+                top: 12px
+            }
+
+            .header--floating .header__container {
+                gap: 8px
+            }
+
+            .header--floating .logo img {
+                width: 140px;
+                height: auto
+            }
+
+            body {
+                padding-top: 90px
+            }
+        }
+
+        @media (max-width:640px) {
+            .header--floating {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                border-radius: 0;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                padding: 0
+            }
+
+            .header--floating .nav {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                opacity: 0;
+                pointer-events: none
+            }
+
+            .header--floating .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .header--floating .header__container {
+                height: 56px;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0
+            }
+
+            .header--floating .logo img {
+                height: 24px;
+                width: auto
+            }
+
+            .header--floating .mobile-toggle {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px
+            }
+
+            .header--floating .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                text-align: center
+            }
+
+            .header--floating .nav.active .nav__list {
+                display: flex
+            }
+
+            .header--floating .nav.active .btn {
+                width: 100%
+            }
+
+            body {
+                padding-top: 56px
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="header header--floating">
         <div class="container header__container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo-new.png" alt="UltraStreamNow Logo">
@@ -136,23 +305,36 @@
         <!-- Article Content -->
         <div class="article-content">
             <p class="lead" style="font-size: 1.25rem; color: #334155; margin-bottom: 2rem;">
-                iPhone and iPad are excellent devices for IPTV streaming. With high-resolution displays, powerful processors, and the ability to stream to your TV via AirPlay, iOS devices offer a great mobile IPTV experience. This guide will show you how to set up IPTV on your iPhone or iPad in just a few minutes.
+                iPhone and iPad are excellent devices for IPTV streaming. With high-resolution displays, powerful
+                processors, and the ability to stream to your TV via AirPlay, iOS devices offer a great mobile IPTV
+                experience. This guide will show you how to set up IPTV on your iPhone or iPad in just a few minutes.
             </p>
 
             <p>
-                Whether you want to watch IPTV on your device while traveling, stream to your TV using AirPlay, or enjoy content on the go, setting up IPTV on iOS is straightforward. We'll cover the best apps, step-by-step setup, and how to get the most out of your IPTV experience on iPhone and iPad.
+                Whether you want to watch IPTV on your device while traveling, stream to your TV using AirPlay, or enjoy
+                content on the go, setting up IPTV on iOS is straightforward. We'll cover the best apps, step-by-step
+                setup, and how to get the most out of your IPTV experience on iPhone and iPad.
             </p>
 
-            <div class="table-of-contents" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
+            <div class="table-of-contents"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #3b82f6;">
                 <h3 style="margin-top: 0; color: #1e293b;">Table of Contents</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin: 0.5rem 0;"><a href="#best-apps" style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for iPhone/iPad</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#install-app" style="color: #3b82f6; text-decoration: none;">Step 1: Install IPTV App from App Store</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#configure" style="color: #3b82f6; text-decoration: none;">Step 2: Configure IPTV Service</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#iphone-vs-ipad" style="color: #3b82f6; text-decoration: none;">iPhone vs iPad: Differences</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#airplay" style="color: #3b82f6; text-decoration: none;">Streaming to TV with AirPlay</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting" style="color: #3b82f6; text-decoration: none;">Troubleshooting iOS Issues</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#faq" style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#best-apps"
+                            style="color: #3b82f6; text-decoration: none;">Best IPTV Apps for iPhone/iPad</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#install-app"
+                            style="color: #3b82f6; text-decoration: none;">Step 1: Install IPTV App from App Store</a>
+                    </li>
+                    <li style="margin: 0.5rem 0;"><a href="#configure"
+                            style="color: #3b82f6; text-decoration: none;">Step 2: Configure IPTV Service</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#iphone-vs-ipad"
+                            style="color: #3b82f6; text-decoration: none;">iPhone vs iPad: Differences</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#airplay"
+                            style="color: #3b82f6; text-decoration: none;">Streaming to TV with AirPlay</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#troubleshooting"
+                            style="color: #3b82f6; text-decoration: none;">Troubleshooting iOS Issues</a></li>
+                    <li style="margin: 0.5rem 0;"><a href="#faq"
+                            style="color: #3b82f6; text-decoration: none;">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
@@ -163,11 +345,14 @@
             </div>
 
             <h2 id="best-apps">Best IPTV Apps for iPhone and iPad</h2>
-            <p>There are several excellent IPTV apps available in the App Store for iOS devices. Here are the top options:</p>
+            <p>There are several excellent IPTV apps available in the App Store for iOS devices. Here are the top
+                options:</p>
 
             <h3>1. GSE Smart IPTV (Free with Premium Option)</h3>
             <p><strong>Best For:</strong> Most users - great balance of features and ease of use</p>
-            <p>GSE Smart IPTV is one of the most popular IPTV apps for iOS. It offers a clean interface, good EPG support, and works well on both iPhone and iPad. The free version has ads, but the premium version removes ads and adds additional features.</p>
+            <p>GSE Smart IPTV is one of the most popular IPTV apps for iOS. It offers a clean interface, good EPG
+                support, and works well on both iPhone and iPad. The free version has ads, but the premium version
+                removes ads and adds additional features.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Free version available (with ads)</li>
@@ -180,7 +365,8 @@
 
             <h3>2. IPTV Smarters (Free)</h3>
             <p><strong>Best For:</strong> Users who want a free, ad-free option</p>
-            <p>IPTV Smarters is the iOS version of the popular IPTV Smarters Pro app. It's free, user-friendly, and offers good performance on iOS devices.</p>
+            <p>IPTV Smarters is the iOS version of the popular IPTV Smarters Pro app. It's free, user-friendly, and
+                offers good performance on iOS devices.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Completely free (no ads)</li>
@@ -193,7 +379,8 @@
 
             <h3>3. Flex IPTV (Free with Premium)</h3>
             <p><strong>Best For:</strong> Users who want advanced features</p>
-            <p>Flex IPTV offers a modern interface and advanced features. The free version is limited, but the premium version unlocks all features.</p>
+            <p>Flex IPTV offers a modern interface and advanced features. The free version is limited, but the premium
+                version unlocks all features.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Modern, customizable interface</li>
@@ -205,7 +392,8 @@
 
             <h3>4. IPTVX (Premium Only)</h3>
             <p><strong>Best For:</strong> Users who want the best iOS IPTV experience</p>
-            <p>IPTVX is a premium IPTV player with a beautiful interface and advanced features. It's paid-only but offers the best user experience.</p>
+            <p>IPTVX is a premium IPTV player with a beautiful interface and advanced features. It's paid-only but
+                offers the best user experience.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
                 <li>Beautiful, modern interface</li>
@@ -216,9 +404,11 @@
             </ul>
 
             <h2 id="install-app">Step 1: Install IPTV App from App Store</h2>
-            <p>Installing an IPTV app on iPhone or iPad is straightforward since all apps come from the official App Store:</p>
+            <p>Installing an IPTV app on iPhone or iPad is straightforward since all apps come from the official App
+                Store:</p>
 
-            <div class="step-box" style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <div class="step-box"
+                style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
                 <h3 style="margin-top: 0;">Installation Steps:</h3>
                 <ol>
                     <li>Open the <strong>App Store</strong> on your iPhone or iPad</li>
@@ -232,20 +422,25 @@
                 </ol>
             </div>
 
-            <p><strong>Note:</strong> All IPTV apps in the App Store are legitimate and safe to install. Unlike Android, iOS doesn't allow sideloading apps from outside the App Store without jailbreaking, which we don't recommend.</p>
+            <p><strong>Note:</strong> All IPTV apps in the App Store are legitimate and safe to install. Unlike Android,
+                iOS doesn't allow sideloading apps from outside the App Store without jailbreaking, which we don't
+                recommend.</p>
 
             <h2 id="configure">Step 2: Configure IPTV Service</h2>
-            <p>Once you have your IPTV app installed, it's time to add your IPTV service. The process is similar across most iOS IPTV apps:</p>
+            <p>Once you have your IPTV app installed, it's time to add your IPTV service. The process is similar across
+                most iOS IPTV apps:</p>
 
             <h3>Using Xtream Codes API (Recommended)</h3>
-            <p>Most IPTV providers, including UltraStreamNow, support Xtream Codes API, which provides better features:</p>
+            <p>Most IPTV providers, including UltraStreamNow, support Xtream Codes API, which provides better features:
+            </p>
             <ol>
                 <li>Open your IPTV app</li>
                 <li>Look for <strong>Add Playlist</strong>, <strong>Add User</strong>, or <strong>+</strong> button</li>
                 <li>Select <strong>Xtream Codes API</strong> or <strong>Login with Xtream Codes</strong></li>
                 <li>Enter your IPTV credentials:
                     <ul>
-                        <li><strong>Server URL:</strong> Provided by your IPTV service (e.g., http://server.ultrastreamnow.com)</li>
+                        <li><strong>Server URL:</strong> Provided by your IPTV service (e.g.,
+                            http://server.ultrastreamnow.com)</li>
                         <li><strong>Username:</strong> Your IPTV username</li>
                         <li><strong>Password:</strong> Your IPTV password</li>
                     </ul>
@@ -266,10 +461,12 @@
                 <li>Wait for channels to load</li>
             </ol>
 
-            <p><strong>Pro Tip:</strong> Xtream Codes API offers better features like EPG, catch-up TV, and better organization. If your provider supports it, use Xtream Codes instead of M3U.</p>
+            <p><strong>Pro Tip:</strong> Xtream Codes API offers better features like EPG, catch-up TV, and better
+                organization. If your provider supports it, use Xtream Codes instead of M3U.</p>
 
             <h2 id="iphone-vs-ipad">iPhone vs iPad: Key Differences</h2>
-            <p>While the setup process is identical, there are some differences when using IPTV on iPhone versus iPad:</p>
+            <p>While the setup process is identical, there are some differences when using IPTV on iPhone versus iPad:
+            </p>
 
             <h3>iPhone Advantages</h3>
             <ul>
@@ -288,12 +485,17 @@
             </ul>
 
             <h3>Which Should You Use?</h3>
-            <p><strong>Use iPhone if:</strong> You want portability, watch on the go, or primarily stream to TV via AirPlay.</p>
-            <p><strong>Use iPad if:</strong> You want a better viewing experience on the device itself, prefer larger screen, or want to multi-task while watching.</p>
-            <p><strong>Best of Both:</strong> Many users use both - iPhone for on-the-go viewing and iPad for home viewing or when traveling.</p>
+            <p><strong>Use iPhone if:</strong> You want portability, watch on the go, or primarily stream to TV via
+                AirPlay.</p>
+            <p><strong>Use iPad if:</strong> You want a better viewing experience on the device itself, prefer larger
+                screen, or want to multi-task while watching.</p>
+            <p><strong>Best of Both:</strong> Many users use both - iPhone for on-the-go viewing and iPad for home
+                viewing or when traveling.</p>
 
             <h2 id="airplay">Streaming to TV with AirPlay</h2>
-            <p>One of the best features of using IPTV on iPhone or iPad is the ability to stream to your TV using AirPlay. This allows you to watch IPTV on your big screen TV using your iOS device as a remote control.</p>
+            <p>One of the best features of using IPTV on iPhone or iPad is the ability to stream to your TV using
+                AirPlay. This allows you to watch IPTV on your big screen TV using your iOS device as a remote control.
+            </p>
 
             <h3>Requirements for AirPlay</h3>
             <ul>
@@ -324,25 +526,32 @@
                 <li>Roku TVs (select models)</li>
             </ul>
 
-            <p><strong>Note:</strong> If your TV doesn't support AirPlay, you can use an Apple TV connected to your TV to enable AirPlay functionality.</p>
+            <p><strong>Note:</strong> If your TV doesn't support AirPlay, you can use an Apple TV connected to your TV
+                to enable AirPlay functionality.</p>
 
             <h2 id="troubleshooting">Troubleshooting iOS-Specific Issues</h2>
 
             <h3>App Won't Install from App Store</h3>
             <ul>
-                <li><strong>Check iOS Version:</strong> Ensure your iPhone/iPad is running iOS 12 or later (check Settings → General → About)</li>
-                <li><strong>Check Storage:</strong> Ensure you have enough storage space (Settings → General → iPhone/iPad Storage)</li>
+                <li><strong>Check iOS Version:</strong> Ensure your iPhone/iPad is running iOS 12 or later (check
+                    Settings → General → About)</li>
+                <li><strong>Check Storage:</strong> Ensure you have enough storage space (Settings → General →
+                    iPhone/iPad Storage)</li>
                 <li><strong>Restart Device:</strong> Restart your iPhone/iPad and try again</li>
-                <li><strong>Update iOS:</strong> Update to the latest iOS version (Settings → General → Software Update)</li>
+                <li><strong>Update iOS:</strong> Update to the latest iOS version (Settings → General → Software Update)
+                </li>
                 <li><strong>Sign Out and Back In:</strong> Sign out of App Store and sign back in</li>
             </ul>
 
             <h3>Channels Not Loading</h3>
             <ul>
-                <li><strong>Check Internet Connection:</strong> Ensure you're connected to Wi-Fi or have cellular data enabled</li>
+                <li><strong>Check Internet Connection:</strong> Ensure you're connected to Wi-Fi or have cellular data
+                    enabled</li>
                 <li><strong>Verify Credentials:</strong> Double-check your username, password, and server URL</li>
-                <li><strong>Test on Another Device:</strong> Try logging in on a computer or Android device to verify your account works</li>
-                <li><strong>Close and Reopen App:</strong> Force close the app (swipe up and swipe away) and reopen it</li>
+                <li><strong>Test on Another Device:</strong> Try logging in on a computer or Android device to verify
+                    your account works</li>
+                <li><strong>Close and Reopen App:</strong> Force close the app (swipe up and swipe away) and reopen it
+                </li>
                 <li><strong>Reinstall App:</strong> Delete and reinstall the IPTV app</li>
             </ul>
 
@@ -352,7 +561,8 @@
                 <li><strong>Use Wi-Fi:</strong> If on cellular, switch to Wi-Fi for better stability</li>
                 <li><strong>Close Background Apps:</strong> Close other apps to free up resources</li>
                 <li><strong>Lower Quality:</strong> Try SD or HD instead of 4K if connection is slow</li>
-                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
+                <li><strong>Use VPN:</strong> ISP throttling can cause buffering - check our <a
+                        href="best-vpn-for-iptv-usa.html">VPN guide</a></li>
                 <li><strong>Restart Device:</strong> Restart your iPhone/iPad to clear memory</li>
             </ul>
 
@@ -360,9 +570,11 @@
             <ul>
                 <li><strong>Check Wi-Fi:</strong> Ensure both devices are on the same Wi-Fi network</li>
                 <li><strong>Restart Devices:</strong> Restart both your iPhone/iPad and Apple TV or Smart TV</li>
-                <li><strong>Check AirPlay Settings:</strong> On Apple TV, go to Settings → AirPlay and ensure it's enabled</li>
+                <li><strong>Check AirPlay Settings:</strong> On Apple TV, go to Settings → AirPlay and ensure it's
+                    enabled</li>
                 <li><strong>Update Software:</strong> Update iOS and Apple TV software to latest versions</li>
-                <li><strong>Check App Support:</strong> Ensure your IPTV app supports AirPlay (most do, but check app settings)</li>
+                <li><strong>Check App Support:</strong> Ensure your IPTV app supports AirPlay (most do, but check app
+                    settings)</li>
             </ul>
 
             <h3>App Crashes</h3>
@@ -383,7 +595,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>GSE Smart IPTV and IPTV Smarters are the most popular free options. GSE Smart IPTV offers a premium version that removes ads, while IPTV Smarters is completely free. For the best experience, IPTVX is excellent but premium-only. Most users start with GSE Smart IPTV or IPTV Smarters as they offer the best balance of features and price.</p>
+                        <p>GSE Smart IPTV and IPTV Smarters are the most popular free options. GSE Smart IPTV offers a
+                            premium version that removes ads, while IPTV Smarters is completely free. For the best
+                            experience, IPTVX is excellent but premium-only. Most users start with GSE Smart IPTV or
+                            IPTV Smarters as they offer the best balance of features and price.</p>
                     </div>
                 </div>
 
@@ -393,7 +608,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Most IPTV providers, including UltraStreamNow, allow you to use your account on multiple devices. You can use the same account on your iPhone, iPad, and other devices. However, there's usually a limit on simultaneous streams (typically 1-3 devices at once). Check your subscription details to confirm how many simultaneous streams you can use.</p>
+                        <p>Yes! Most IPTV providers, including UltraStreamNow, allow you to use your account on multiple
+                            devices. You can use the same account on your iPhone, iPad, and other devices. However,
+                            there's usually a limit on simultaneous streams (typically 1-3 devices at once). Check your
+                            subscription details to confirm how many simultaneous streams you can use.</p>
                     </div>
                 </div>
 
@@ -403,7 +621,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP throttling (which causes buffering), protects your privacy, and can improve streaming performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for IPTV</a> to find the right one for you.</p>
+                        <p>While not always required, a VPN is highly recommended for IPTV streaming. It prevents ISP
+                            throttling (which causes buffering), protects your privacy, and can improve streaming
+                            performance. Check out our guide on the <a href="best-vpn-for-iptv-usa.html">best VPNs for
+                                IPTV</a> to find the right one for you.</p>
                     </div>
                 </div>
 
@@ -413,7 +634,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, you can watch IPTV on iPhone using cellular data. However, keep in mind that IPTV uses significant data (3-4 GB per hour for HD). Make sure you have an unlimited data plan or monitor your usage. Also, some cellular connections may be slower than Wi-Fi, which could cause buffering. For best results, use Wi-Fi when available.</p>
+                        <p>Yes, you can watch IPTV on iPhone using cellular data. However, keep in mind that IPTV uses
+                            significant data (3-4 GB per hour for HD). Make sure you have an unlimited data plan or
+                            monitor your usage. Also, some cellular connections may be slower than Wi-Fi, which could
+                            cause buffering. For best results, use Wi-Fi when available.</p>
                     </div>
                 </div>
 
@@ -423,7 +647,10 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The easiest way is using AirPlay. If you have an Apple TV or AirPlay-compatible Smart TV, simply start playing content in your IPTV app and tap the AirPlay icon to stream to your TV. Both devices need to be on the same Wi-Fi network. Alternatively, you can use an HDMI adapter to connect your iPhone directly to your TV.</p>
+                        <p>The easiest way is using AirPlay. If you have an Apple TV or AirPlay-compatible Smart TV,
+                            simply start playing content in your IPTV app and tap the AirPlay icon to stream to your TV.
+                            Both devices need to be on the same Wi-Fi network. Alternatively, you can use an HDMI
+                            adapter to connect your iPhone directly to your TV.</p>
                     </div>
                 </div>
 
@@ -451,27 +678,37 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Most free IPTV apps for iOS don't support recording. However, some premium apps like IPTVX offer cloud DVR features. Some IPTV services also offer cloud-based DVR as part of their subscription. Check with your IPTV provider about recording options, or consider using a premium IPTV app that supports recording.</p>
+                        <p>Most free IPTV apps for iOS don't support recording. However, some premium apps like IPTVX
+                            offer cloud DVR features. Some IPTV services also offer cloud-based DVR as part of their
+                            subscription. Check with your IPTV provider about recording options, or consider using a
+                            premium IPTV app that supports recording.</p>
                     </div>
                 </div>
             </div>
 
             <h2>Conclusion</h2>
             <p>
-                Setting up IPTV on iPhone and iPad is simple and opens up thousands of channels and on-demand content on your iOS devices. With excellent apps available in the App Store and AirPlay support for streaming to your TV, iPhone and iPad are great options for IPTV streaming.
+                Setting up IPTV on iPhone and iPad is simple and opens up thousands of channels and on-demand content on
+                your iOS devices. With excellent apps available in the App Store and AirPlay support for streaming to
+                your TV, iPhone and iPad are great options for IPTV streaming.
             </p>
             <p>
-                Whether you prefer watching on your device or streaming to your TV, the setup process is straightforward. Choose an app that fits your needs, add your IPTV credentials, and start enjoying unlimited entertainment.
+                Whether you prefer watching on your device or streaming to your TV, the setup process is
+                straightforward. Choose an app that fits your needs, add your IPTV credentials, and start enjoying
+                unlimited entertainment.
             </p>
             <p>
-                For more help, check out our other guides on <a href="install-iptv-firestick-guide.html">setting up IPTV on Firestick</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV streaming.
+                For more help, check out our other guides on <a href="install-iptv-firestick-guide.html">setting up IPTV
+                    on Firestick</a> and <a href="best-vpn-for-iptv-usa.html">choosing the best VPN</a> for IPTV
+                streaming.
             </p>
 
             <div class="cta-box">
                 <h3>Ready to Start Streaming on Your iPhone or iPad?</h3>
                 <p>Get access to 22,000+ live channels and 80,000+ movies and shows with UltraStreamNow.</p>
                 <a href="../free-trial.html" class="btn">Start Free Trial</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7 support</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">No credit card required • Instant activation • 24/7
+                    support</p>
             </div>
         </div>
     </article>
